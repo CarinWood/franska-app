@@ -1,0 +1,22 @@
+.chapter {
+    border: 1px solid greenyellow;
+    border-radius: 5px;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 4px;
+    text-decoration: none;  
+}
+
+
+.chapter:active {
+    transform: translateY(3px)
+}
+
+p {
+    color: greenyellow;
+    text-decoration: none;
+}
