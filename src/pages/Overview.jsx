@@ -5,7 +5,12 @@ const Overview = () => {
   return (
     <div className="overview">
       <ul>
-        <Link to="/trois" className="list-item">Unité 3</Link>
+        <Link to="/kapitel_2" className="list-item">
+          Unité 2
+        </Link>
+        <Link to="/kapitel_3" className="list-item">
+          Unité 3
+        </Link>
       </ul>
     </div>
   );

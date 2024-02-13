@@ -1,4 +1,4 @@
-export let ThirdList = [
+export const ThirdList = [
   {
     id: 1,
     fr: "manger",
