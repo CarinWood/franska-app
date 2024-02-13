@@ -4,6 +4,7 @@ import SwedishFlag from "../../assets/img/swedishFlag.png";
 import { useState, useRef } from "react";
 import { GrFormCheckmark } from "react-icons/gr";
 import { WrongCard } from "../wrongCard/WrongCard";
+import { RightCard } from "../rightCard/RightCard";
 
 export const Spell = ({ wordList }) => {
   const [shiftActive, setShiftActive] = useState(false);
@@ -11,8 +12,13 @@ export const Spell = ({ wordList }) => {
   const [currenObject, setCurrentObject] = useState(0);
   const [frenchWord, setFrenchWord] = useState("");
   const [wrongCard, setWrongCard] = useState(false);
+  const [rightCard, setRightCard] = useState(false);
 
   const inputRef = useRef(null);
+
+  const startWrite = (e) => {
+    setFrenchAnswer(e.target.value);
+  };
 
   const getCurrentWord = () => {
     return <p>{wordList[currenObject].sv}</p>;
@@ -28,12 +34,15 @@ export const Spell = ({ wordList }) => {
 
   const submitAnswer = (e) => {
     e.preventDefault();
+    setShiftActive(false);
     if (frenchAnswer === wordList[currenObject].fr) {
-      if(wrongCard === true) setWrongCard(false)
+      if (wrongCard === true) setWrongCard(false);
+      setFrenchWord(frenchAnswer);
+      setRightCard(true);
       setCurrentObject(currenObject + 1);
       setFrenchAnswer("");
     } else {
-      console.log("false");
+      if (rightCard === true) setRightCard(false);
       setFrenchWord(frenchAnswer);
       setFrenchAnswer("");
       setWrongCard(true);
@@ -85,12 +94,11 @@ export const Spell = ({ wordList }) => {
 
   return (
     <>
-      {wrongCard ?
-        <>
-       <WrongCard frenchWord={frenchWord} getCurrent={getCurrentFrenchWord}/>
-       </>
-        :<p className="placeholder"></p>
-      }
+      {rightCard && <RightCard frenchWord={frenchWord} />}
+      {wrongCard && (
+        <WrongCard frenchWord={frenchWord} getCurrent={getCurrentFrenchWord} />
+      )}
+      {!rightCard && !wrongCard && <p className="placeholder"></p>}
 
       <div className="outer-container">
         <form className="input-container">
@@ -117,39 +125,39 @@ export const Spell = ({ wordList }) => {
               type="text"
               placeholder="Översätt"
               value={frenchAnswer}
-              onChange={(e) => setFrenchAnswer(e.target.value)}
+              onChange={(e) => startWrite(e)}
               onKeyPress={handleKeyPress}
             />
           </div>
           <div className="buttons">
-            <button className="special-btn" onClick={pressShift}>
+            <button className="shift" onClick={pressShift}>
               Shift
             </button>
-            <button className="special-btn" onClick={(e) => addCharacter(e, 1)}>
+            <button onClick={(e) => addCharacter(e, 1)}>
               {shiftActive ? "À" : "à"}
             </button>
-            <button className="special-btn" onClick={(e) => addCharacter(e, 2)}>
+            <button onClick={(e) => addCharacter(e, 2)}>
               {shiftActive ? "Ç" : "ç"}
             </button>
-            <button className="special-btn" onClick={(e) => addCharacter(e, 3)}>
+            <button onClick={(e) => addCharacter(e, 3)}>
               {shiftActive ? "É" : "é"}
             </button>
-            <button className="special-btn" onClick={(e) => addCharacter(e, 4)}>
+            <button onClick={(e) => addCharacter(e, 4)}>
               {shiftActive ? "È" : "è"}
             </button>
-            <button className="special-btn" onClick={(e) => addCharacter(e, 5)}>
+            <button onClick={(e) => addCharacter(e, 5)}>
               {shiftActive ? "Ê" : "ê"}
             </button>
-            <button className="special-btn" onClick={(e) => addCharacter(e, 6)}>
+            <button onClick={(e) => addCharacter(e, 6)}>
               {shiftActive ? "Î" : "î"}
             </button>
-            <button className="special-btn" onClick={(e) => addCharacter(e, 7)}>
+            <button onClick={(e) => addCharacter(e, 7)}>
               {shiftActive ? "Ô" : "ô"}
             </button>
-            <button className="special-btn" onClick={(e) => addCharacter(e, 8)}>
+            <button onClick={(e) => addCharacter(e, 8)}>
               {shiftActive ? "Œ" : "œ"}
             </button>
-            <button className="special-btn" onClick={(e) => addCharacter(e, 9)}>
+            <button onClick={(e) => addCharacter(e, 9)}>
               {shiftActive ? "Û" : "û"}
             </button>
           </div>
