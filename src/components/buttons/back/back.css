@@ -1,6 +1,6 @@
 .go-back {
-    background-color: midnightblue;
     color: white;
+    background-color: transparent;
     border: none;
     width: 90px;
     height: 40px;
@@ -13,6 +13,6 @@
     font-size: 18px;
 }
 
-.go-back:active {
-    transform: translateY(2px);
+.go-back:hover {
+    opacity: 0.6;
 }

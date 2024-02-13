@@ -3,7 +3,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import PropTypes from "prop-types";
 import "@splidejs/splide/css";
 import { Card } from "../card/Card";
-import './carousel.css'
+import "./carousel.css";
 
 const Carousel = ({ flashcardList }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -25,7 +25,7 @@ const Carousel = ({ flashcardList }) => {
       >
         {flashcardList.map((item) => (
           <SplideSlide key={item.id}>
-            <Card sv={item.sv} fr={item.fr}/>
+            <Card sv={item.sv} fr={item.fr} />
           </SplideSlide>
         ))}
       </Splide>

@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.splide__arrow {
+/* .splide__arrow {
     font-size: 22px; 
     color: #fff; 
     background-color: rgb(0, 0, 0,);
@@ -20,7 +20,7 @@
 
   .splide__arrow--next {
     right: 50px !important; 
-  }
+  } */
 
   .slide-indicator {
     font-weight: 600;
