@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 import { GrFormCheckmark } from "react-icons/gr";
 import { WrongCard } from "../wrongCard/WrongCard";
 import { RightCard } from "../rightCard/RightCard";
+import { FinishedCard } from "../finishedCard/FinishedCard";
 
 export const Spell = ({ wordList }) => {
   const [shiftActive, setShiftActive] = useState(false);
@@ -13,6 +14,7 @@ export const Spell = ({ wordList }) => {
   const [frenchWord, setFrenchWord] = useState("");
   const [wrongCard, setWrongCard] = useState(false);
   const [rightCard, setRightCard] = useState(false);
+  const [finished, setFinished] = useState(false);
 
   const inputRef = useRef(null);
 
@@ -39,7 +41,11 @@ export const Spell = ({ wordList }) => {
       if (wrongCard === true) setWrongCard(false);
       setFrenchWord(frenchAnswer);
       setRightCard(true);
-      setCurrentObject(currenObject + 1);
+      if (currenObject < wordList.length - 1) {
+        setCurrentObject(currenObject + 1);
+      } else {
+        setFinished(true);
+      }
       setFrenchAnswer("");
     } else {
       if (rightCard === true) setRightCard(false);
@@ -92,81 +98,98 @@ export const Spell = ({ wordList }) => {
     }
   };
 
+  const resetExercise = () => {
+    console.log('reset')
+  }
+
   return (
     <>
-      {rightCard && <RightCard frenchWord={frenchWord} />}
-      {wrongCard && (
-        <WrongCard frenchWord={frenchWord} getCurrent={getCurrentFrenchWord} />
-      )}
-      {!rightCard && !wrongCard && <p className="placeholder"></p>}
-
-      <div className="outer-container">
-        <form className="input-container">
-          <div className="swedish-input-wrapper">
-            <div className="swedish-flag">
-              <img
-                src={SwedishFlag}
-                alt="swedish flag"
-                className="swedish-flag-img"
-              />
-            </div>
-            <div className="fake-input">{getCurrentWord()}</div>
-          </div>
-          <div className="french-input-wrapper">
-            <div className="french-flag">
-              <img
-                src={FrenchFlag}
-                alt="french flag"
-                className="french-flag-img"
-              />
-            </div>
-            <input
-              ref={inputRef}
-              type="text"
-              placeholder="Översätt"
-              value={frenchAnswer}
-              onChange={(e) => startWrite(e)}
-              onKeyPress={handleKeyPress}
+      {finished ? (
+        <FinishedCard setFinished={setFinished} resetExercise={resetExercise}/>
+      ) : (
+        <>
+          {rightCard && <RightCard frenchWord={frenchWord} />}
+          {wrongCard && (
+            <WrongCard
+              frenchWord={frenchWord}
+              getCurrent={getCurrentFrenchWord}
             />
+          )}
+          {!rightCard && !wrongCard && <p className="placeholder"></p>}
+
+          <div className="outer-container">
+            <form className="input-container">
+              <div className="swedish-input-wrapper">
+                <div className="swedish-flag">
+                  <img
+                    src={SwedishFlag}
+                    alt="swedish flag"
+                    className="swedish-flag-img"
+                  />
+                </div>
+                <div className="fake-input">{getCurrentWord()}</div>
+              </div>
+              <div className="french-input-wrapper">
+                <div className="french-flag">
+                  <img
+                    src={FrenchFlag}
+                    alt="french flag"
+                    className="french-flag-img"
+                  />
+                </div>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  placeholder="Översätt"
+                  value={frenchAnswer}
+                  onChange={(e) => startWrite(e)}
+                  onKeyPress={handleKeyPress}
+                />
+              </div>
+              <div className="buttons">
+                <button className="shift" onClick={pressShift}>
+                  Shift
+                </button>
+                <button onClick={(e) => addCharacter(e, 1)}>
+                  {shiftActive ? "À" : "à"}
+                </button>
+                <button onClick={(e) => addCharacter(e, 2)}>
+                  {shiftActive ? "Ç" : "ç"}
+                </button>
+                <button onClick={(e) => addCharacter(e, 3)}>
+                  {shiftActive ? "É" : "é"}
+                </button>
+                <button onClick={(e) => addCharacter(e, 4)}>
+                  {shiftActive ? "È" : "è"}
+                </button>
+                <button onClick={(e) => addCharacter(e, 5)}>
+                  {shiftActive ? "Ê" : "ê"}
+                </button>
+                <button onClick={(e) => addCharacter(e, 6)}>
+                  {shiftActive ? "Î" : "î"}
+                </button>
+                <button onClick={(e) => addCharacter(e, 7)}>
+                  {shiftActive ? "Ô" : "ô"}
+                </button>
+                <button onClick={(e) => addCharacter(e, 8)}>
+                  {shiftActive ? "Œ" : "œ"}
+                </button>
+                <button onClick={(e) => addCharacter(e, 9)}>
+                  {shiftActive ? "Û" : "û"}
+                </button>
+              </div>
+              <button
+                className="answer-btn"
+                type="submit"
+                onClick={submitAnswer}
+              >
+                <GrFormCheckmark className="check" />
+                Svara
+              </button>
+            </form>
           </div>
-          <div className="buttons">
-            <button className="shift" onClick={pressShift}>
-              Shift
-            </button>
-            <button onClick={(e) => addCharacter(e, 1)}>
-              {shiftActive ? "À" : "à"}
-            </button>
-            <button onClick={(e) => addCharacter(e, 2)}>
-              {shiftActive ? "Ç" : "ç"}
-            </button>
-            <button onClick={(e) => addCharacter(e, 3)}>
-              {shiftActive ? "É" : "é"}
-            </button>
-            <button onClick={(e) => addCharacter(e, 4)}>
-              {shiftActive ? "È" : "è"}
-            </button>
-            <button onClick={(e) => addCharacter(e, 5)}>
-              {shiftActive ? "Ê" : "ê"}
-            </button>
-            <button onClick={(e) => addCharacter(e, 6)}>
-              {shiftActive ? "Î" : "î"}
-            </button>
-            <button onClick={(e) => addCharacter(e, 7)}>
-              {shiftActive ? "Ô" : "ô"}
-            </button>
-            <button onClick={(e) => addCharacter(e, 8)}>
-              {shiftActive ? "Œ" : "œ"}
-            </button>
-            <button onClick={(e) => addCharacter(e, 9)}>
-              {shiftActive ? "Û" : "û"}
-            </button>
-          </div>
-          <button className="answer-btn" type="submit" onClick={submitAnswer}>
-            <GrFormCheckmark className="check" />
-            Svara
-          </button>
-        </form>
-      </div>
+        </>
+      )}
     </>
   );
 };

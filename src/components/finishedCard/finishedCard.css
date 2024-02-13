@@ -1,0 +1,53 @@
+.finished {
+width: 420px;
+min-height: 300px;  
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border: 1px solid white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.finished-heading {
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkmark {
+    font-size: 28px;
+    margin-right: 5px;
+    color: #5cb85c;
+}
+
+.try-again-buttons {
+    margin-top: 20px;
+}
+
+.try-again-buttons button {
+    border: none;
+    font-size: 16px;
+    padding: 6px 18px;
+    margin: 0px 4px;
+    border-radius: 5px;
+    background-color: lavender;
+    color: black;
+    cursor: pointer;
+}
+
+.try-again-buttons button:hover {
+    opacity: 0.7;
+}
+
+.try-again-buttons button:active {
+    transform: translateY(3px);
+}
+
+.redo-icon {
+    font-size: 12px;
+    margin-right: 5px;
+}
