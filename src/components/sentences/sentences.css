@@ -30,15 +30,29 @@
 }
 
 .answer-box {
-    margin: 120px 0px 30px 0px;
+    margin: 50px 0px 0px 0px;
     width: 400px;
-    height: 100px;
+    height: 90px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    border: 1px solid pink;
 }
 
+.right-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.right-message p {
+    font-size: 18px;
+}
+
+.right-icon {
+    font-size: 30px;
+    color: #5cb85c;
+}
 .word {
     padding: 4px 6px;
     background-color: lavender;
@@ -50,14 +64,14 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
-.correct-btn {
+.correct-btn, .next-word-btn {
     background-color: #5cb85c;
     color: white;
     padding: 5px 7px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 0px;
     letter-spacing: 1px;
     cursor: pointer;
     display: flex;
@@ -68,16 +82,27 @@
     margin-bottom: 20px;
 }
 
-.correct-btn:active {
+.correct-btn:active, .next-word-btn:active {
     transform: translateY(3px)
 }
 
-.check-area {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.next-word-btn {
+    background-color: rgb(202, 149, 49);
+    color: white;
 }
+
+.check-area {
+    margin-top: 20px;
+    width: 390px;
+    height: 70px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-bottom: 6px;
+    border-bottom: 1px solid white;
+}
+
+
 
 .hide {
     visibility: hidden;

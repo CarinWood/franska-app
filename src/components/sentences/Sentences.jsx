@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./sentences.css";
-import { click } from "@testing-library/user-event/dist/click";
+import { GrFormCheckmark } from "react-icons/gr";
 
 export const Sentences = ({ sentenceList }) => {
   /*   const [boxes, setBoxes] = useState([]); */
@@ -8,31 +8,25 @@ export const Sentences = ({ sentenceList }) => {
   const [newArray, setNewArray] = useState([]);
   const [checkArray, setCheckArray] = useState([]);
   const [clickedIndices, setClickedIndices] = useState([]);
+  const [isCorrect, setIsCorrect] = useState(false);
 
   const getSentence = () => {
     return <p>{sentenceList[currentNum].sv}</p>;
   };
 
-  /*  const generateBoxes = () => {
-    generateWord();
-    const quant = sentenceList[currentNum].quant;
-    const words = Array.from({ length: quant }, (_, index) => (
-      <p key={index} className="wordbox"></p>
-    ));
-    return <div className="boxes">{words}</div>;
-  };
-  */
-
   useEffect(() => {
     generateWord();
   }, []);
 
-  useEffect(() => {
-    console.log(clickedIndices);
-  }, [clickedIndices]);
+  useEffect(() => {}, [clickedIndices]);
+
+  const shuffleArray = (arr) => {
+    arr.sort((a, b) => 0.5 - Math.random());
+  };
 
   const generateWord = () => {
     const wordsArray = sentenceList[currentNum].fr.split(" ");
+    shuffleArray(wordsArray);
     setNewArray([...wordsArray]);
   };
 
@@ -44,21 +38,38 @@ export const Sentences = ({ sentenceList }) => {
   };
 
   const checkBuiltSentence = () => {
-    console.log(checkArray, newArray);
-    let success = true;
+    let won = true;
+    let newWord = "";
     for (let i = 0; i < checkArray.length; i++) {
-      if (checkArray[i] !== newArray[i]) {
-        success = false;
+      newWord += checkArray[i] + " ";
+    }
+    newWord.trim();
+
+    let correctWord = sentenceList[currentNum].fr;
+    for (let i = 0; i < correctWord.length; i++) {
+      if (correctWord.charAt(i) !== newWord.charAt(i)) {
+        won = false;
         break;
       }
     }
-    console.log("Du klarade meningen:", success);
+
+    if (won === true) {
+      setCurrentNum(currentNum + 1);
+      setIsCorrect(true);
+    }
+    console.log(won);
+  };
+
+  const resetAndNext = () => {
+    setCheckArray([]);
+    setIsCorrect(false);
+    setClickedIndices([]);
+    generateWord();
   };
 
   return (
     <div className="sentences">
       <div className="sentence">{getSentence()}</div>
-      {/* {generateBoxes()} */}
       <div className="check-area">
         {checkArray.map((word, i) => {
           return (
@@ -68,7 +79,9 @@ export const Sentences = ({ sentenceList }) => {
           );
         })}
       </div>
-
+      <div className={isCorrect ? "right-message" : "right-message hide"}>
+        <GrFormCheckmark className="right-icon" /> <p>Rätt!</p>
+      </div>
       <div className="answer-box">
         {newArray.map((word, i) => {
           return (
@@ -82,9 +95,15 @@ export const Sentences = ({ sentenceList }) => {
           );
         })}
       </div>
-      <button className="correct-btn" onClick={checkBuiltSentence}>
-        Rätta
-      </button>
+      {isCorrect ? (
+        <button className="next-word-btn" onClick={resetAndNext}>
+          Nästa ord
+        </button>
+      ) : (
+        <button className="correct-btn" onClick={checkBuiltSentence}>
+          Rätta
+        </button>
+      )}
       <p>Klicka på orden i rätt ordning</p>
     </div>
   );
