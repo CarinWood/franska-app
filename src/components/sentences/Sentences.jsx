@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./sentences.css";
 import { GrFormCheckmark } from "react-icons/gr";
+import { FaRedo } from "react-icons/fa";
 
 export const Sentences = ({ sentenceList }) => {
   /*   const [boxes, setBoxes] = useState([]); */
@@ -9,6 +10,8 @@ export const Sentences = ({ sentenceList }) => {
   const [checkArray, setCheckArray] = useState([]);
   const [clickedIndices, setClickedIndices] = useState([]);
   const [isCorrect, setIsCorrect] = useState(false);
+  const [oldSentence, setOldSentence] = useState("");
+  const [gameOver, setGameOver] = useState(false);
 
   const getSentence = () => {
     return <p>{sentenceList[currentNum].sv}</p>;
@@ -54,8 +57,14 @@ export const Sentences = ({ sentenceList }) => {
     }
 
     if (won === true) {
-      setCurrentNum(currentNum + 1);
+      setOldSentence(sentenceList[currentNum].sv);
       setIsCorrect(true);
+      setCurrentNum(0);
+      if (currentNum === sentenceList.length - 1) {
+        setGameOver(true);
+      } else {
+        setCurrentNum(currentNum + 1);
+      }
     }
     console.log(won);
   };
@@ -67,44 +76,73 @@ export const Sentences = ({ sentenceList }) => {
     generateWord();
   };
 
+  const resetExercise = () => {
+    setCheckArray([]);
+    setIsCorrect(false);
+    setClickedIndices([]);
+    generateWord();
+    setGameOver(false);
+  };
   return (
-    <div className="sentences">
-      <div className="sentence">{getSentence()}</div>
-      <div className="check-area">
-        {checkArray.map((word, i) => {
-          return (
-            <p key={i} className="word">
-              {word}
-            </p>
-          );
-        })}
-      </div>
-      <div className={isCorrect ? "right-message" : "right-message hide"}>
-        <GrFormCheckmark className="right-icon" /> <p>Rätt!</p>
-      </div>
-      <div className="answer-box">
-        {newArray.map((word, i) => {
-          return (
-            <p
-              key={i}
-              className={clickedIndices.includes(i) ? "word hide" : "word"}
-              onClick={() => choseWord(word, i)}
-            >
-              {word}
-            </p>
-          );
-        })}
-      </div>
-      {isCorrect ? (
-        <button className="next-word-btn" onClick={resetAndNext}>
-          Nästa ord
-        </button>
+    <>
+      {gameOver ? (
+        <div className="game-over-card">
+          <p className="finished-heading">
+            <GrFormCheckmark className="checkmark" />
+            Övningen avklarad!
+          </p>
+          <div className="try-again-buttons">
+            <button onClick={resetExercise}>
+              <FaRedo className="redo-icon" />
+              Öva igen
+            </button>
+          </div>
+        </div>
       ) : (
-        <button className="correct-btn" onClick={checkBuiltSentence}>
-          Rätta
-        </button>
+        <div className="sentences">
+          {isCorrect ? (
+            <div className="sentence">{oldSentence}</div>
+          ) : (
+            <div className="sentence">{getSentence()}</div>
+          )}
+
+          <div className="check-area">
+            {checkArray.map((word, i) => {
+              return (
+                <p key={i} className="word">
+                  {word}
+                </p>
+              );
+            })}
+          </div>
+          <div className={isCorrect ? "right-message" : "right-message hide"}>
+            <GrFormCheckmark className="right-icon" /> <p>Rätt!</p>
+          </div>
+          <div className="answer-box">
+            {newArray.map((word, i) => {
+              return (
+                <p
+                  key={i}
+                  className={clickedIndices.includes(i) ? "word hide" : "word"}
+                  onClick={() => choseWord(word, i)}
+                >
+                  {word}
+                </p>
+              );
+            })}
+          </div>
+          {isCorrect ? (
+            <button className="next-word-btn" onClick={resetAndNext}>
+              Nästa ord
+            </button>
+          ) : (
+            <button className="correct-btn" onClick={checkBuiltSentence}>
+              Rätta
+            </button>
+          )}
+          <p>Klicka på orden i rätt ordning</p>
+        </div>
       )}
-      <p>Klicka på orden i rätt ordning</p>
-    </div>
+    </>
   );
 };

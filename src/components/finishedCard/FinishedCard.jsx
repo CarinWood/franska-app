@@ -14,10 +14,6 @@ export const FinishedCard = ({
     resetExercise();
   };
 
-  const toMenu = () => {
-    setFinished(false);
-    setMenuAway(false);
-  };
 
   return (
     <div className="finished">
