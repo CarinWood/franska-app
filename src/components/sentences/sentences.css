@@ -32,21 +32,35 @@
     align-items: flex-start;
 }
 
-.right-message {
+.right-message, .wrong-message {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 40px;
+    height: 40px;
+    border: 1px solid white;
+    margin-bottom: -10px;
 }
 
-.right-message p {
+.placeholder-sent {
+    margin-top: 40px;
+    height: 40px;
+    margin-bottom: -10px;
+}
+
+.right-message p, .wrong-message p {
     font-size: 18px;
 }
 
-.right-icon {
+.right-icon, .wrong-icon {
     font-size: 30px;
     color: #5cb85c;
 }
+
+.wrong-icon {
+    color: red;
+}
+
 .word {
     padding: 4px 6px;
     background-color: lavender;
@@ -110,4 +124,5 @@
 
 .hide {
     visibility: hidden;
+    height: 0px;
 }

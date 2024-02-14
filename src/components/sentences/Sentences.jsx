@@ -10,6 +10,7 @@ export const Sentences = ({ sentenceList }) => {
   const [checkArray, setCheckArray] = useState([]);
   const [clickedIndices, setClickedIndices] = useState([]);
   const [isCorrect, setIsCorrect] = useState(false);
+  const [isWrong, setIsWrong] = useState(false)
   const [oldSentence, setOldSentence] = useState("");
   const [gameOver, setGameOver] = useState(false);
 
@@ -65,8 +66,10 @@ export const Sentences = ({ sentenceList }) => {
       } else {
         setCurrentNum(currentNum + 1);
       }
+    } else {
+      setIsWrong(true)
     }
-    console.log(won);
+
   };
 
   const resetAndNext = () => {
@@ -115,9 +118,17 @@ export const Sentences = ({ sentenceList }) => {
               );
             })}
           </div>
-          <div className={isCorrect ? "right-message" : "right-message hide"}>
-            <GrFormCheckmark className="right-icon" /> <p>Rätt!</p>
+          {isCorrect &&
+              <div className="right-message">
+                <GrFormCheckmark className="right-icon" /> <p>Rätt!</p>
+              </div>
+          }
+          {isWrong &&
+          <div className="wrong-message">
+            <GrFormCheckmark className="wrong-icon" /> <p>Fel!</p>
           </div>
+          }
+          {!isCorrect && !isWrong && <div className="placeholder-sent"></div>}
           <div className="answer-box">
             {newArray.map((word, i) => {
               return (
