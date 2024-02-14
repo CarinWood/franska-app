@@ -82,3 +82,9 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     background-color: #5cb85c;
     margin-right: 8px;
 }
+
+@media screen and (max-width: 600px) {
+    .finished {
+        box-shadow: none
+    }
+}
