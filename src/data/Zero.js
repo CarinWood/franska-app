@@ -88,25 +88,30 @@ export const zeroSentences = [
   {
     id: 1, 
     fr: "Comment ça s'écrit?", 
-    sv: "Hur skriver man det?"
+    sv: "Hur skriver man det?",
+    quant: 4,
   },
   {
     id: 2,
     fr: "Vous pouvez répéter, s'il vous plaît?",
     sv: "Kan ni vara snäll och upprepa?",
+    quant: 6,
   },
   {
     id: 3,
     fr: "Excusez-moi, je suis en retard",
     sv: "Ursäkta att jag är sen",
+    quant: 5,
   },
   {
     id: 4,
     fr: "Comment on dit ... en français?",
     sv: "Hur säger man ... på franska?",
+    quant: 6,
   },
   { id: 5, 
     fr: "Je ne comprends pas", 
-    sv: "Jag förstår inte" 
+    sv: "Jag förstår inte",
+    quant: 4,
   },
 ]

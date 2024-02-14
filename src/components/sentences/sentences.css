@@ -1,0 +1,29 @@
+.sentences {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sentence-heading {
+    font-size: 20px;
+    letter-spacing: 0.2px;
+}
+
+.sentence {
+    margin-top: 30px;
+}
+
+.boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wordbox {
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
+}

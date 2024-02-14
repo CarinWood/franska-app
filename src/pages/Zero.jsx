@@ -5,10 +5,13 @@ import "../styles/zero.css";
 import { useState } from "react";
 import { Spell } from "../components/spell/Spell";
 import { Menu } from "../components/menu/Menu";
+import { Sentences } from "../components/sentences/Sentences";
+import { zeroSentences } from "../data/Zero";
 
 export const Zero = () => {
   const [showFlash, setShowFlash] = useState(false);
   const [showSpell, setShowSpell] = useState(false);
+  const [showSentences, setShowSentences] = useState(true);
 
   return (
     <div className="container">
@@ -19,6 +22,7 @@ export const Zero = () => {
       />
       {showFlash && <Carousel flashcardList={ZeroList} />}
       {showSpell && <Spell wordList={ZeroList} />}
+      {showSentences && <Sentences sentenceList={zeroSentences}/>}
     </div>
   );
 };
