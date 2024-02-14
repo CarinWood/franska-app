@@ -9,10 +9,14 @@ import { Menu } from "../components/menu/Menu";
 export const Zero = () => {
   const [showFlash, setShowFlash] = useState(false);
   const [showSpell, setShowSpell] = useState(false);
+
   return (
     <div className="container">
       <Back />
-      <Menu setShowFlash={setShowFlash} setShowSpell={setShowSpell}/>
+      <Menu
+        setShowFlash={setShowFlash}
+        setShowSpell={setShowSpell}
+      />
       {showFlash && <Carousel flashcardList={ZeroList} />}
       {showSpell && <Spell wordList={ZeroList} />}
     </div>

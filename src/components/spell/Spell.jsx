@@ -104,6 +104,11 @@ export const Spell = ({ wordList }) => {
 
   const resetExercise = () => {
     setCurrentObject(0);
+    setFrenchAnswer("")
+    setWrongCard(false)
+    setRightCard(false)
+    setQuantityRight(0)
+    setQuantityWrong(0)
   };
 
   return (

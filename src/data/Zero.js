@@ -2,7 +2,7 @@ export const ZeroList = [
   { id: 1, fr: "le chocolat", sv: "choklad" },
   { id: 2, fr: "le restaurant", sv: "restaurang" },
   { id: 3, fr: "le cinéma", sv: "biograf" },
-  { id: 4, fr: "le croissant", sv: "croissant" },
+ /*  { id: 4, fr: "le croissant", sv: "croissant" },
   { id: 5, fr: "le train", sv: "tåg" },
   { id: 6, fr: "les toilettes", sv: "toalett" },
   { id: 7, fr: "faire la bise", sv: "pussa på kind" },
@@ -81,5 +81,5 @@ export const ZeroList = [
     fr: "Vous pouvez répéter, s'il vous plaît?",
     sv: "Kan ni vara snäll och upprepa?",
   },
-  { id: 71, fr: "Comment ça s'écrit?", sv: "Hur skriver man det?" },
+  { id: 71, fr: "Comment ça s'écrit?", sv: "Hur skriver man det?" }, */
 ];

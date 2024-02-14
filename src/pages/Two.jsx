@@ -2,12 +2,20 @@ import Back from "../components/buttons/back/Back";
 import Carousel from "../components/carousel/Carousel";
 import "../styles/two.css";
 import { SecondList } from "../data/Second";
+import { useState } from "react";
+import { Menu } from "../components/menu/Menu";
+import { Spell } from "../components/spell/Spell";
 
 export const Two = () => {
+  const [showFlash, setShowFlash] = useState(false);
+  const [showSpell, setShowSpell] = useState(false);
+
   return (
     <div className="container">
-      <Back />
-      <Carousel flashcardList={SecondList} />
-    </div>
+    <Back />
+    <Menu setShowFlash={setShowFlash} setShowSpell={setShowSpell}/>
+    {showFlash && <Carousel flashcardList={SecondList} />}
+    {showSpell && <Spell wordList={SecondList} />}
+  </div>
   );
 };

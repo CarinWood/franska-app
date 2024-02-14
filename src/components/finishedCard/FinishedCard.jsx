@@ -7,10 +7,16 @@ export const FinishedCard = ({
   resetExercise,
   quantityRight,
   quantityWrong,
+  setMenuAway,
 }) => {
   const clickExerciseAgain = () => {
     setFinished(false);
     resetExercise();
+  };
+
+  const toMenu = () => {
+    setFinished(false);
+    setMenuAway(false);
   };
 
   return (
@@ -35,7 +41,6 @@ export const FinishedCard = ({
           <FaRedo className="redo-icon" />
           Öva igen
         </button>
-        <button>Öva på andra sätt</button>
       </div>
     </div>
   );

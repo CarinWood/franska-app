@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Back from '../components/buttons/back/Back'
 import Carousel from '../components/carousel/Carousel'
 import { FirstList } from '../data/First'
+import { Menu } from '../components/menu/Menu'
+import { Spell } from '../components/spell/Spell'
 
 export const One = () => {
-  return (
-    <div className='container'>
-        <Back/>
-        <Carousel flashcardList={FirstList}/>
+  const [showFlash, setShowFlash] = useState(false);
+  const [showSpell, setShowSpell] = useState(false);
 
-    </div>
+
+  return (
+    <div className="container">
+    <Back />
+    <Menu setShowFlash={setShowFlash} setShowSpell={setShowSpell}/>
+    {showFlash && <Carousel flashcardList={FirstList} />}
+    {showSpell && <Spell wordList={FirstList} />}
+  </div>
   )
 }
