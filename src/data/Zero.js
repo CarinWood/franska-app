@@ -81,15 +81,15 @@ export const ZeroList = [
     fr: "Vous pouvez répéter, s'il vous plaît?",
     sv: "Kan ni vara snäll och upprepa?",
   },
-  { id: 71, fr: "Comment ça s'écrit?", sv: "Hur skriver man det?" }, 
+  { id: 71, fr: "Comment ça s'écrit?", sv: "Hur skriver man det?" },
 ];
 
 export const zeroSentences = [
   {
-    id: 1, 
-    fr: "Comment ça s'écrit?", 
+    id: 1,
+    fr: "Comment ça s'écrit?",
     sv: "Hur skriver man det?",
-    quant: 4,
+    quant: 3,
   },
   {
     id: 2,
@@ -109,9 +109,5 @@ export const zeroSentences = [
     sv: "Hur säger man ... på franska?",
     quant: 6,
   },
-  { id: 5, 
-    fr: "Je ne comprends pas", 
-    sv: "Jag förstår inte",
-    quant: 4,
-  },
-]
+  { id: 5, fr: "Je ne comprends pas", sv: "Jag förstår inte", quant: 4 },
+];

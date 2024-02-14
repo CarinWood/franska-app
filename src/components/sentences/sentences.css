@@ -19,11 +19,66 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .wordbox {
     border: 1px solid white;
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 30px;
     margin: 0px 5px;
+}
+
+.answer-box {
+    margin: 120px 0px 30px 0px;
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid pink;
+}
+
+.word {
+    padding: 4px 6px;
+    background-color: lavender;
+    color: black;
+    border: 2px dotted lightgray;
+    margin: 0px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.correct-btn {
+    background-color: #5cb85c;
+    color: white;
+    padding: 5px 7px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 35px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.correct-btn:active {
+    transform: translateY(3px)
+}
+
+.check-area {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hide {
+    visibility: hidden;
 }
