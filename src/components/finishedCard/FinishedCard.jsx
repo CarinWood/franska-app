@@ -2,7 +2,12 @@ import "./finishedCard.css";
 import { GrFormCheckmark } from "react-icons/gr";
 import { FaRedo } from "react-icons/fa";
 
-export const FinishedCard = ({ setFinished, resetExercise }) => {
+export const FinishedCard = ({
+  setFinished,
+  resetExercise,
+  quantityRight,
+  quantityWrong,
+}) => {
   const clickExerciseAgain = () => {
     setFinished(false);
     resetExercise();
@@ -14,6 +19,17 @@ export const FinishedCard = ({ setFinished, resetExercise }) => {
         <GrFormCheckmark className="checkmark" />
         Övningen avklarad!
       </p>
+      <div className="statistics">
+        <div className="cube-div">
+          <p className="green-cube"></p>
+          <p>{quantityRight} stycken rätt svar</p>
+        </div>
+        <div className="cube-div">
+          <div className="red-cube"></div>
+          <p>{quantityWrong} stycken fel svar</p>
+        </div>
+      </div>
+      <div></div>
       <div className="try-again-buttons">
         <button onClick={clickExerciseAgain}>
           <FaRedo className="redo-icon" />

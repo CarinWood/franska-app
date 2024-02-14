@@ -15,6 +15,8 @@ export const Spell = ({ wordList }) => {
   const [wrongCard, setWrongCard] = useState(false);
   const [rightCard, setRightCard] = useState(false);
   const [finished, setFinished] = useState(false);
+  const [quantityRight, setQuantityRight] = useState(0);
+  const [quantityWrong, setQuantityWrong] = useState(0);
 
   const inputRef = useRef(null);
 
@@ -38,6 +40,7 @@ export const Spell = ({ wordList }) => {
     e.preventDefault();
     setShiftActive(false);
     if (frenchAnswer === wordList[currenObject].fr) {
+      setQuantityRight(quantityRight + 1);
       if (wrongCard === true) setWrongCard(false);
       setFrenchWord(frenchAnswer);
       setRightCard(true);
@@ -48,6 +51,7 @@ export const Spell = ({ wordList }) => {
       }
       setFrenchAnswer("");
     } else {
+      setQuantityWrong(quantityWrong + 1);
       if (rightCard === true) setRightCard(false);
       setFrenchWord(frenchAnswer);
       setFrenchAnswer("");
@@ -99,13 +103,18 @@ export const Spell = ({ wordList }) => {
   };
 
   const resetExercise = () => {
-    console.log('reset')
-  }
+    setCurrentObject(0);
+  };
 
   return (
     <>
       {finished ? (
-        <FinishedCard setFinished={setFinished} resetExercise={resetExercise}/>
+        <FinishedCard
+          setFinished={setFinished}
+          resetExercise={resetExercise}
+          quantityRight={quantityRight}
+          quantityWrong={quantityWrong}
+        />
       ) : (
         <>
           {rightCard && <RightCard frenchWord={frenchWord} />}
