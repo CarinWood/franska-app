@@ -1,8 +1,6 @@
 .overview {
-    width: 100%;
-    height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -10,7 +8,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 0px 20px;
 }
 
 .list-item {
@@ -18,4 +17,16 @@
     text-decoration: none;
     font-size: 20px;
     margin: 10px;
+}
+
+.spec {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 200px;
+}
+
+.overview-icon {
+    font-size: 22px;
+    margin-right: 15px;
 }

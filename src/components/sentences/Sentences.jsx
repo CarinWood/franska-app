@@ -156,7 +156,7 @@ export const Sentences = ({ sentenceList }) => {
           </div>
           {isCorrect ? (
             <button className="next-word-btn" onClick={resetAndNext}>
-              Nästa ord
+              Nästa
             </button>
           ) : isWrong ? (
             <button className="try-btn" onClick={tryAgain}>

@@ -6,14 +6,26 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding-left: 15px;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
     line-height: 25px;
+    animation: fade 0.3s ease-in;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+
+    } 
+    100% {
+        opacity: 1
+
+    }
 }
 
 #wrong {
     margin-right: 10px;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .wrong-card p span {

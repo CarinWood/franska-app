@@ -1,7 +1,6 @@
 .menu {
     list-style: none;
     padding: 30px;
-    transition: all 0.2s ease-in-out;
     position: absolute;
     top: 50%;
     left: 50%;

@@ -112,7 +112,7 @@ export const Spell = ({ wordList }) => {
   };
 
   return (
-    <>
+    <div className="spell">
       {finished ? (
         <FinishedCard
           setFinished={setFinished}
@@ -204,6 +204,6 @@ export const Spell = ({ wordList }) => {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 };

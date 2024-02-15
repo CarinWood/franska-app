@@ -90,3 +90,10 @@ export const FirstList = [
     { id: 89, fr: "la célébrité", sv: "berömdhet, kändis" },
     { id: 90, fr: "l'âge", sv: "ålder" }
 ]
+
+export const firstSentences = [
+    {
+        id: 1,
+        
+    }
+]

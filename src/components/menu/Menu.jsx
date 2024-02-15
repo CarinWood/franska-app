@@ -3,7 +3,7 @@ import "./menu.css";
 import { BsCardText, BsPencil, BsSpellcheck } from "react-icons/bs";
 
 export const Menu = ({ setShowFlash, setShowSpell }) => {
-  const [menuAway, setMenuAway] = useState(true);
+  const [menuAway, setMenuAway] = useState(false);
 
   const flash = () => {
     setMenuAway(true);
@@ -19,10 +19,6 @@ export const Menu = ({ setShowFlash, setShowSpell }) => {
     }, 100);
   };
 
-  const sentence = () => {
-    console.log("hello");
-  };
-
   return (
     <div className={menuAway ? "menu away" : "menu"}>
       <p className="menu-headline">Hur vill du träna?</p>
@@ -33,13 +29,8 @@ export const Menu = ({ setShowFlash, setShowSpell }) => {
         </li>
 
         <li onClick={spell}>
-          <BsSpellcheck className="icon spellcheck" />
-          <p>Skriv orden</p>
-        </li>
-
-        <li onClick={sentence}>
           <BsPencil className="icon" />
-          <p>Bygg meningar</p>
+          <p>Skriv orden</p>
         </li>
       </ul>
     </div>
