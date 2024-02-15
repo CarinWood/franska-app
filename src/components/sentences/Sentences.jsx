@@ -4,13 +4,12 @@ import { GrFormCheckmark } from "react-icons/gr";
 import { FaRedo } from "react-icons/fa";
 
 export const Sentences = ({ sentenceList }) => {
-  /*   const [boxes, setBoxes] = useState([]); */
   const [currentNum, setCurrentNum] = useState(0);
   const [newArray, setNewArray] = useState([]);
   const [checkArray, setCheckArray] = useState([]);
   const [clickedIndices, setClickedIndices] = useState([]);
   const [isCorrect, setIsCorrect] = useState(false);
-  const [isWrong, setIsWrong] = useState(false)
+  const [isWrong, setIsWrong] = useState(false);
   const [oldSentence, setOldSentence] = useState("");
   const [gameOver, setGameOver] = useState(false);
 
@@ -67,9 +66,16 @@ export const Sentences = ({ sentenceList }) => {
         setCurrentNum(currentNum + 1);
       }
     } else {
-      setIsWrong(true)
+      setIsWrong(true);
     }
+  };
 
+  const regret = (id) => {
+    const filteredArray = checkArray.filter((_, index) => index !== id);
+    setCheckArray(filteredArray);
+
+    const filteredIndicies = clickedIndices.filter((_, index) => index !== id)
+    setClickedIndices(filteredIndicies)
   };
 
   const resetAndNext = () => {
@@ -112,22 +118,22 @@ export const Sentences = ({ sentenceList }) => {
           <div className="check-area">
             {checkArray.map((word, i) => {
               return (
-                <p key={i} className="word">
+                <p key={i} className="word" onClick={() => regret(i)}>
                   {word}
                 </p>
               );
             })}
           </div>
-          {isCorrect &&
-              <div className="right-message">
-                <GrFormCheckmark className="right-icon" /> <p>Rätt!</p>
-              </div>
-          }
-          {isWrong &&
-          <div className="wrong-message">
-            <GrFormCheckmark className="wrong-icon" /> <p>Fel!</p>
-          </div>
-          }
+          {isCorrect && (
+            <div className="right-message">
+              <GrFormCheckmark className="right-icon" /> <p>Rätt!</p>
+            </div>
+          )}
+          {isWrong && (
+            <div className="wrong-message">
+              <GrFormCheckmark className="wrong-icon" /> <p>Fel!</p>
+            </div>
+          )}
           {!isCorrect && !isWrong && <div className="placeholder-sent"></div>}
           <div className="answer-box">
             {newArray.map((word, i) => {
