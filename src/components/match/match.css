@@ -1,0 +1,33 @@
+.button-start {
+    width: 120px;
+    height: 30px;
+    background-color: rgb(236, 98, 121);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 100px
+}
+
+.buttun-start:active {
+    transform: translateY(3px);
+}
+
+.match-container {
+    width: 380px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid pink;
+}
+
+.match-card {
+    border: 1px solid white;
+    cursor: pointer;
+    width: 100px;
+    margin: 10px;
+}
+
+.green {
+    border: 3px solid yellowgreen;
+}

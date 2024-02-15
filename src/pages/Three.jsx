@@ -5,6 +5,7 @@ import Back from "../components/buttons/back/Back";
 import { useState } from "react";
 import { Menu } from "../components/menu/Menu";
 import { Spell } from "../components/spell/Spell";
+import { Match } from "../components/match/Match";
 
 export const Three = () => {
   const [showFlash, setShowFlash] = useState(false);
@@ -15,6 +16,7 @@ export const Three = () => {
     <Menu setShowFlash={setShowFlash} setShowSpell={setShowSpell}/>
     {showFlash && <Carousel flashcardList={ThirdList} />}
     {showSpell && <Spell wordList={ThirdList} />}
+    <Match wordList={ThirdList}/>
   </div>
   );
 };

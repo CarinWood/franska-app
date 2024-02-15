@@ -3,7 +3,9 @@ import "./menu.css";
 import { BsCardText, BsPencil, BsSpellcheck } from "react-icons/bs";
 
 export const Menu = ({ setShowFlash, setShowSpell }) => {
-  const [menuAway, setMenuAway] = useState(false);
+  const [menuAway, setMenuAway] = useState(true);
+  
+
 
   const flash = () => {
     setMenuAway(true);
@@ -18,6 +20,8 @@ export const Menu = ({ setShowFlash, setShowSpell }) => {
       setShowSpell(true);
     }, 100);
   };
+
+
 
   return (
     <div className={menuAway ? "menu away" : "menu"}>

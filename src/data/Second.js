@@ -65,3 +65,7 @@ export const SecondList = [
   { id: 64, fr: "célibataire", sv: "singel" },
   { id: 65, fr: "mon", sv: "min, mitt" },
 ];
+
+export const secondMatchList = [
+  
+]
