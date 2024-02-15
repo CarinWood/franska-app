@@ -63,7 +63,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
-.correct-btn, .next-word-btn {
+.correct-btn, .next-word-btn, .try-btn {
     background-color: #5cb85c;
     color: white;
     padding: 5px 7px;
@@ -81,13 +81,18 @@
     margin-bottom: 20px;
 }
 
-.correct-btn:active, .next-word-btn:active {
+.correct-btn:active, .next-word-btn:active, .try-btn:active {
     transform: translateY(3px)
 }
 
 .next-word-btn {
     background-color: rgb(202, 149, 49);
     color: white;
+}
+
+.try-btn {
+    background-color:rgb(161, 8, 8);
+    width: 140px;
 }
 
 .check-area {
@@ -116,4 +121,8 @@
 .hide {
     visibility: hidden;
     height: 0px;
+}
+
+.instructions {
+    margin-top: 10px;
 }

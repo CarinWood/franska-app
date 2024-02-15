@@ -74,8 +74,14 @@ export const Sentences = ({ sentenceList }) => {
     const filteredArray = checkArray.filter((_, index) => index !== id);
     setCheckArray(filteredArray);
 
-    const filteredIndicies = clickedIndices.filter((_, index) => index !== id)
-    setClickedIndices(filteredIndicies)
+    const filteredIndicies = clickedIndices.filter((_, index) => index !== id);
+    setClickedIndices(filteredIndicies);
+  };
+
+  const tryAgain = () => {
+    setCheckArray([]);
+    setClickedIndices([]);
+    setIsWrong(false);
   };
 
   const resetAndNext = () => {
@@ -152,12 +158,17 @@ export const Sentences = ({ sentenceList }) => {
             <button className="next-word-btn" onClick={resetAndNext}>
               Nästa ord
             </button>
+          ) : isWrong ? (
+            <button className="try-btn" onClick={tryAgain}>
+              Försök igen
+            </button>
           ) : (
             <button className="correct-btn" onClick={checkBuiltSentence}>
               Rätta
             </button>
           )}
-          <p>Klicka på orden i rätt ordning</p>
+
+          <p className="instructions">Klicka på orden i rätt ordning</p>
         </div>
       )}
     </>
