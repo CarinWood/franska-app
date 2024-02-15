@@ -99,7 +99,7 @@ export const Sentences = ({ sentenceList }) => {
     setGameOver(false);
   };
   return (
-    <>
+    <div className="sentence-container">
       {gameOver ? (
         <div className="game-over-card">
           <p className="finished-heading">
@@ -171,6 +171,6 @@ export const Sentences = ({ sentenceList }) => {
           <p className="instructions">Klicka på orden i rätt ordning</p>
         </div>
       )}
-    </>
+    </div>
   );
 };

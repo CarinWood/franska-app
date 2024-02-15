@@ -1,5 +1,10 @@
+.sentence-container {
+    margin-top: 30px;
+    width: 100%;
+}
+
 .sentences {
-    margin-top: 10px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +21,7 @@
 }
 
 .answer-box {
-    margin: 40px 0px 0px 0px;
+    margin: 35px 0px 12px 0px;
     width: 400px;
     min-height: 60px;
     display: flex;
