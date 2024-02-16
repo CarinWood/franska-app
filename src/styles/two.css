@@ -6,4 +6,5 @@
     justify-content: flex-start;   
     min-height: 100vh; 
     margin-top: 100px;
+    overflow-x: hidden;
 }

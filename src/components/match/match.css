@@ -9,6 +9,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    position: absolute;
+    left: 50%;
+    margin-left: -165px;
 }
 
 .match-headline {
@@ -60,8 +63,9 @@
 }
 
 .match-card {
-    width: 120px;
+    width: 140px;
     height: 62px;
+    font-size: 17px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,4 +101,14 @@
         opacity: 0.3;
         border: 2px solid rgba(255, 255, 255, 0.2);
     }
+}
+
+
+@media screen and (max-width: 600px) {
+    .match-container {
+    width: 330px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 55px;
+}
 }
