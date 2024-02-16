@@ -1,7 +1,12 @@
 .overview {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.chapters {
+    display: flex;
 }
 
 .overview ul {
@@ -19,14 +24,27 @@
     margin: 10px;
 }
 
+.specials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px !important;
+
+}
+
 .spec {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 200px;
 }
 
 .overview-icon {
     font-size: 22px;
     margin-right: 15px;
+}
+
+
+@media screen and (max-width: 600px) {
+  
 }
