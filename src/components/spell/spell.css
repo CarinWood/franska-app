@@ -67,7 +67,7 @@
 }
 
 .buttons {
-    width: 300px;
+    width: 330px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -104,7 +104,7 @@
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 14px;
     letter-spacing: 1px;
     cursor: pointer;
     display: flex;

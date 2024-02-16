@@ -8,6 +8,7 @@ export const Match = ({ wordList }) => {
   const [secondChoice, setSecondChoice] = useState();
   const [firstChoice, setFirstChoice] = useState();
   const [rightAnswers, setRightAnswers] = useState(0);
+  const [startClicked, isStartClicked] = useState(false);
 
   useEffect(() => {
     if (firstChoice && secondChoice) {
@@ -20,6 +21,7 @@ export const Match = ({ wordList }) => {
   }, [firstChoice, secondChoice]);
 
   const startGame = () => {
+    if (!startClicked) isStartClicked(true);
     const shuffledArray = wordArray.sort(() => Math.random() - 0.5);
     const newSvArray = shuffledArray
       .slice(0, 5)
@@ -27,6 +29,10 @@ export const Match = ({ wordList }) => {
     const newFrArray = shuffledArray
       .slice(0, 5)
       .map((word) => ({ ...word, langue: "fr", matched: false }));
+
+    newSvArray.sort(() => Math.random() - 0.5);
+    newFrArray.sort(() => Math.random() - 0.5);
+
     setSvArray(newSvArray);
     setFrArray(newFrArray);
   };
@@ -84,15 +90,26 @@ export const Match = ({ wordList }) => {
     if (firstChoice && secondChoice) checkForMatch();
   };
 
-  const restartGame =() => {
-    
-  }
+  const restartGame = () => {
+    setRightAnswers(0);
+    setTimeout(() => {
+      startGame();
+    }, 400);
+  };
 
   return (
     <div>
-      <button className="button-start" onClick={startGame}>
-        Start
-      </button>
+      {!startClicked && (
+        <div className="match-start">
+          <h3 className="match-headline">Matcha orden</h3>
+          <p className="match-text">
+            Matcha de franska orden med rätt svensk översättning
+          </p>
+          <button className="button-start" onClick={startGame}>
+            Start
+          </button>
+        </div>
+      )}
 
       {/* Container for swedish match cards */}
       <section className="match-container">

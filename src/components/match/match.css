@@ -1,15 +1,45 @@
+
+.match-start {
+    margin-top: 80px;
+    width: 330px;
+    height: 200px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.match-headline {
+    margin-top: 20px;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px black;
+}
+
+.match-text {
+    width: 230px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
 .button-start {
-    width: 120px;
-    height: 30px;
-    background-color: rgb(236, 98, 121);
+    width: 110px;
+    height: 32px;   
+    background: rgb(63, 63, 216);
     border: none;
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    margin-top:20px
+    margin-top:30px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-shadow: 2px 2px black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
-.buttun-start:active {
+.button-start:active {
     transform: translateY(3px);
 }
 
@@ -17,6 +47,7 @@
     width: 380px;
     display: flex;
     justify-content: space-around;
+    margin-top: 55px;
 }
 
 .outer-match-box {
@@ -29,8 +60,8 @@
 }
 
 .match-card {
-    width: 110px;
-    height: 60px;
+    width: 120px;
+    height: 62px;
     display: flex;
     align-items: center;
     justify-content: center;

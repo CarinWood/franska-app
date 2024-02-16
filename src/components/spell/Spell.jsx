@@ -62,6 +62,9 @@ export const Spell = ({ wordList }) => {
   const addCharacter = (e, num) => {
     e.preventDefault();
     switch (num) {
+      case 0:
+        setFrenchAnswer(frenchAnswer + (shiftActive ? "Â" : "â"))
+        break;
       case 1:
         setFrenchAnswer(frenchAnswer + (shiftActive ? "À" : "à"));
         break;
@@ -163,6 +166,9 @@ export const Spell = ({ wordList }) => {
               <div className="buttons">
                 <button className="shift" onClick={pressShift}>
                   Shift
+                </button>
+                <button onClick={(e) => addCharacter(e, 0)}>
+                  {shiftActive ? "Â" : "â"}
                 </button>
                 <button onClick={(e) => addCharacter(e, 1)}>
                   {shiftActive ? "À" : "à"}

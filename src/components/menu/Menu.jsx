@@ -1,11 +1,10 @@
 import { useState } from "react";
 import "./menu.css";
-import { BsCardText, BsPencil, BsSpellcheck } from "react-icons/bs";
+import { BsCardText, BsPencil } from "react-icons/bs";
+import { PiCardsLight } from "react-icons/pi";
 
-export const Menu = ({ setShowFlash, setShowSpell }) => {
-  const [menuAway, setMenuAway] = useState(true);
-  
-
+export const Menu = ({ setShowFlash, setShowSpell, setShowMatch }) => {
+  const [menuAway, setMenuAway] = useState(false);
 
   const flash = () => {
     setMenuAway(true);
@@ -21,7 +20,12 @@ export const Menu = ({ setShowFlash, setShowSpell }) => {
     }, 100);
   };
 
-
+  const match = () => {
+    setMenuAway(true);
+    setTimeout(() => {
+      setShowMatch(true);
+    }, 100);
+  };
 
   return (
     <div className={menuAway ? "menu away" : "menu"}>
@@ -35,6 +39,11 @@ export const Menu = ({ setShowFlash, setShowSpell }) => {
         <li onClick={spell}>
           <BsPencil className="icon" />
           <p>Skriv orden</p>
+        </li>
+
+        <li onClick={match}>
+          <PiCardsLight className="icon" />
+          <p>Matcha</p>
         </li>
       </ul>
     </div>
