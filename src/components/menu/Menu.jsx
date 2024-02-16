@@ -29,7 +29,7 @@ export const Menu = ({ setShowFlash, setShowSpell, setShowMatch }) => {
 
   return (
     <div className={menuAway ? "menu away" : "menu"}>
-      <p className="menu-headline">Hur vill du träna?</p>
+      <p className="menu-headline">Vad vill du träna?</p>
       <ul className="menu-list">
         <li onClick={flash}>
           <BsCardText className="icon" />
