@@ -60,7 +60,7 @@ export const Match = ({ wordList }) => {
 
           setSvArray(updatedSvArray);
           setFrArray(updatedFrArray);
-        }, 300);
+        }, 200);
         console.log(rightAnswers);
         if (rightAnswers === 4) {
           restartGame();
@@ -71,7 +71,7 @@ export const Match = ({ wordList }) => {
       setTimeout(() => {
         setFirstChoice(null);
         setSecondChoice(null);
-      }, 300);
+      }, 200);
     }
   };
 
@@ -94,7 +94,7 @@ export const Match = ({ wordList }) => {
     setRightAnswers(0);
     setTimeout(() => {
       startGame();
-    }, 400);
+    }, 600);
   };
 
   return (

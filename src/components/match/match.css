@@ -89,7 +89,7 @@
 #fadeaway {
     opacity: 0.3;
     cursor: unset;
-    animation: fade 1s linear;
+    animation: fade 900ms linear;
 }
 
 @keyframes fade {
