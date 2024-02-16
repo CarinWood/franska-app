@@ -5,12 +5,9 @@ export const Match = ({ wordList }) => {
   const [wordArray, setWordArray] = useState(wordList);
   const [svArray, setSvArray] = useState([]);
   const [frArray, setFrArray] = useState([]);
-  const [secondChoice, setSecondChoice] = useState(null);
-  const [firstChoice, setFirstChoice] = useState(null);
-  const [clickedIndices, setClickedIndices] = useState([]);
-  const [secClickedIndices, setSecClickedIndices] = useState([]);
+  const [secondChoice, setSecondChoice] = useState();
+  const [firstChoice, setFirstChoice] = useState();
 
-  useEffect(() => {}, [clickedIndices]);
   useEffect(() => {
     if (firstChoice && secondChoice) {
       checkForMatch();
@@ -19,64 +16,59 @@ export const Match = ({ wordList }) => {
 
   useEffect(() => {
     checkForMatch();
-    console.log(svArray);
   }, [firstChoice, secondChoice]);
-
-
-  useEffect(() => {
-    console.log(clickedIndices);
-  }, [clickedIndices, secClickedIndices]);
 
   const startGame = () => {
     const shuffledArray = wordArray.sort(() => Math.random() - 0.5);
-    const newSvArray = shuffledArray.slice(0, 5);
-    const newFrArray = shuffledArray.slice(0, 5);
+    const newSvArray = shuffledArray
+      .slice(0, 5)
+      .map((word) => ({ ...word, langue: "sv", matched: false }));
+    const newFrArray = shuffledArray
+      .slice(0, 5)
+      .map((word) => ({ ...word, langue: "fr", matched: false }));
     setSvArray(newSvArray);
     setFrArray(newFrArray);
   };
 
   const checkForMatch = () => {
     if (firstChoice && secondChoice) {
-      if (firstChoice === secondChoice) {
-        console.log("win");
-        let filterSvArray = svArray.filter((word) => word.id !== firstChoice);
-        setSvArray(filterSvArray);
-        let filterFrArray = frArray.filter((word) => word.id !== firstChoice);
-        setFrArray(filterFrArray);
+      if (firstChoice.id === secondChoice.id) {
+        const updatedSvArray = svArray.map((word) => {
+          if (word.id === firstChoice.id) {
+            return { ...word, matched: true };
+          } else {
+            return word;
+          }
+        });
+
+        const updatedFrArray = frArray.map((word) => {
+          if (word.id === firstChoice.id) {
+            return { ...word, matched: true };
+          } else {
+            return word;
+          }
+        });
+
+        setSvArray(updatedSvArray);
+        setFrArray(updatedFrArray);
       } else {
       }
-      const filteredIndicies = clickedIndices.filter(
-        (id) => id !== firstChoice
-      );
-      setClickedIndices(filteredIndicies);
-      const filteredSecIndicies = secClickedIndices.filter(
-        (id) => id !== firstChoice
-      );
-      setSecClickedIndices(filteredSecIndicies);
 
-      setFirstChoice(null);
-      setSecondChoice(null);
+    
+        setFirstChoice(null);
+        setSecondChoice(null);
+   
     }
   };
 
-  const setChoiceLeft = (id) => {
-    setClickedIndices([...clickedIndices, id]);
+  const setChoice = (id, langue, matched) => {
+    if (matched) return;
     if (firstChoice) {
-      setSecondChoice(id);
+      setSecondChoice({ id: id, langue: langue });
     } else {
-      setFirstChoice(id);
+      setFirstChoice({ id: id, langue: langue });
     }
 
-    if (firstChoice && secondChoice) checkForMatch();
-  };
-
-  const setChoiceRight = (id) => {
-    setSecClickedIndices([...secClickedIndices, id]);
-    if (firstChoice) {
-      setSecondChoice(id);
-    } else {
-      setFirstChoice(id);
-    }
     if (firstChoice && secondChoice) checkForMatch();
   };
 
@@ -91,16 +83,24 @@ export const Match = ({ wordList }) => {
         <div>
           {svArray.map((word) => {
             return (
-              <div
-                onClick={() => setChoiceLeft(word.id)}
-                className={
-                  clickedIndices.includes(word.id)
-                    ? "match-card green"
-                    : "match-card"
-                }
-                key={word.id}
-              >
-                {word.sv}
+              <div className="outer-match-box">
+                <div
+                  id={word.matched ? "fadeaway" : null}
+                  onClick={() => setChoice(word.id, word.langue, word.matched)}
+                  className={
+                    (firstChoice &&
+                      firstChoice.id === word.id &&
+                      firstChoice.langue === word.langue) ||
+                    (secondChoice &&
+                      secondChoice.id === word.id &&
+                      secondChoice.langue === word.langue)
+                      ? "match-card green"
+                      : "match-card"
+                  }
+                  key={word.id}
+                >
+                  {word.sv}
+                </div>
               </div>
             );
           })}
@@ -108,16 +108,24 @@ export const Match = ({ wordList }) => {
         <div>
           {frArray.map((word) => {
             return (
-              <div
-                onClick={() => setChoiceRight(word.id)}
-                className={
-                  secClickedIndices.includes(word.id)
-                    ? "match-card green"
-                    : "match-card"
-                }
-                key={word.id}
-              >
-                {word.fr}
+              <div className="outer-match-box">
+                <div
+                  onClick={() => setChoice(word.id, word.langue, word.matched)}
+                  id={word.matched ? "fadeaway" : null}
+                  className={
+                    (firstChoice &&
+                      firstChoice.id === word.id &&
+                      firstChoice.langue === word.langue) ||
+                    (secondChoice &&
+                      secondChoice.id === word.id &&
+                      secondChoice.langue === word.langue)
+                      ? "match-card green"
+                      : "match-card"
+                  }
+                  key={word.id}
+                >
+                  {word.fr}
+                </div>
               </div>
             );
           })}
