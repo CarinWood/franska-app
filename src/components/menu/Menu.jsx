@@ -41,7 +41,7 @@ export const Menu = ({ setShowFlash, setShowSpell, setShowMatch }) => {
           <p>Skriv orden</p>
         </li>
 
-        <li onClick={match}>
+        <li onClick={match} className="lower-item">
           <PiCardsLight className="icon" />
           <p>Matcha</p>
         </li>
