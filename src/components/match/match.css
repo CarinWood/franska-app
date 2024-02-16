@@ -111,4 +111,10 @@
     justify-content: space-around;
     margin-top: 55px;
 }
+
+.match-card {
+    width: 148px;
+    height: 63px;
+    font-size: 18px;
+}
 }
