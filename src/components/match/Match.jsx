@@ -7,6 +7,7 @@ export const Match = ({ wordList }) => {
   const [frArray, setFrArray] = useState([]);
   const [secondChoice, setSecondChoice] = useState();
   const [firstChoice, setFirstChoice] = useState();
+  const [rightAnswers, setRightAnswers] = useState(0);
 
   useEffect(() => {
     if (firstChoice && secondChoice) {
@@ -33,44 +34,59 @@ export const Match = ({ wordList }) => {
   const checkForMatch = () => {
     if (firstChoice && secondChoice) {
       if (firstChoice.id === secondChoice.id) {
-        const updatedSvArray = svArray.map((word) => {
-          if (word.id === firstChoice.id) {
-            return { ...word, matched: true };
-          } else {
-            return word;
-          }
-        });
+        setRightAnswers(rightAnswers + 1);
+        setTimeout(() => {
+          const updatedSvArray = svArray.map((word) => {
+            if (word.id === firstChoice.id) {
+              return { ...word, matched: true };
+            } else {
+              return word;
+            }
+          });
 
-        const updatedFrArray = frArray.map((word) => {
-          if (word.id === firstChoice.id) {
-            return { ...word, matched: true };
-          } else {
-            return word;
-          }
-        });
+          const updatedFrArray = frArray.map((word) => {
+            if (word.id === firstChoice.id) {
+              return { ...word, matched: true };
+            } else {
+              return word;
+            }
+          });
 
-        setSvArray(updatedSvArray);
-        setFrArray(updatedFrArray);
+          setSvArray(updatedSvArray);
+          setFrArray(updatedFrArray);
+        }, 300);
+        console.log(rightAnswers);
+        if (rightAnswers === 4) {
+          restartGame();
+        }
       } else {
       }
 
-    
+      setTimeout(() => {
         setFirstChoice(null);
         setSecondChoice(null);
-   
+      }, 300);
     }
   };
 
   const setChoice = (id, langue, matched) => {
     if (matched) return;
     if (firstChoice) {
-      setSecondChoice({ id: id, langue: langue });
+      if (firstChoice.langue === langue) {
+        setFirstChoice({ id: id, langue: langue });
+      } else {
+        setSecondChoice({ id: id, langue: langue });
+      }
     } else {
       setFirstChoice({ id: id, langue: langue });
     }
 
     if (firstChoice && secondChoice) checkForMatch();
   };
+
+  const restartGame =() => {
+    
+  }
 
   return (
     <div>

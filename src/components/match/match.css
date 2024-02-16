@@ -46,8 +46,24 @@
     border: 3px solid yellowgreen;
 }
 
+.red {
+    border: 3px solid red;
+}
+
 
 #fadeaway {
     opacity: 0.3;
-    cursor:unset;
+    cursor: unset;
+    animation: fade 1s linear;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        border: 3px solid yellowgreen;
+    }
+    100% {
+        opacity: 0.3;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
 }
