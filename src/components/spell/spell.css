@@ -123,7 +123,61 @@
 
 @media screen and (max-width: 460px) {
     .outer-container {
-        box-shadow: none
+        box-shadow: none;
+        width: 360px;
+        padding: 0px;
+        position: absolute;
+        left: 50%;
+        margin-left: -180px;
+
+    }
+
+    .french-input-wrapper, .swedish-input-wrapper {
+        height: 35px;
+        width: 290px;
+    }
+
+    .fake-input {
+        width: 290px;
+        height: 35px;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+    .input-container input {
+        font-size: 18px;
+        height: 35px;
+        width: 290px;
+        border-radius: 5px;
+    }
+
+    .french-input-wrapper, .swedish-input-wrapper {
+        height: 35px;
+    }
+
+    .buttons {
+        width: 320px;
+        margin-top: 3px;
+     
+    }
+
+    .buttons button {
+        background-color: #eeeeee;
+        width: 32px;
+        padding: 2px 5px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 16px;
+        margin-bottom: 7px;
+        margin-right: 4px;
+    }
+
+    .answer-btn {
+        padding: 9px 10px;
+        font-size: 18px;
+        margin-top: 5px;
     }
 
 }

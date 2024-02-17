@@ -92,6 +92,9 @@ export const Spell = ({ wordList }) => {
       case 9:
         setFrenchAnswer(frenchAnswer + (shiftActive ? "Û" : "û"));
         break;
+      case 10:
+        setFrenchAnswer(frenchAnswer + (shiftActive ? "Ù" : "ù"));
+        break;
       default:
         setFrenchAnswer(frenchAnswer);
     }
@@ -196,6 +199,9 @@ export const Spell = ({ wordList }) => {
                 </button>
                 <button onClick={(e) => addCharacter(e, 9)}>
                   {shiftActive ? "Û" : "û"}
+                </button>
+                <button onClick={(e) => addCharacter(e, 10)}>
+                  {shiftActive ? "Ù" : "ù"}
                 </button>
               </div>
               <button

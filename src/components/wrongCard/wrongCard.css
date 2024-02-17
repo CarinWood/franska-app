@@ -8,10 +8,10 @@
     padding-left: 15px;
     margin-bottom: 8px;
     line-height: 25px;
-    animation: fade 0.3s ease-in;
+    animation: wrongfade 0.3s ease-in;
 }
 
-@keyframes fade {
+@keyframes wrongfade {
     0% {
         opacity: 0;
 
@@ -37,6 +37,13 @@
     color: red;
     font-size: 18px;
     margin-right: 2px;
+}
+
+@media screen and (max-width: 600px) {
+    .wrong-card {
+        width: 360px;
+        height: 90px;
+    }
 }
 
 

@@ -10,7 +10,6 @@
     line-height: 25px;
     opacity: 1;
     animation: fades 0.3s ease-in;
-
 }
 
 
@@ -37,4 +36,10 @@
     margin-left: 6px;
     letter-spacing: 1px;
     text-shadow: 2px 2px black;
+}
+
+@media screen and (max-width: 600px) {
+    .right-card {
+        width: 360px;
+    }
 }
