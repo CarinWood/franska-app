@@ -41,8 +41,9 @@
 
 @media screen and (max-width: 600px) {
     .wrong-card {
-        width: 360px;
         height: 90px;
+        width: 330px;
+        margin-top: 60px;
     }
 }
 

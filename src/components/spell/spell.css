@@ -124,9 +124,10 @@
 @media screen and (max-width: 460px) {
     .outer-container {
         box-shadow: none;
-        width: 360px;
+        width: 375px;
         padding: 0px;
         position: absolute;
+        top: 35%;
         left: 50%;
         margin-left: -180px;
 
@@ -134,11 +135,11 @@
 
     .french-input-wrapper, .swedish-input-wrapper {
         height: 35px;
-        width: 290px;
+        width: 335px;
     }
 
     .fake-input {
-        width: 290px;
+        width: 330px;
         height: 35px;
         font-size: 18px;
         border-radius: 5px;
@@ -146,7 +147,7 @@
     .input-container input {
         font-size: 18px;
         height: 35px;
-        width: 290px;
+        width: 330px;
         border-radius: 5px;
     }
 
