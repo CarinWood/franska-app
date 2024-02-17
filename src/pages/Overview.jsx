@@ -20,7 +20,9 @@ const Overview = () => {
           <Link to="/kapitel_3" className="list-item">
             Unité 3
           </Link>
-          <Link className="list-item">Unité 4</Link>
+          <Link to="/kapitel_4" className="list-item">
+            Unité 4
+          </Link>
           <Link className="list-item">Unité 5</Link>
         </ul>
 

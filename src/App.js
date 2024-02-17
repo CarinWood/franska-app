@@ -1,4 +1,5 @@
 import "./App.css";
+import { Four } from "./pages/Four";
 import { One } from "./pages/One";
 import Overview from "./pages/Overview";
 import { SentencePage } from "./pages/SentencePage";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/kapitel_1" element={<One />} />
         <Route path="/kapitel_2" element={<Two />} />
         <Route path="/kapitel_3" element={<Three />} />
+        <Route path="/kapitel_4" element={<Four/>} />
         <Route path="/sentences" element={<SentencePage />} />
       </Routes>
     </div>
