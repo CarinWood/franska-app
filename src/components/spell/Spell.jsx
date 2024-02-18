@@ -127,7 +127,7 @@ export const Spell = ({ wordList }) => {
           quantityWrong={quantityWrong}
         />
       ) : (
-        <>
+        <div>
           {rightCard && <RightCard frenchWord={frenchWord} />}
           {wrongCard && (
             <WrongCard
@@ -215,7 +215,7 @@ export const Spell = ({ wordList }) => {
               </button>
             </form>
           </div>
-        </>
+        </ div>
       )}
     </div>
   );
