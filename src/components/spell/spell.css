@@ -126,11 +126,6 @@
         box-shadow: none;
         width: 375px;
         padding: 0px;
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        margin-left: -180px;
-
     }
 
     .french-input-wrapper, .swedish-input-wrapper {
