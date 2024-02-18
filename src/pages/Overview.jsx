@@ -23,15 +23,15 @@ const Overview = () => {
           <Link to="/kapitel_4" className="list-item">
             Unité 4
           </Link>
-          <Link className="list-item">Unité 5</Link>
+          <Link className="list-item invisible">Unité 5</Link>
         </ul>
 
         <ul>
-          <Link className="list-item">Unité 6</Link>
-          <Link className="list-item">Unité 7</Link>
-          <Link className="list-item">Unité 8</Link>
-          <Link className="list-item">Unité 9</Link>
-          <Link className="list-item">Unité 10</Link>
+          <Link className="list-item invisible">Unité 6</Link>
+          <Link className="list-item invisible">Unité 7</Link>
+          <Link className="list-item invisible">Unité 8</Link>
+          <Link className="list-item invisible">Unité 9</Link>
+          <Link className="list-item invisible">Unité 10</Link>
         </ul>
       </div>
       <ul className="specials">

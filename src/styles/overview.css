@@ -48,6 +48,10 @@
     margin-right: 15px;
 }
 
+.invisible {
+    opacity: 0;
+}
+
 
 @media screen and (max-width: 600px) {
   .overview {
