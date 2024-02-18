@@ -123,8 +123,8 @@
 
 @media screen and (max-width: 460px) {
     .spell {
- 
-        margin-top: -30px;
+        border: 1px solid white;
+        margin-bottom: 300px !important;
     }
     .outer-container {
         box-shadow: none;
@@ -134,7 +134,7 @@
 
     .french-input-wrapper, .swedish-input-wrapper {
         height: 35px;
-        width: 335px;
+        width: 343px;
     }
 
     .fake-input {
