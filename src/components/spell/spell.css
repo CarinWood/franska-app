@@ -123,8 +123,8 @@
 
 @media screen and (max-width: 460px) {
     .spell {
-        border: 1px solid white;
-        margin-bottom: 300px !important;
+       position: absolute;
+       top: 0%;
     }
     .outer-container {
         box-shadow: none;
