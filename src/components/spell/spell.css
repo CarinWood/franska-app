@@ -123,9 +123,10 @@
 
 @media screen and (max-width: 460px) {
     .spell {
-       border: 1px solid white;
        position: absolute;
        top: 20%;
+       height: 100%;
+       overflow: hidden;
     }
     .outer-container {
         box-shadow: none;
