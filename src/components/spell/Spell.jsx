@@ -161,6 +161,7 @@ export const Spell = ({ wordList }) => {
                   ref={inputRef}
                   type="text"
                   placeholder="Översätt"
+                  autocapitalize="none"
                   value={frenchAnswer}
                   onChange={(e) => startWrite(e)}
                   onKeyPress={handleKeyPress}
