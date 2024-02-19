@@ -1,3 +1,4 @@
+import { DndProvider } from "react-dnd";
 import "./App.css";
 import { Four } from "./pages/Four";
 import { One } from "./pages/One";
@@ -5,11 +6,14 @@ import Overview from "./pages/Overview";
 import { SentencePage } from "./pages/SentencePage";
 import { Three } from "./pages/Three";
 import { Two } from "./pages/Two";
+import { Verb } from "./pages/Verb";
 import { Zero } from "./pages/Zero";
 import { Route, Routes } from "react-router-dom";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 function App() {
   return (
+    <DndProvider backend={HTML5Backend}>
     <div className="app">
       <Routes>
         <Route path="/" element={<Overview />} />
@@ -19,8 +23,10 @@ function App() {
         <Route path="/kapitel_3" element={<Three />} />
         <Route path="/kapitel_4" element={<Four/>} />
         <Route path="/sentences" element={<SentencePage />} />
+        <Route path="/verb" element={<Verb />} />
       </Routes>
     </div>
+    </DndProvider>
   );
 }
 

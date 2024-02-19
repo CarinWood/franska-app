@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/overview.css";
-import { FaFlagCheckered } from "react-icons/fa";
-import { BsPencil } from "react-icons/bs";
+import { BsPencil, BsBook } from "react-icons/bs";
+import { GiNotebook } from "react-icons/gi";
 
 const Overview = () => {
   return (
@@ -39,10 +39,10 @@ const Overview = () => {
           <BsPencil className="overview-icon" />
           bygg meningar
         </Link>
-        {/*     <Link to="/challenge" className="list-item spec">
-          <FaFlagCheckered className="overview-icon" />
-          Utmaningen
-        </Link> */}
+        <Link to="/verb" className="list-item spec">
+          <BsBook className="overview-icon" />
+          Öva verb
+        </Link>
       </ul>
     </div>
   );

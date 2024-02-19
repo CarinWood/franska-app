@@ -119,9 +119,9 @@ export const zeroSentences = [
   },
   {
     id: 7,
-    fr: "Elles mangent souvent desbonbons",
+    fr: "Elles mangent souvent des bonbons",
     sv: "De äter ofta godis",
-    quant: 4,
+    quant: 5,
   },
   {
     id: 8,

@@ -1,0 +1,16 @@
+.verb-card {
+    color: white;
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    cursor:grab
+
+}
+
+.disappear {
+    visibility: hidden;
+}
