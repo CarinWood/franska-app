@@ -4,11 +4,18 @@ import "../styles/verb.css";
 import { useDrop } from "react-dnd";
 
 export const Verb = () => {
-  const [table, setTable] = useState([]);
+  const [table, setTable] = useState([
+    {
+      id: 1,
+      subject: "j'",
+      person: "jag har: ",
+      verb: "",
+    },
+  ]);
   const [verbList, setVerbList] = useState([
     {
       id: 1,
-      verb: "'ai",
+      verb: "ai",
     },
     {
       id: 2,
@@ -29,19 +36,40 @@ export const Verb = () => {
   }));
 
   const addWordToBoard = (id) => {
-    const tableList = verbList.filter((verb) => id === verb.id);
-    setTable(table => [...table, tableList[0]]);
-   
-    setVerbList((prevVerbList) => {
-        const newVerbList = prevVerbList.filter((verb) => id !== verb.id);
-        return newVerbList;
+    if (id !== 1) return;
+    const selectedVerb = verbList.find((verb) => verb.id === id);
+
+    setTable((prevTable) => {
+      return prevTable.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            verb: selectedVerb ? selectedVerb.verb : "",
+          };
+        }
+        return item;
       });
+    });
+
+    setVerbList((prevVerbList) => {
+      return prevVerbList.filter((verb) => verb.id !== id);
+    });
   };
+
   return (
     <>
       <div className="verb-table" ref={drop}>
-        {table.map((verb) => {
-          return <VerbCard id={verb.id} verb={verb.verb} key={verb.id} />;
+        <h4 className="headline-text">Avoir</h4>
+        {table.map((item) => {
+          return (
+            <div key={item.id} className="holder">
+              <p className="person">{item.person}</p>
+              <p className="subject">{item.subject}</p>
+              <div className="verb-border">
+              <p className="verb-item">{item.verb}</p>
+              </div>
+            </div>
+          );
         })}
       </div>
       <div className="verbs">
