@@ -105,31 +105,49 @@ export const zeroSentences = [
   },
   {
     id: 4,
-    fr: "Comment on dit ... en français?",
+    fr: "Comment on dit ... en français ?",
     sv: "Hur säger man ... på franska?",
-    quant: 6,
+    quant: 7,
   },
   { id: 5, fr: "Je ne comprends pas", sv: "Jag förstår inte", quant: 4 },
-];
 
+  {
+    id: 6,
+    fr: "Ça coûte combien ?",
+    sv: "Hur mycket kostar det?",
+    quant: 4,
+  },
+  {
+    id: 7,
+    fr: "Elles mangent souvent desbonbons",
+    sv: "De äter ofta godis",
+    quant: 4,
+  },
+  {
+    id: 8,
+    fr: "Mes cousins n'aiment pas la pluie",
+    sv: "Mina kusiner gillar inte regnet",
+    quant: 6,
+  },
+];
 
 export const zeroMatchList = [
   { id: 1, fr: "le chocolat", sv: "choklad" },
-  { id: 2, fr: "s'appeler", sv: "heta"},
+  { id: 2, fr: "s'appeler", sv: "heta" },
   { id: 3, fr: "le cinéma", sv: "biograf" },
   { id: 4, fr: "le croissant", sv: "croissant" },
   { id: 5, fr: "le train", sv: "tåg" },
   { id: 6, fr: "excuser", sv: "ursäkta" },
-  { id: 7, fr: "français", sv: "fransk"},
+  { id: 7, fr: "français", sv: "fransk" },
   { id: 8, fr: "pardon", sv: "ursäkta" },
   { id: 9, fr: "bonjour", sv: "god dag" },
   { id: 10, fr: "salut", sv: "hej/hej då" },
   { id: 11, fr: "au revoir", sv: "adjö" },
-  { id: 12, fr: "comment", sv: "hur"},
-  { id: 13, fr: "trente", sv: "trettio"},
+  { id: 12, fr: "comment", sv: "hur" },
+  { id: 13, fr: "trente", sv: "trettio" },
   { id: 14, fr: "oui", sv: "ja" },
   { id: 15, fr: "non", sv: "nej" },
-  { id: 16, fr: "vingt-neuf", sv: "tjugonio"},
+  { id: 16, fr: "vingt-neuf", sv: "tjugonio" },
   { id: 17, fr: "merci", sv: "tack" },
   { id: 18, fr: "très", sv: "mycket" },
   { id: 19, fr: "bien", sv: "bra" },
@@ -142,7 +160,7 @@ export const zeroMatchList = [
   { id: 26, fr: "ils", sv: "de (mask.)" },
   { id: 27, fr: "elles", sv: "de (fem.)" },
   { id: 28, fr: "et", sv: "och" },
-  { id: 29, fr: "demander", sv: "fråga"},
+  { id: 29, fr: "demander", sv: "fråga" },
   { id: 30, fr: "un", sv: "ett" },
   { id: 31, fr: "deux", sv: "två" },
   { id: 32, fr: "trois", sv: "tre" },
@@ -163,13 +181,11 @@ export const zeroMatchList = [
   { id: 47, fr: "dix-huit", sv: "arton" },
   { id: 48, fr: "dix-neuf", sv: "nitton" },
   { id: 49, fr: "vingt", sv: "tjugo" },
-  { id: 50, fr: "vingt-huit", sv: "tjugoåtta"},
+  { id: 50, fr: "vingt-huit", sv: "tjugoåtta" },
   { id: 51, fr: "vingt-deux", sv: "tjugotvå" },
   { id: 52, fr: "vingt-trois", sv: "tjugotre" },
   { id: 53, fr: "vingt-quatre", sv: "tjugofyra" },
   { id: 54, fr: "vingt-cinq", sv: "tjugofem" },
   { id: 55, fr: "vingt-six", sv: "tjugosex" },
   { id: 56, fr: "vingt-sept", sv: "tjugosju" },
- ];
-  
-
+];

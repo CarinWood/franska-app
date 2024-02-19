@@ -7,7 +7,7 @@ export const FirstList = [
   { id: 6, fr: "la langue", sv: "språk" },
   { id: 7, fr: "la musique", sv: "musik" },
   { id: 8, fr: "le sport", sv: "sport, idrott" },
-  { id: 9, fr: "le café", sv: "kaffe ; café" },
+  { id: 9, fr: "le café", sv: "kaffe, café" },
   { id: 10, fr: "l'histoire", sv: "historia" },
   { id: 11, fr: "le chocolat", sv: "choklad" },
   { id: 12, fr: "trente-deux", sv: "trettiotvå" },
@@ -27,14 +27,14 @@ export const FirstList = [
   { id: 26, fr: "soixante et un", sv: "sextioett" },
   { id: 27, fr: "soixante-neuf", sv: "sextionio" },
   { id: 28, fr: "parler", sv: "tala, prata" },
-  { id: 29, fr: "quel, quelle", sv: "vilken, vilket (i mask. /fem. form)" },
-  { id: 30, fr: "le nom", sv: "(efter)namn" },
+  { id: 29, fr: "quel", sv: "vilken, vilket (mask.)" },
+  { id: 30, fr: "quelle", sv: "vilken, vilket (fem.)" },
   { id: 31, fr: "le prénom", sv: "förnamn" },
   { id: 32, fr: "la date de naissance", sv: "födelsedatum" },
   { id: 33, fr: "le lieu de naissance", sv: "födelseort" },
   { id: 34, fr: "le lieu", sv: "ställe, ort, plats" },
   { id: 35, fr: "la naissance", sv: "födelse" },
-  { id: 36, fr: "né(e)", sv: "född" },
+  { id: 36, fr: "né", sv: "född" },
   { id: 37, fr: "le pays", sv: "land" },
   { id: 38, fr: "la ville", sv: "stad" },
   { id: 39, fr: "soixante-dix", sv: "sjuttio" },
@@ -93,6 +93,7 @@ export const FirstList = [
   { id: 88, fr: "la phrase", sv: "mening" },
   { id: 89, fr: "la célébrité", sv: "berömdhet, kändis" },
   { id: 90, fr: "l'âge", sv: "ålder" },
+  { id: 91, fr: "le nom", sv: "(efter)namn" },
 ];
 
 export const firstMatchList = [
@@ -136,7 +137,7 @@ export const firstMatchList = [
   { id: 38, fr: "la ville", sv: "stad" },
   { id: 39, fr: "soixante-dix", sv: "sjuttio" },
   { id: 40, fr: "trouver", sv: "hitta" },
-  { id: 41, fr: "la nationalité", sv: "nationalitet"},
+  { id: 41, fr: "la nationalité", sv: "nationalitet" },
   { id: 42, fr: "comment", sv: "hur" },
   { id: 43, fr: "quatre-vingts", sv: "åttio" },
   { id: 44, fr: "utiliser", sv: "använda" },
@@ -158,5 +159,4 @@ export const firstMatchList = [
   { id: 60, fr: "dans", sv: "i" },
   { id: 61, fr: "être", sv: "vara" },
   { id: 62, fr: "habiter", sv: "bo" },
-
 ];

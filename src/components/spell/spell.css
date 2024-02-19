@@ -1,5 +1,6 @@
 .spell {
-    margin-top: 70px;
+    position: fixed;
+    
 }
 
 .outer-container {
@@ -124,7 +125,7 @@
 @media screen and (max-width: 460px) {
     .spell {
        position: fixed;
-       top: 30%;
+       top: 10%;
        height: 100%;
     }
     .outer-container {
