@@ -1,9 +1,12 @@
 .verb-table {
+    padding-top: 10px;
     width: 600px;
     min-height: 200px;
-    border: 1px solid white;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 6px;
     position: absolute;
-    top: 10%;
+    top: 4%;
     left: 50%;
     margin-left: -300px;
     display: flex;
@@ -12,8 +15,11 @@
     align-items: center;
 }
 
+.row {
+    margin-bottom: 18px;
+}
 .headline-text {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
@@ -21,6 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .inner-box {
@@ -29,33 +36,13 @@
     justify-content: center;
 }
 
-.subject {
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 3px;
-}
 
-.person {
-    opacity: 0.6;
-    margin-right: 13px;
-}
 
-.verb-border {
-    width: 80px;
-    height: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 5px;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 5px;
-}
 
 .verb-item {
     width: 100px;
     height: 50px;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -64,8 +51,13 @@
 }
 
 .verbs {
-    border: 1px solid pink;
-    width: 500px;
-    height: 200px;
-    margin-top: 140px;
+    width: 600px;
+    height: 140px;
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    margin-left: -300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }

@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    width: 130px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.verb-border {
+    width: 80px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 5px 10px 5px;
+}
+
+.subject {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 3px;
+    width: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.person {
+    opacity: 0.6;
+    width: 60px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
