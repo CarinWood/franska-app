@@ -111,7 +111,6 @@ export const Spell = ({ wordList }) => {
     }
   };
 
-  console.log(hardWordsArr);
   const addCharacter = (e, num) => {
     e.preventDefault();
     switch (num) {

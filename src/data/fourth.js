@@ -206,8 +206,8 @@ export const FourthList = [
   },
   {
     id: 42,
-    fr: "le/la journaliste",
-    sv: "journalist",
+    fr: "le journaliste",
+    sv: "journalist (mask.)",
   },
   {
     id: 43,
