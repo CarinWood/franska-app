@@ -13,6 +13,7 @@ export const Sentences = ({ sentenceList }) => {
   const [oldSentence, setOldSentence] = useState("");
   const [gameOver, setGameOver] = useState(false);
 
+
   const getSentence = () => {
     return <p>{sentenceList[currentNum].sv}</p>;
   };

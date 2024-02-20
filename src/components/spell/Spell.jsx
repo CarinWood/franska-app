@@ -17,6 +17,8 @@ export const Spell = ({ wordList }) => {
   const [finished, setFinished] = useState(false);
   const [quantityRight, setQuantityRight] = useState(0);
   const [quantityWrong, setQuantityWrong] = useState(0);
+  const [hardWordsArr, setHardWordsArr] = useState([]);
+  const [hardMode, setHardmode] = useState(false);
 
   const inputRef = useRef(null);
 
@@ -25,10 +27,18 @@ export const Spell = ({ wordList }) => {
   };
 
   const getCurrentWord = () => {
-    return <p>{wordList[currenObject].sv}</p>;
+    if (hardMode && currenObject >= 0 && currenObject < hardWordsArr.length) {
+      return <p>{hardWordsArr[currenObject].sv}</p>;
+    } else {
+      return <p>{wordList[currenObject].sv}</p>;
+    }
   };
   const getCurrentFrenchWord = () => {
-    return <span>{wordList[currenObject].fr}</span>;
+    if (hardMode && currenObject >= 0 && currenObject < hardWordsArr.length) {
+      return <span>{hardWordsArr[currenObject].fr}</span>;
+    } else {
+      return <span>{wordList[currenObject].fr}</span>;
+    }
   };
 
   const pressShift = (e) => {
@@ -36,15 +46,22 @@ export const Spell = ({ wordList }) => {
     setShiftActive(!shiftActive);
   };
 
-  const submitAnswer = (e) => {
+  const clickAnswer = (e) => {
     e.preventDefault();
-    setShiftActive(false);
-    if (frenchAnswer === wordList[currenObject].fr) {
+    if (hardMode) {
+      submitHardWord();
+    } else {
+      submitAnswer();
+    }
+  };
+
+  const submitHardWord = () => {
+    if (frenchAnswer === hardWordsArr[currenObject].fr) {
       setQuantityRight(quantityRight + 1);
       if (wrongCard === true) setWrongCard(false);
       setFrenchWord(frenchAnswer);
       setRightCard(true);
-      if (currenObject < wordList.length - 1) {
+      if (currenObject < hardWordsArr.length - 1) {
         setCurrentObject(currenObject + 1);
       } else {
         setFinished(true);
@@ -59,11 +76,47 @@ export const Spell = ({ wordList }) => {
     }
   };
 
+  const submitAnswer = () => {
+    setShiftActive(false);
+
+    if (frenchAnswer === wordList[currenObject].fr) {
+      setQuantityRight(quantityRight + 1);
+      if (wrongCard === true) setWrongCard(false);
+      setFrenchWord(frenchAnswer);
+      setRightCard(true);
+      if (currenObject < wordList.length - 1) {
+        setCurrentObject(currenObject + 1);
+      } else {
+        setFinished(true);
+      }
+      setFrenchAnswer("");
+    } else {
+      if (!hardMode) {
+        const hardWord = {
+          id: wordList[currenObject].id,
+          fr: wordList[currenObject].fr,
+          sv: wordList[currenObject].sv,
+        };
+
+        setHardWordsArr((prevArray) => {
+          return [...prevArray, hardWord];
+        });
+      }
+
+      setQuantityWrong(quantityWrong + 1);
+      if (rightCard === true) setRightCard(false);
+      setFrenchWord(frenchAnswer);
+      setFrenchAnswer("");
+      setWrongCard(true);
+    }
+  };
+
+  console.log(hardWordsArr);
   const addCharacter = (e, num) => {
     e.preventDefault();
     switch (num) {
       case 0:
-        setFrenchAnswer(frenchAnswer + (shiftActive ? "Â" : "â"))
+        setFrenchAnswer(frenchAnswer + (shiftActive ? "Â" : "â"));
         break;
       case 1:
         setFrenchAnswer(frenchAnswer + (shiftActive ? "À" : "à"));
@@ -104,17 +157,29 @@ export const Spell = ({ wordList }) => {
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      submitAnswer(e);
+      clickAnswer(e);
     }
   };
 
   const resetExercise = () => {
     setCurrentObject(0);
-    setFrenchAnswer("")
-    setWrongCard(false)
-    setRightCard(false)
-    setQuantityRight(0)
-    setQuantityWrong(0)
+    setFrenchAnswer("");
+    setWrongCard(false);
+    setRightCard(false);
+    setQuantityRight(0);
+    setQuantityWrong(0);
+    setHardWordsArr([]);
+    setHardmode(false);
+  };
+
+  const exerciseFaults = () => {
+    setHardmode(true);
+    setCurrentObject(0);
+    setFrenchAnswer("");
+    setWrongCard(false);
+    setRightCard(false);
+    setQuantityRight(0);
+    setQuantityWrong(0);
   };
 
   return (
@@ -125,6 +190,7 @@ export const Spell = ({ wordList }) => {
           resetExercise={resetExercise}
           quantityRight={quantityRight}
           quantityWrong={quantityWrong}
+          exerciseFaults={exerciseFaults}
         />
       ) : (
         <div>
@@ -161,7 +227,7 @@ export const Spell = ({ wordList }) => {
                   ref={inputRef}
                   type="text"
                   placeholder="Översätt"
-                  autocapitalize="none"
+                  autoCapitalize="none"
                   value={frenchAnswer}
                   onChange={(e) => startWrite(e)}
                   onKeyPress={handleKeyPress}
@@ -208,14 +274,14 @@ export const Spell = ({ wordList }) => {
               <button
                 className="answer-btn"
                 type="submit"
-                onClick={submitAnswer}
+                onClick={clickAnswer}
               >
                 <GrFormCheckmark className="check" />
                 Svara
               </button>
             </form>
           </div>
-        </ div>
+        </div>
       )}
     </div>
   );

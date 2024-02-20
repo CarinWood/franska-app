@@ -8,12 +8,17 @@ export const FinishedCard = ({
   quantityRight,
   quantityWrong,
   setMenuAway,
+  exerciseFaults,
 }) => {
   const clickExerciseAgain = () => {
     setFinished(false);
     resetExercise();
   };
 
+  const clickExerciseFaults = () => {
+    setFinished(false);
+    exerciseFaults();
+  };
 
   return (
     <div className="finished">
@@ -36,6 +41,10 @@ export const FinishedCard = ({
         <button onClick={clickExerciseAgain}>
           <FaRedo className="redo-icon" />
           Öva igen
+        </button>
+        <button onClick={clickExerciseFaults}>
+          <FaRedo className="redo-icon" />
+          öva mina fel
         </button>
       </div>
     </div>
