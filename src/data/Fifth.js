@@ -120,4 +120,13 @@ export const fifthList = [
   { id: 119, fr: "les bottes", sv: "stövlar" },
   { id: 120, fr: "le parapluie", sv: "paraply" },
   { id: 121, fr: "le manteau", sv: "rock, kappa" },
+  { id: 122, fr: "l'imperméable", sv: "regnkappa" },
+  { id: 123, fr: "la laine", sv: "ull, ylle" },
+  { id: 124, fr: "le degré", sv: "grad" },
+  { id: 125, fr: "la neige", sv: "snö" },
+  { id: 126, fr: "le nuage", sv: "moln" },
+  { id: 127, fr: "l'orage", sv: "åskväder, oväder, storm" },
+  { id: 128, fr: "la pluie", sv: "regn" },
+  { id: 129, fr: "le soleil", sv: "sol" },
+  { id: 130, fr: "le vent", sv: "vind" },
 ];
