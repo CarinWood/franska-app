@@ -11,6 +11,7 @@ import { Zero } from "./pages/Zero";
 import { Route, Routes } from "react-router-dom";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import Five from "./pages/Five";
+import { Verbs } from "./pages/Verbs";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/kapitel_5" element={<Five/>} />
         <Route path="/sentences" element={<SentencePage />} />
         <Route path="/verb" element={<Verb />} />
+        <Route path="/verbs" element={<Verbs/>}/>
       </Routes>
     </div>
     </DndProvider>

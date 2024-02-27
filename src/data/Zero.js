@@ -129,6 +129,13 @@ export const zeroSentences = [
     sv: "Mina kusiner gillar inte regnet",
     quant: 6,
   },
+  {
+    id: 9,
+    fr: "il te va bien",
+    sv: "den passar dig",
+    quant: 4,
+  },
+
 ];
 
 export const zeroMatchList = [
