@@ -5,7 +5,6 @@ import { FaRedo } from "react-icons/fa";
 export const FinishedCard = ({
   setFinished,
   resetExercise,
-  quantityRight,
   quantityWrong,
   setMenuAway,
   exerciseFaults,
@@ -27,10 +26,6 @@ export const FinishedCard = ({
         Övningen avklarad!
       </p>
       <div className="statistics">
-        <div className="cube-div">
-          <p className="green-cube"></p>
-          <p>{quantityRight} stycken rätt svar</p>
-        </div>
         <div className="cube-div">
           <div className="red-cube"></div>
           <p>{quantityWrong} stycken fel svar</p>

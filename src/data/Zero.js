@@ -65,23 +65,6 @@ export const ZeroList = [
   { id: 64, fr: "excuser", sv: "ursäkta" },
   { id: 65, fr: "s'appeler", sv: "heta" },
   { id: 66, fr: "demander", sv: "fråga" },
-  { id: 67, fr: "Je ne comprends pas", sv: "Jag förstår inte" },
-  {
-    id: 68,
-    fr: "Comment on dit ... en français?",
-    sv: "Hur säger man ... på franska?",
-  },
-  {
-    id: 69,
-    fr: "Excusez-moi, je suis en retard",
-    sv: "Ursäkta att jag är sen",
-  },
-  {
-    id: 70,
-    fr: "Vous pouvez répéter, s'il vous plaît?",
-    sv: "Kan ni vara snäll och upprepa?",
-  },
-  { id: 71, fr: "Comment ça s'écrit?", sv: "Hur skriver man det?" },
 ];
 
 export const zeroSentences = [

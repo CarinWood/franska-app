@@ -15,10 +15,11 @@ export const Spell = ({ wordList }) => {
   const [wrongCard, setWrongCard] = useState(false);
   const [rightCard, setRightCard] = useState(false);
   const [finished, setFinished] = useState(false);
-  const [quantityRight, setQuantityRight] = useState(0);
   const [quantityWrong, setQuantityWrong] = useState(0);
   const [hardWordsArr, setHardWordsArr] = useState([]);
   const [hardMode, setHardmode] = useState(false);
+
+  console.log(wordList.length);
 
   const inputRef = useRef(null);
 
@@ -57,7 +58,7 @@ export const Spell = ({ wordList }) => {
 
   const submitHardWord = () => {
     if (frenchAnswer === hardWordsArr[currenObject].fr) {
-      setQuantityRight(quantityRight + 1);
+      let word = hardWordsArr.find()
       if (wrongCard === true) setWrongCard(false);
       setFrenchWord(frenchAnswer);
       setRightCard(true);
@@ -80,7 +81,6 @@ export const Spell = ({ wordList }) => {
     setShiftActive(false);
 
     if (frenchAnswer === wordList[currenObject].fr) {
-      setQuantityRight(quantityRight + 1);
       if (wrongCard === true) setWrongCard(false);
       setFrenchWord(frenchAnswer);
       setRightCard(true);
@@ -98,12 +98,19 @@ export const Spell = ({ wordList }) => {
           sv: wordList[currenObject].sv,
         };
 
-        setHardWordsArr((prevArray) => {
-          return [...prevArray, hardWord];
-        });
+        const wordExists = hardWordsArr.some(
+          (item) =>
+            item.id === hardWord.id &&
+            item.fr === hardWord.fr &&
+            item.sv === hardWord.sv
+        );
+
+        if (!wordExists) {
+          setHardWordsArr((prevArray) => [...prevArray, hardWord]);
+          setQuantityWrong(quantityWrong + 1);
+        }
       }
 
-      setQuantityWrong(quantityWrong + 1);
       if (rightCard === true) setRightCard(false);
       setFrenchWord(frenchAnswer);
       setFrenchAnswer("");
@@ -165,7 +172,6 @@ export const Spell = ({ wordList }) => {
     setFrenchAnswer("");
     setWrongCard(false);
     setRightCard(false);
-    setQuantityRight(0);
     setQuantityWrong(0);
     setHardWordsArr([]);
     setHardmode(false);
@@ -177,7 +183,6 @@ export const Spell = ({ wordList }) => {
     setFrenchAnswer("");
     setWrongCard(false);
     setRightCard(false);
-    setQuantityRight(0);
     setQuantityWrong(0);
   };
 
@@ -187,7 +192,6 @@ export const Spell = ({ wordList }) => {
         <FinishedCard
           setFinished={setFinished}
           resetExercise={resetExercise}
-          quantityRight={quantityRight}
           quantityWrong={quantityWrong}
           exerciseFaults={exerciseFaults}
         />

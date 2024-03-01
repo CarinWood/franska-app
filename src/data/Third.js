@@ -166,7 +166,7 @@ export const ThirdList = [
   },
   {
     id: 34,
-    fr: "un pique-nique",
+    fr: "le pique-nique",
     sv: "picknick",
   },
   {
