@@ -37,7 +37,7 @@ export const SecondList = [
   { id: 39, fr: "inviter", sv: "bjuda (in)" },
   { id: 40, fr: "l'invité", sv: "gäst, inbjuden" },
   { id: 41, fr: "le cousin", sv: "kusin (manlig)" },
-  { id: 42, fr: "préparer", sv: "förbereda" },
+  { id: 42, fr: "la cousine", sv: "kusin (kvinnlig)"},
   { id: 44, fr: "le mariage", sv: "äktenskap, bröllop, vigsel" },
   { id: 46, fr: "les parents", sv: "föräldrar" },
   { id: 47, fr: "la grand-mère", sv: "mormor, farmor" },
@@ -70,6 +70,7 @@ export const SecondList = [
   { id: 82, fr: "l'activité", sv: "aktivitet, verksamhet" },
   { id: 83, fr: "le portrait", sv: "porträtt" },
   { id: 84, fr: "être d'accord", sv: "vara överens" },
+  { id: 85, fr: "préparer", sv: "förbereda"}
 ];
 
 export const secondMatchList = [

@@ -27,8 +27,17 @@ export const FinishedCard = ({
       </p>
       <div className="statistics">
         <div className="cube-div">
-          <div className="red-cube"></div>
-          <p>{quantityWrong} stycken fel svar</p>
+          {quantityWrong < 1 ? (
+            <div className="all-rights-div">
+              <div className="green-cube"></div>
+              <p>Du hade alla rätt!</p>
+            </div>
+          ) : (
+            <div className="red-div">
+              <div className="red-cube"></div>
+              <p>{quantityWrong} stycken fel svar</p>
+            </div>
+          )}
         </div>
       </div>
       <div></div>
@@ -37,10 +46,12 @@ export const FinishedCard = ({
           <FaRedo className="redo-icon" />
           Öva igen
         </button>
-        <button onClick={clickExerciseFaults}>
-          <FaRedo className="redo-icon" />
-          öva mina fel
-        </button>
+        {quantityWrong > 0 && (
+          <button onClick={clickExerciseFaults}>
+            <FaRedo className="redo-icon" />
+            öva mina fel
+          </button>
+        )}
       </div>
     </div>
   );

@@ -58,7 +58,7 @@ export const Spell = ({ wordList }) => {
 
   const submitHardWord = () => {
     if (frenchAnswer === hardWordsArr[currenObject].fr) {
-      let word = hardWordsArr.find()
+     
       if (wrongCard === true) setWrongCard(false);
       setFrenchWord(frenchAnswer);
       setRightCard(true);

@@ -15,7 +15,7 @@ export const Zero = () => {
 
 
   return (
-    <div className="container">
+    <div className="zero-container">
       <Back />
       <Menu
         setShowFlash={setShowFlash}
