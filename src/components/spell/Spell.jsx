@@ -57,13 +57,20 @@ export const Spell = ({ wordList }) => {
   };
 
   const submitHardWord = () => {
+    console.log()
     if (frenchAnswer === hardWordsArr[currenObject].fr) {
-     
+      const index = hardWordsArr.findIndex((item) => item.fr === frenchAnswer);
+      if (index !== -1) {
+        const newArr = [...hardWordsArr];
+        newArr.splice(index, 1);
+        setHardWordsArr(newArr);
+      }
+
       if (wrongCard === true) setWrongCard(false);
       setFrenchWord(frenchAnswer);
       setRightCard(true);
       if (currenObject < hardWordsArr.length - 1) {
-        setCurrentObject(currenObject + 1);
+        /*    setCurrentObject(currenObject + 1); */
       } else {
         setFinished(true);
       }

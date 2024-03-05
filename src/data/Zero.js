@@ -3,7 +3,7 @@ export const ZeroList = [
   { id: 2, fr: "le restaurant", sv: "restaurang" },
   { id: 3, fr: "le cinéma", sv: "biograf" },
   { id: 4, fr: "le croissant", sv: "croissant" },
-  { id: 5, fr: "le train", sv: "tåg" },
+/*   { id: 5, fr: "le train", sv: "tåg" },
   { id: 6, fr: "les toilettes", sv: "toalett" },
   { id: 7, fr: "faire la bise", sv: "pussa på kind" },
   { id: 8, fr: "serrer la main", sv: "ta i hand" },
@@ -64,7 +64,7 @@ export const ZeroList = [
   { id: 63, fr: "français", sv: "fransk, franska (språket)" },
   { id: 64, fr: "excuser", sv: "ursäkta" },
   { id: 65, fr: "s'appeler", sv: "heta" },
-  { id: 66, fr: "demander", sv: "fråga" },
+  { id: 66, fr: "demander", sv: "fråga" }, */
 ];
 
 export const zeroSentences = [
