@@ -2,7 +2,7 @@ export const ZeroList = [
   { id: 1, fr: "le chocolat", sv: "choklad" },
   { id: 2, fr: "le restaurant", sv: "restaurang" },
   { id: 3, fr: "le cinéma", sv: "biograf" },
-  { id: 4, fr: "le croissant", sv: "croissant" },   
+  { id: 4, fr: "le croissant", sv: "croissant" },
   { id: 5, fr: "le train", sv: "tåg" },
   { id: 6, fr: "les toilettes", sv: "toalett" },
   { id: 7, fr: "faire la bise", sv: "pussa på kind" },
@@ -64,7 +64,7 @@ export const ZeroList = [
   { id: 63, fr: "français", sv: "fransk, franska (språket)" },
   { id: 64, fr: "excuser", sv: "ursäkta" },
   { id: 65, fr: "s'appeler", sv: "heta" },
-  { id: 66, fr: "demander", sv: "fråga" }, 
+  { id: 66, fr: "demander", sv: "fråga" },
 ];
 
 export const zeroSentences = [
@@ -118,7 +118,24 @@ export const zeroSentences = [
     sv: "den passar dig",
     quant: 4,
   },
-
+  {
+    id: 10,
+    fr: "C'est la mailleure voiture!",
+    sv: "Det är den bästa bilen!",
+    quant: 4,
+  },
+  {
+    id: 11,
+    fr: "Det är den vackraste filmen",
+    sv: "C'est le plus beau film",
+    quant: 5,
+  },
+  {
+    id: 12,
+    fr: "Det är de vackraste husen",
+    sv: "Ce sont les plus belles maisons",
+    quant: 6,
+  },
 ];
 
 export const zeroMatchList = [
