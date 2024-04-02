@@ -29,7 +29,9 @@ const Overview = () => {
         </ul>
 
         <ul>
-          <Link className="list-item invisible">Unité 6</Link>
+          <Link to="/kapitel_6" className="list-item">
+            Unité 6
+          </Link>
           <Link className="list-item invisible">Unité 7</Link>
           <Link className="list-item invisible">Unité 8</Link>
           <Link className="list-item invisible">Unité 9</Link>

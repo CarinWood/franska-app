@@ -8,10 +8,12 @@ import { Three } from "./pages/Three";
 import { Two } from "./pages/Two";
 import { Verb } from "./pages/Verb";
 import { Zero } from "./pages/Zero";
+
 import { Route, Routes } from "react-router-dom";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import Five from "./pages/Five";
 import { Verbs } from "./pages/Verbs";
+import Six from "./pages/Six";
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         <Route path="/kapitel_3" element={<Three />} />
         <Route path="/kapitel_4" element={<Four/>} />
         <Route path="/kapitel_5" element={<Five/>} />
+        <Route path="/kapitel_6" element={<Six/>} />
         <Route path="/sentences" element={<SentencePage />} />
         <Route path="/verb" element={<Verb />} />
         <Route path="/verbs" element={<Verbs/>}/>
