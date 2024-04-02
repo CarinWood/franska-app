@@ -46,7 +46,7 @@ export const SixthList = [
   {
     id: 45,
     fr: "bricolage",
-    sv: "hemmafixande, hemmasnickeri, gör-det-själv- arbete",
+    sv: "hemmafixande, hemmasnickeri",
   },
   { id: 46, fr: "bricoler", sv: "göra småjobb, fixa, meka" },
   { id: 47, fr: "faire du sport", sv: "sporta" },
@@ -73,7 +73,7 @@ export const SixthList = [
   {
     id: 68,
     fr: "accompagner",
-    sv: "följa med, göra sällskap med; ackompanjera",
+    sv: "följa med, ackompanjera",
   },
   { id: 69, fr: "la proposition", sv: "förslag, erbjudande" },
   { id: 70, fr: "le message", sv: "meddelande" },
@@ -81,11 +81,6 @@ export const SixthList = [
   { id: 72, fr: "d'accord!", sv: "ok, överenskommet!" },
   { id: 73, fr: "désolé", sv: "ledsen" },
   { id: 74, fr: "l'envie", sv: "lust, begär" },
-  {
-    id: 75,
-    fr: "ça vous/te dit",
-    sv: "har ni/du lust med det, tycker du/ni att det verkar roligt",
-  },
   { id: 76, fr: "rarement", sv: "sällan" },
   { id: 77, fr: "se coiffer", sv: "kamma sig, göra sig snygg i håret" },
   { id: 78, fr: "prendre son petit déjeuner", sv: "äta frukost" },
