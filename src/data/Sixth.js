@@ -140,7 +140,6 @@ export const SixthList = [
   { id: 128, fr: "dire", sv: "säga" },
   { id: 129, fr: "suivre", sv: "följa" },
   { id: 130, fr: "la politique", sv: "politik" },
-  { id: 131, fr: "venir de faire quelque chose", sv: "nyss ha gjort något" },
   { id: 132, fr: "petit", sv: "liten" },
   { id: 133, fr: "gros", sv: "stor, tjock" },
   { id: 134, fr: "la moustache", sv: "mustasch" },
