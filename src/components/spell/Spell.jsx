@@ -10,7 +10,7 @@ import { FinishedCard } from "../finishedCard/FinishedCard";
 export const Spell = ({ wordList }) => {
   const [shiftActive, setShiftActive] = useState(false);
   const [frenchAnswer, setFrenchAnswer] = useState("");
-  const [currenObject, setCurrentObject] = useState(0);
+  const [currentObject, setCurrentObject] = useState(0);
   const [frenchWord, setFrenchWord] = useState("");
   const [wrongCard, setWrongCard] = useState(false);
   const [rightCard, setRightCard] = useState(false);
@@ -19,8 +19,6 @@ export const Spell = ({ wordList }) => {
   const [hardWordsArr, setHardWordsArr] = useState([]);
   const [hardMode, setHardmode] = useState(false);
 
-  console.log(wordList.length);
-
   const inputRef = useRef(null);
 
   const startWrite = (e) => {
@@ -28,17 +26,17 @@ export const Spell = ({ wordList }) => {
   };
 
   const getCurrentWord = () => {
-    if (hardMode && currenObject >= 0 && currenObject < hardWordsArr.length) {
-      return <p>{hardWordsArr[currenObject].sv}</p>;
+    if (hardMode && currentObject >= 0 && currentObject < hardWordsArr.length) {
+      return <p>{hardWordsArr[currentObject].sv}</p>;
     } else {
-      return <p>{wordList[currenObject].sv}</p>;
+      return <p>{wordList[currentObject].sv}</p>;
     }
   };
   const getCurrentFrenchWord = () => {
-    if (hardMode && currenObject >= 0 && currenObject < hardWordsArr.length) {
-      return <span>{hardWordsArr[currenObject].fr}</span>;
+    if (hardMode && currentObject >= 0 && currentObject < hardWordsArr.length) {
+      return <span>{hardWordsArr[currentObject].fr}</span>;
     } else {
-      return <span>{wordList[currenObject].fr}</span>;
+      return <span>{wordList[currentObject].fr}</span>;
     }
   };
 
@@ -57,42 +55,44 @@ export const Spell = ({ wordList }) => {
   };
 
   const submitHardWord = () => {
-    console.log()
-    if (frenchAnswer === hardWordsArr[currenObject].fr) {
+      if (frenchAnswer === hardWordsArr[currentObject].fr) {
       const index = hardWordsArr.findIndex((item) => item.fr === frenchAnswer);
       if (index !== -1) {
         const newArr = [...hardWordsArr];
         newArr.splice(index, 1);
         setHardWordsArr(newArr);
+        console.log(hardWordsArr)
       }
 
       if (wrongCard === true) setWrongCard(false);
-      setFrenchWord(frenchAnswer);
-      setRightCard(true);
-      if (currenObject < hardWordsArr.length - 1) {
-        /*    setCurrentObject(currenObject + 1); */
-      } else {
+        setFrenchWord(frenchAnswer);
+        setRightCard(true);
+
+      if (currentObject === hardWordsArr.length - 1) {
         setFinished(true);
-      }
+      } 
+
       setFrenchAnswer("");
     } else {
+      console.log("wrong!");
       setQuantityWrong(quantityWrong + 1);
       if (rightCard === true) setRightCard(false);
       setFrenchWord(frenchAnswer);
       setFrenchAnswer("");
       setWrongCard(true);
+      console.log(hardWordsArr)
     }
   };
 
   const submitAnswer = () => {
     setShiftActive(false);
 
-    if (frenchAnswer === wordList[currenObject].fr) {
+    if (frenchAnswer === wordList[currentObject].fr) {
       if (wrongCard === true) setWrongCard(false);
       setFrenchWord(frenchAnswer);
       setRightCard(true);
-      if (currenObject < wordList.length - 1) {
-        setCurrentObject(currenObject + 1);
+      if (currentObject < wordList.length - 1) {
+        setCurrentObject(currentObject + 1);
       } else {
         setFinished(true);
       }
@@ -100,9 +100,9 @@ export const Spell = ({ wordList }) => {
     } else {
       if (!hardMode) {
         const hardWord = {
-          id: wordList[currenObject].id,
-          fr: wordList[currenObject].fr,
-          sv: wordList[currenObject].sv,
+          id: wordList[currentObject].id,
+          fr: wordList[currentObject].fr,
+          sv: wordList[currentObject].sv,
         };
 
         const wordExists = hardWordsArr.some(
@@ -185,12 +185,14 @@ export const Spell = ({ wordList }) => {
   };
 
   const exerciseFaults = () => {
-    setHardmode(true);
+    setHardmode(true)
     setCurrentObject(0);
     setFrenchAnswer("");
     setWrongCard(false);
     setRightCard(false);
     setQuantityWrong(0);
+    console.log(hardMode);
+    console.log(hardWordsArr);
   };
 
   return (
