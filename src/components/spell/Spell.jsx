@@ -18,6 +18,7 @@ export const Spell = ({ wordList }) => {
   const [quantityWrong, setQuantityWrong] = useState(0);
   const [hardWordsArr, setHardWordsArr] = useState([]);
   const [hardMode, setHardmode] = useState(false);
+  const [tempArr, setTempArr] = useState([]);
 
   const inputRef = useRef(null);
 
@@ -55,32 +56,50 @@ export const Spell = ({ wordList }) => {
   };
 
   const submitHardWord = () => {
-      if (frenchAnswer === hardWordsArr[currentObject].fr) {
+    if (frenchAnswer === hardWordsArr[currentObject].fr) {
       const index = hardWordsArr.findIndex((item) => item.fr === frenchAnswer);
       if (index !== -1) {
         const newArr = [...hardWordsArr];
         newArr.splice(index, 1);
         setHardWordsArr(newArr);
-        console.log(hardWordsArr)
+        console.log(hardWordsArr);
       }
 
       if (wrongCard === true) setWrongCard(false);
-        setFrenchWord(frenchAnswer);
-        setRightCard(true);
+      setFrenchWord(frenchAnswer);
+      setRightCard(true);
 
       if (currentObject === hardWordsArr.length - 1) {
         setFinished(true);
-      } 
+      }
 
       setFrenchAnswer("");
     } else {
       console.log("wrong!");
-      setQuantityWrong(quantityWrong + 1);
+      const hardWord = {
+        id: hardWordsArr[currentObject].id,
+        fr: hardWordsArr[currentObject].fr,
+        sv: hardWordsArr[currentObject].sv,
+      };
+
+      const wordExists = tempArr.some(
+        (item) =>
+          item.id === hardWord.id &&
+          item.fr === hardWord.fr &&
+          item.sv === hardWord.sv
+      );
+
+      if (!wordExists) {
+        console.log("pushing into the temp arr!");
+        setTempArr((prevArr) => [...prevArr, hardWord]);
+        setQuantityWrong(quantityWrong + 1);
+      }
+
       if (rightCard === true) setRightCard(false);
       setFrenchWord(frenchAnswer);
       setFrenchAnswer("");
       setWrongCard(true);
-      console.log(hardWordsArr)
+      console.log(tempArr);
     }
   };
 
@@ -181,18 +200,19 @@ export const Spell = ({ wordList }) => {
     setRightCard(false);
     setQuantityWrong(0);
     setHardWordsArr([]);
+    setTempArr([]);
     setHardmode(false);
   };
 
   const exerciseFaults = () => {
-    setHardmode(true)
+    setHardmode(true);
     setCurrentObject(0);
     setFrenchAnswer("");
     setWrongCard(false);
     setRightCard(false);
     setQuantityWrong(0);
-    console.log(hardMode);
-    console.log(hardWordsArr);
+    //if there is something in temArr, set it to hardWordsArr
+    if (tempArr.length > 0) setHardWordsArr(tempArr);
   };
 
   return (
