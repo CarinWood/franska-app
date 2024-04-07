@@ -577,7 +577,7 @@ export const SevenMatchList = [
   { id: 28, fr: "à gauche", sv: "till vänster" },
   { id: 29, fr: "à droite", sv: "till höger" },
   { id: 30, fr: "à côté", sv: "bredvid" },
-  { id: 31, fr: "en face", sv: "mitemot" },
+  { id: 31, fr: "en face", sv: "mittemot" },
   { id: 32, fr: "l'aquarium", sv: "akvarium" },
   { id: 33, fr: "la télé", sv: "tv" },
   { id: 34, fr: "le tapis", sv: "matta" },
@@ -648,7 +648,7 @@ export const SevenMatchList = [
   { id: 99, fr: "accueillant", sv: "välkomnande" },
   { id: 100, fr: "fumer", sv: "röka" },
   { id: 101, fr: "le wifi", sv: "wifi" },
-  { id: 102, fr: "equipé", sv: "utrustad" },
+  { id: 102, fr: "équipé", sv: "utrustad" },
   { id: 103, fr: "la piscine", sv: "pool" },
   { id: 104, fr: "arroser", sv: "vattna" },
   { id: 105, fr: "la douche", sv: "dusch" },
@@ -656,5 +656,5 @@ export const SevenMatchList = [
   { id: 107, fr: "le domicile", sv: "hemvist" },
   { id: 108, fr: "le formulaire", sv: "formulär" },
   { id: 109, fr: "le revenu", sv: "inkomst" },
-  { id: 110, fr: "recevoir", sv: "motta, få" }
+  { id: 110, fr: "recevoir", sv: "motta, få" },
 ];
