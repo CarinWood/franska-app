@@ -30,11 +30,15 @@ export const Match = ({ wordList }) => {
       .slice(0, 5)
       .map((word) => ({ ...word, langue: "fr", matched: false }));
 
+    // Remove the sliced words from wordArray
+    const remainingWords = shuffledArray.slice(10);
+
     newSvArray.sort(() => Math.random() - 0.5);
     newFrArray.sort(() => Math.random() - 0.5);
 
     setSvArray(newSvArray);
     setFrArray(newFrArray);
+    setWordArray(remainingWords);
   };
 
   const checkForMatch = () => {

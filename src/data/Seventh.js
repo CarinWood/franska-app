@@ -618,7 +618,7 @@ export const SevenMatchList = [
   { id: 89, fr: "la défense", sv: "förbud" },
   { id: 90, fr: "la pelouse", sv: "gräsmata" },
   { id: 91, fr: "le couloir", sv: "korridor" },
-  { id: 93, fr: "les déchets", sv: "avfall, sopor, skräp" },
+  { id: 93, fr: "les déchets", sv: "sopor" },
   { id: 94, fr: "chut!", sv: "tyst!" },
   { id: 95, fr: "organiser", sv: "organiser" },
   { id: 96, fr: "la mission", sv: "uppdrag" },
