@@ -1,5 +1,5 @@
 
-.match-start {
+.match-start, .match-finished {
     margin-top: 80px;
     width: 330px;
     height: 200px;
@@ -27,7 +27,7 @@
 }
 
 
-.button-start {
+.button-start, .button-start-again {
     width: 110px;
     height: 32px;   
     background: rgb(63, 63, 216);
@@ -42,8 +42,19 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
+.button-start-again {
+    width: auto;
+    height: auto;
+    padding: 10px 14px;
+}
+
 .button-start:active {
     transform: translateY(3px);
+}
+
+.practice-again-icon {
+    margin-right: 10px;
+    font-size: 12px;
 }
 
 .match-container {

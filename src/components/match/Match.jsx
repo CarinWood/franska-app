@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./match.css";
+import { FaRedo } from "react-icons/fa";
 
 export const Match = ({ wordList }) => {
   const [wordArray, setWordArray] = useState(wordList);
@@ -9,6 +10,7 @@ export const Match = ({ wordList }) => {
   const [firstChoice, setFirstChoice] = useState();
   const [rightAnswers, setRightAnswers] = useState(0);
   const [startClicked, isStartClicked] = useState(false);
+  const [finishCard, showFinishCard] = useState(false);
 
   useEffect(() => {
     if (firstChoice && secondChoice) {
@@ -22,6 +24,7 @@ export const Match = ({ wordList }) => {
 
   const startGame = () => {
     if (!startClicked) isStartClicked(true);
+    if (wordArray.length === 0) showFinishCard(true);
     const shuffledArray = wordArray.sort(() => Math.random() - 0.5);
     const newSvArray = shuffledArray
       .slice(0, 5)
@@ -103,6 +106,17 @@ export const Match = ({ wordList }) => {
 
   return (
     <div>
+      {finishCard && (
+        <div className="match-finished">
+          <h3 className="match-headline">Övningen avklarad</h3>
+          <p className="match-text">Du har matchat alla orden!</p>
+          <button className="button-start-again" onClick={startGame}>
+            <FaRedo className="practice-again-icon" />
+            Öva igen
+          </button>
+        </div>
+      )}
+
       {!startClicked && (
         <div className="match-start">
           <h3 className="match-headline">Matcha orden</h3>
