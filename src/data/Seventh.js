@@ -15,7 +15,7 @@ export const SeventhList =
       "fr": "visiter",
       "sv": "besöka"
     },
-  /*   {
+    {
       "id": 4,
       "fr": "nouveau",
       "sv": "ny (singular m)"
@@ -29,8 +29,8 @@ export const SeventhList =
       "id": 6,
       "fr": "nouveaux",
       "sv": "ny (plural m)"
-    }, */
-  /*   {
+    },
+    {
       "id": 7,
       "fr": "nouvelles",
       "sv": "ny (plural f)"
@@ -544,6 +544,6 @@ export const SeventhList =
       "id": 109,
       "fr": "recevoir",
       "sv": "mottagning, få"
-    } */
+    } 
   ]
   

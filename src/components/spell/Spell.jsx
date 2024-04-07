@@ -212,7 +212,10 @@ export const Spell = ({ wordList }) => {
     setRightCard(false);
     setQuantityWrong(0);
     //if there is something in temArr, set it to hardWordsArr
-    if (tempArr.length > 0) setHardWordsArr(tempArr);
+    if (tempArr.length > 0) {
+      setHardWordsArr(tempArr);
+      setTempArr([])
+    }
   };
 
   return (
