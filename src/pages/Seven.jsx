@@ -4,7 +4,7 @@ import { Menu } from '../components/menu/Menu';
 import Carousel from '../components/carousel/Carousel';
 import { Spell } from '../components/spell/Spell';
 import { Match } from '../components/match/Match';
-import { SeventhList } from '../data/Seventh';
+import { SevenMatchList, SeventhList } from '../data/Seventh';
 
 
 const Seven = () => {
@@ -21,7 +21,7 @@ const Seven = () => {
       />
       {showFlash && <Carousel flashcardList={SeventhList} />}
       {showSpell && <Spell wordList={SeventhList} />}
-      {showMatch && <Match wordList={SeventhList} />}
+      {showMatch && <Match wordList={SevenMatchList} />}
     </div>
   )
 }
