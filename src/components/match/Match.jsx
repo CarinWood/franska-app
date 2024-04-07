@@ -22,6 +22,11 @@ export const Match = ({ wordList }) => {
     checkForMatch();
   }, [firstChoice, secondChoice]);
 
+  const playAgain = () => {
+    setWordArray(wordList);
+    startGame();
+  };
+
   const startGame = () => {
     if (!startClicked) isStartClicked(true);
     if (wordArray.length === 0) showFinishCard(true);
@@ -106,11 +111,12 @@ export const Match = ({ wordList }) => {
 
   return (
     <div>
+      {/* Finished card, showing when all matches are done */}
       {finishCard && (
         <div className="match-finished">
           <h3 className="match-headline">Övningen avklarad</h3>
           <p className="match-text">Du har matchat alla orden!</p>
-          <button className="button-start-again" onClick={startGame}>
+          <button className="button-start-again" onClick={playAgain}>
             <FaRedo className="practice-again-icon" />
             Öva igen
           </button>
