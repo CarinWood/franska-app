@@ -6,7 +6,7 @@
     height: 40px;
     border-radius: 5px;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: 1%;
     left: 38%;
     padding: 5px 10px;
