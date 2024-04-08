@@ -620,7 +620,7 @@ export const SevenMatchList = [
   { id: 71, fr: "le couloir", sv: "korridor" },
   { id: 72, fr: "les déchets", sv: "sopor" },
   { id: 73, fr: "chut!", sv: "tyst!" },
-  { id: 74, fr: "organiser", sv: "organiser" },
+  { id: 74, fr: "organiser", sv: "organisera" },
   { id: 75, fr: "la mission", sv: "uppdrag" },
   { id: 76, fr: "la réponse", sv: "svar" },
   { id: 77, fr: "une énigme", sv: "gåta" },

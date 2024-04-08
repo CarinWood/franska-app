@@ -23,13 +23,17 @@ export const Match = ({ wordList }) => {
   }, [firstChoice, secondChoice]);
 
   const playAgain = () => {
-    setWordArray(wordList);
+    showFinishCard(false);
     startGame();
   };
 
   const startGame = () => {
     if (!startClicked) isStartClicked(true);
-    if (wordArray.length === 0) showFinishCard(true);
+    if (wordArray.length === 0) {
+      setWordArray(wordList);
+      showFinishCard(true);
+      return;
+    }
     const shuffledArray = wordArray.sort(() => Math.random() - 0.5);
     const newSvArray = shuffledArray
       .slice(0, 5)
@@ -47,6 +51,7 @@ export const Match = ({ wordList }) => {
     setSvArray(newSvArray);
     setFrArray(newFrArray);
     setWordArray(remainingWords);
+    console.log(wordArray);
   };
 
   const checkForMatch = () => {
@@ -136,11 +141,13 @@ export const Match = ({ wordList }) => {
       )}
 
       {/* Container for swedish match cards */}
-      <section className="match-container">
+      <section
+        className={finishCard ? "match-container hide" : "match-container"}
+      >
         <div>
           {svArray.map((word) => {
             return (
-              <div className="outer-match-box">
+              <div className="outer-match-box" key={word.id}>
                 <div
                   id={word.matched ? "fadeaway" : null}
                   onClick={() => setChoice(word.id, word.langue, word.matched)}
@@ -154,7 +161,6 @@ export const Match = ({ wordList }) => {
                       ? "match-card green"
                       : "match-card"
                   }
-                  key={word.id}
                 >
                   {word.sv}
                 </div>
@@ -165,7 +171,7 @@ export const Match = ({ wordList }) => {
         <div>
           {frArray.map((word) => {
             return (
-              <div className="outer-match-box">
+              <div className="outer-match-box" key={word.id}>
                 <div
                   onClick={() => setChoice(word.id, word.langue, word.matched)}
                   id={word.matched ? "fadeaway" : null}
