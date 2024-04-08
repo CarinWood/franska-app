@@ -67,4 +67,8 @@
     .list-item {
         font-size: 24px;
     }
+
+    .spec {
+        visibility: hidden;
+    }
 }
