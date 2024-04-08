@@ -51,7 +51,7 @@ export const Match = ({ wordList }) => {
     setSvArray(newSvArray);
     setFrArray(newFrArray);
     setWordArray(remainingWords);
-    console.log(wordArray);
+
   };
 
   const checkForMatch = () => {

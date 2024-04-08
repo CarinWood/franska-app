@@ -45,10 +45,6 @@ const Overview = () => {
           <BsPencil className="overview-icon" />
           bygg meningar
         </Link>
-        <Link to="/verbs" className="list-item spec">
-          <BsBook className="overview-icon" />
-          Öva verb
-        </Link>
       </ul>
     </div>
   );

@@ -36,7 +36,7 @@
     justify-content: center;
     margin-top: 20px !important;
     position: fixed;
-    bottom: 0;
+    bottom: 10%;
 
 }
 
@@ -70,10 +70,6 @@
 }
     .list-item {
         font-size: 24px;
-    }
-
-    .spec {
-        visibility: hidden;
     }
 
 
