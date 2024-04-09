@@ -4,9 +4,8 @@
     align-items: center;
     justify-content: center;
     color: white;
-    border: 1px solid white;
     font-size: 20px;
-    border: 1px solid white;
+
 }
 
 .click-instructions {
@@ -17,4 +16,13 @@
     margin-left: -150px;
     display: flex;
     justify-content: center;
+}
+
+.french-correct {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 30px 0px;
+    font-size: 20px;
 }

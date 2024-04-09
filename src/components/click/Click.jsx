@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './click.css'
+import { QuizAlternative } from '../quizAlternative/QuizAlternative'
 
 const Click = ({wordList}) => {
     const [wordArray, setWordArray] = useState(wordList)
@@ -59,16 +60,14 @@ const Click = ({wordList}) => {
     }
 
 
-    console.log(wordArray)
-
-
   return (
     <div>
-        {currentFrench}
+
+        <p className='french-correct'>{currentFrench}</p>
       
         <div className='alternatives'>
             {guessArray.map((word, i) => {
-                return <div key={i}><p>{word}</p></div>
+                return <div key={i}>{<QuizAlternative word={word} wordArray={wordArray}/>}</div>
             })}
         </div>
 
