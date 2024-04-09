@@ -2,8 +2,9 @@ import { useState } from "react";
 import "./menu.css";
 import { BsCardText, BsPencil } from "react-icons/bs";
 import { PiCardsLight } from "react-icons/pi";
+import { HiOutlineCursorClick } from "react-icons/hi";
 
-export const Menu = ({ setShowFlash, setShowSpell, setShowMatch }) => {
+export const Menu = ({ setShowFlash, setShowSpell, setShowMatch, setShowClick }) => {
   const [menuAway, setMenuAway] = useState(false);
 
   const flash = () => {
@@ -25,6 +26,13 @@ export const Menu = ({ setShowFlash, setShowSpell, setShowMatch }) => {
     setTimeout(() => {
       setShowMatch(true);
     }, 100);
+
+  };
+  const click = () => {
+    setMenuAway(true);
+    setTimeout(() => {
+      setShowClick(true);
+    }, 100);
   };
 
   return (
@@ -44,6 +52,11 @@ export const Menu = ({ setShowFlash, setShowSpell, setShowMatch }) => {
         <li onClick={match} className="lower-item">
           <PiCardsLight className="icon" />
           <p>Matcha</p>
+        </li>
+        
+        <li onClick={click} className="lower-item">
+          <HiOutlineCursorClick className="icon" />
+          <p>Klicka</p>
         </li>
       </ul>
     </div>
