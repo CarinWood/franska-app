@@ -12,22 +12,19 @@ const Click = ({wordList}) => {
     const [guessArray, setGuessArray] = useState([])
     const [finishedCard, showFinishedCard] = useState(false);
 
- 
 
     useEffect(() => {
         setCurrentWords()
-    }, [wordArray])
+    }, [currObj])
 
-
-  
-
-
+ 
     const shuffleArray = (array) => {
         array.sort(() => Math.random() - 0.5);
     }
-
+ 
 
     const setCurrentWords = () => {
+        console.log(originalArray)
         const currentWord = {
             id: originalArray[currObj].id,
             fr: originalArray[currObj].fr,
@@ -35,8 +32,6 @@ const Click = ({wordList}) => {
         };
         setCurrentFrench(currentWord);
     
-        const updatedOriginalArray = originalArray.filter(item => item.id !== currentWord.id);
-        setOriginalArray(updatedOriginalArray);
 
         // Initialize an array to store the guesses
         const guesses = [];
@@ -46,7 +41,7 @@ const Click = ({wordList}) => {
         // Select one guess randomly from the wordArray array until we have 4 guesses
         while (guesses.length < 5) {
             // Get a random index within the range of remainingWords length
-            shuffleArray(wordArray)
+    /*         shuffleArray(wordArray) */
 
             const randomIndex = Math.floor(Math.random() * wordArray.length);
 
@@ -60,7 +55,7 @@ const Click = ({wordList}) => {
             // Shuffle the array to randomize the order
             shuffleArray(guesses);
             shuffleArray(guesses);
-            shuffleArray(guesses);
+            shuffleArray(guesses); 
 
            setGuessArray(guesses)
     
@@ -76,7 +71,6 @@ const Click = ({wordList}) => {
         } else {
             // Move to the next word
             setCurrObj(currObj + 1);
-            setCurrentWords();
         }
     }; 
     

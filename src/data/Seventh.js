@@ -557,7 +557,7 @@ export const SevenMatchList = [
   { id: 8, fr: "la pièce", sv: "rum" },
   { id: 9, fr: "la surface", sv: "yta" },
   { id: 10, fr: "combien", sv: "hur mycket" },
-  { id: 11, fr: "le rêve", sv: "dröm" },
+ /*  { id: 11, fr: "le rêve", sv: "dröm" },
   { id: 12, fr: "le meuble", sv: "möbel" },
   { id: 13, fr: "s'asseoir", sv: "sätta sig" },
   { id: 14, fr: "la cuisinière", sv: "spis" },
@@ -656,5 +656,5 @@ export const SevenMatchList = [
   { id: 107, fr: "le domicile", sv: "hemvist" },
   { id: 108, fr: "le formulaire", sv: "formulär" },
   { id: 109, fr: "le revenu", sv: "inkomst" },
-  { id: 110, fr: "recevoir", sv: "motta, få" }, 
+  { id: 110, fr: "recevoir", sv: "motta, få" },  */
 ];
