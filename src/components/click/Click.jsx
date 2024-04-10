@@ -32,8 +32,9 @@ const Click = ({wordList}) => {
         };
         setCurrentFrench(currentWord);
     
-        console.log("currobj " + currObj)
-        console.log("franskt ord: " + currentWord.fr)
+        const updatedOriginalArray = originalArray.filter(item => item.id !== currentWord.id);
+        setOriginalArray(updatedOriginalArray);
+
         // Initialize an array to store the guesses
         const guesses = [];
        // Push guess1 into the array
@@ -69,6 +70,19 @@ const Click = ({wordList}) => {
         setCurrObj(currObj + 1)
         setCurrentWords()
     }
+
+ /*    const nextWord = () => {
+        if (currObj + 1 >= originalArray.length) {
+            // Game is finished, trigger the popup
+            alert("Congratulations! You have completed the game.");
+            // You can also reset the game or perform any other action here
+        } else {
+            // Move to the next word
+            setCurrObj(currObj + 1);
+            setCurrentWords();
+        }
+    }; */
+    
 
 
 
