@@ -559,7 +559,7 @@ export const SevenMatchList = [
   { id: 10, fr: "combien", sv: "hur mycket" },
   { id: 11, fr: "le rêve", sv: "dröm" },
   { id: 12, fr: "le meuble", sv: "möbel" },
-  { id: 13, fr: "s'asseoir", sv: "säta sig" },
+  { id: 13, fr: "s'asseoir", sv: "sätta sig" },
   { id: 14, fr: "la cuisinière", sv: "spis" },
   { id: 15, fr: "le bureau", sv: "skrivbord" },
   { id: 16, fr: "le fauteuil", sv: "fåtölj" },

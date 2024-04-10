@@ -3,13 +3,10 @@ import './click.css'
 import { QuizAlternative } from '../quizAlternative/QuizAlternative'
 
 const Click = ({wordList}) => {
+    const [originalArray, setOriginalArray] = useState(wordList)
     const [wordArray, setWordArray] = useState(wordList)
-    const [currentFrench, setCurrentFrench] = useState("")
-    const [rightGuess, setRightguess] = useState("")
-    const [error1, setError1] = useState("")
-    const [error2, setError2] = useState("")
-    const [error3, setError3] = useState("")
-    const [error4, setError4] = useState("")
+    const [currObj, setCurrObj] = useState(0)
+    const [currentFrench, setCurrentFrench] = useState(originalArray[0])
     const [guessArray, setGuessArray] = useState([])
 
  
@@ -18,56 +15,78 @@ const Click = ({wordList}) => {
         setCurrentWords()
     }, [wordArray])
 
-    useEffect(() => {
-        populateGuessArray();
-    }, [rightGuess, error1, error2, error3, error4]);
+
+  
 
 
     const shuffleArray = (array) => {
         array.sort(() => Math.random() - 0.5);
     }
 
+
     const setCurrentWords = () => {
-        shuffleArray(wordArray)
+        const currentWord = {
+            id: originalArray[currObj].id,
+            fr: originalArray[currObj].fr,
+            sv: originalArray[currObj].sv
+        };
+        setCurrentFrench(currentWord);
+    
+        console.log("currobj " + currObj)
+        console.log("franskt ord: " + currentWord.fr)
+        // Initialize an array to store the guesses
+        const guesses = [];
+       // Push guess1 into the array
+       guesses.push(currentWord);
+    
+        // Select one guess randomly from the wordArray array until we have 4 guesses
+        while (guesses.length < 5) {
+            // Get a random index within the range of remainingWords length
+            shuffleArray(wordArray)
 
-        setCurrentFrench(wordArray[0].fr)
-        setRightguess(wordArray[0].sv)
+            const randomIndex = Math.floor(Math.random() * wordArray.length);
 
-        const filteredAnswers = wordArray.filter((word) => word.id !== currentFrench.id);
-   
+            const exists = guesses.some(guess => guess.sv === wordArray[randomIndex].sv);
 
-        setError1(filteredAnswers[1].sv)
-        setError2(filteredAnswers[2].sv)
-        setError3(filteredAnswers[3].sv)
-        setError4(filteredAnswers[4].sv) 
+            if (!exists) {
+                guesses.push(wordArray[randomIndex]);
+            }
+           
+        }
+            // Shuffle the array to randomize the order
+            shuffleArray(guesses);
+            shuffleArray(guesses);
+            shuffleArray(guesses);
 
-       
+           setGuessArray(guesses)
+    
+    };
+    
+  
+
+
+    const nextWord = () => {
+        setCurrObj(currObj + 1)
+        setCurrentWords()
     }
 
-    const populateGuessArray = () => {
-        //make a new array for the right answer and the 4 wrong answers
-        const newGuessArray = [rightGuess, error1, error2, error3, error4];
-
-        //Shuffle the new array properly five times ...
-        shuffleArray(newGuessArray);
-        shuffleArray(newGuessArray);
-        shuffleArray(newGuessArray);
-        shuffleArray(newGuessArray);
-        shuffleArray(newGuessArray);
-
-        //Set it in the state array we use for the guesses
-        setGuessArray(newGuessArray);
-    }
 
 
   return (
     <div>
-
-        <p className='french-correct'>{currentFrench}</p>
+        <p className='french-correct'>{currentFrench.fr}</p>
       
         <div className='alternatives'>
             {guessArray.map((word, i) => {
-                return <div key={i}>{<QuizAlternative word={word} wordArray={wordArray}/>}</div>
+                return (
+                        <div key={i}>
+                            {<QuizAlternative 
+                            word={word} 
+                            nextWord={nextWord}
+                            currentFrench={currentFrench}
+                            />}
+                        </div>
+                        )
             })}
         </div>
 
