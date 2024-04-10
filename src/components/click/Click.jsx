@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './click.css'
 import { QuizAlternative } from '../quizAlternative/QuizAlternative'
 import { FaRedo } from "react-icons/fa";
-import { FinishedCard } from '../finishedCard/FinishedCard';
 
 const Click = ({wordList}) => {
     const [originalArray, setOriginalArray] = useState(wordList)
@@ -77,6 +76,7 @@ const Click = ({wordList}) => {
 
     const resetGame = () => {
         showFinishedCard(false)
+        setCurrObj(0)
     }
 
 
@@ -93,7 +93,8 @@ const Click = ({wordList}) => {
           </button>
         </div>
         }
-       
+        {!finishedCard &&
+        <>
         <p className='french-correct'>{currentFrench.fr}</p>
       
         <div className='alternatives'>
@@ -111,7 +112,8 @@ const Click = ({wordList}) => {
         </div>
 
         <p className='instructions click-instructions'>Klicka på rätt svensk översättning</p>
-   
+        </>
+        }
         </div>
 
   )
