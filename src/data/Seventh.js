@@ -656,5 +656,5 @@ export const SevenMatchList = [
   { id: 107, fr: "le domicile", sv: "hemvist" },
   { id: 108, fr: "le formulaire", sv: "formulär" },
   { id: 109, fr: "le revenu", sv: "inkomst" },
-  { id: 110, fr: "recevoir", sv: "motta, få" },
+  { id: 110, fr: "recevoir", sv: "motta, få" }, 
 ];

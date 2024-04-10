@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './click.css'
 import { QuizAlternative } from '../quizAlternative/QuizAlternative'
+import { FaRedo } from "react-icons/fa";
+import { FinishedCard } from '../finishedCard/FinishedCard';
 
 const Click = ({wordList}) => {
     const [originalArray, setOriginalArray] = useState(wordList)
@@ -8,6 +10,7 @@ const Click = ({wordList}) => {
     const [currObj, setCurrObj] = useState(0)
     const [currentFrench, setCurrentFrench] = useState(originalArray[0])
     const [guessArray, setGuessArray] = useState([])
+    const [finishedCard, showFinishedCard] = useState(false);
 
  
 
@@ -65,29 +68,38 @@ const Click = ({wordList}) => {
     
   
 
-
-    const nextWord = () => {
-        setCurrObj(currObj + 1)
-        setCurrentWords()
-    }
-
- /*    const nextWord = () => {
+     const nextWord = () => {
         if (currObj + 1 >= originalArray.length) {
             // Game is finished, trigger the popup
-            alert("Congratulations! You have completed the game.");
+           showFinishedCard(true)
             // You can also reset the game or perform any other action here
         } else {
             // Move to the next word
             setCurrObj(currObj + 1);
             setCurrentWords();
         }
-    }; */
+    }; 
     
+
+    const resetGame = () => {
+        showFinishedCard(false)
+    }
 
 
 
   return (
     <div>
+        {finishedCard &&
+         <div className="match-finished">
+          <h3 className="match-headline">Övningen avklarad</h3>
+          <p className="match-text">Du har svarat rätt på alla orden!</p>
+          <button className="button-start-again" onClick={resetGame}>
+            <FaRedo className="practice-again-icon" />
+            Öva igen
+          </button>
+        </div>
+        }
+       
         <p className='french-correct'>{currentFrench.fr}</p>
       
         <div className='alternatives'>
@@ -105,7 +117,9 @@ const Click = ({wordList}) => {
         </div>
 
         <p className='instructions click-instructions'>Klicka på rätt svensk översättning</p>
-    </div>
+   
+        </div>
+
   )
 }
 
