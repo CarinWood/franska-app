@@ -31,4 +31,10 @@
     .quiz-card:hover {
         background: rgb(63, 63, 216);
     }
+
+    .quiz-card {
+        width: 320px;
+        height: 50px;
+
+    }
 }

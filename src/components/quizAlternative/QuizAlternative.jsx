@@ -1,5 +1,4 @@
 import './quizAlternative.css'
-import success from '../../assets/audio/success.mp3'
 import { useState } from 'react'
 
 export const QuizAlternative = ({word, nextWord, currentFrench}) => {
@@ -10,10 +9,7 @@ export const QuizAlternative = ({word, nextWord, currentFrench}) => {
  
 
     const clickOnCard = () => {
-    
         if(word.id === currentFrench.id) {
-            const audio = new Audio(success);
-            audio.play()
             setGreenBorder(true)
 
             setTimeout(() => {
