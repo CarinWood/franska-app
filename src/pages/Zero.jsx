@@ -14,16 +14,29 @@ export const Zero = () => {
   const [showSpell, setShowSpell] = useState(false);
   const [showMatch, setShowMatch] = useState(false);
   const [showClick, setShowClick] = useState(false);
+  const [menuAway, setMenuAway] = useState(false);
 
 
   return (
     <div className="container">
-      <Back />
+      <Back 
+      setShowFlash={setShowFlash}
+      showFlash={showFlash}
+      setShowSpell={setShowSpell}
+      showSpell={showSpell}
+      setShowMatch={setShowMatch}
+      showMatch={showMatch}
+      setShowClick={setShowClick}
+      setMenuAway={setMenuAway}
+      menuAway={menuAway}
+      />
       <Menu
         setShowFlash={setShowFlash}
         setShowSpell={setShowSpell}
         setShowMatch={setShowMatch}
         setShowClick={setShowClick}
+        setMenuAway={setMenuAway}
+        menuAway={menuAway}
       />
       {showFlash && <Carousel flashcardList={ZeroList} />}
       {showSpell && <Spell wordList={ZeroList} />}

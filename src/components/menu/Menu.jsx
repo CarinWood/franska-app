@@ -1,11 +1,16 @@
-import { useState } from "react";
 import "./menu.css";
 import { BsCardText, BsPencil } from "react-icons/bs";
 import { PiCardsLight } from "react-icons/pi";
 import { HiOutlineCursorClick } from "react-icons/hi";
 
-export const Menu = ({ setShowFlash, setShowSpell, setShowMatch, setShowClick }) => {
-  const [menuAway, setMenuAway] = useState(false);
+export const Menu = ({ 
+  setShowFlash,
+  setShowSpell, 
+  setShowMatch,
+  setShowClick, 
+  setMenuAway,
+  menuAway }) => {
+ 
 
   const flash = () => {
     setMenuAway(true);

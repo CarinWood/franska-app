@@ -12,15 +12,30 @@ export const Four = () => {
   const [showSpell, setShowSpell] = useState(false);
   const [showMatch, setShowMatch] = useState(false);
   const [showClick, setShowClick] = useState(false);
+  const [menuAway, setMenuAway] = useState(false);
+
   return (
     <div className="container">
-      <Back />
-      <Menu
+      <Back 
         setShowFlash={setShowFlash}
+        showFlash={showFlash}
         setShowSpell={setShowSpell}
+        showSpell={showSpell}
         setShowMatch={setShowMatch}
+        showMatch={showMatch}
         setShowClick={setShowClick}
+        setMenuAway={setMenuAway}
+        menuAway={menuAway}
       />
+      <Menu
+      setShowFlash={setShowFlash}
+      setShowSpell={setShowSpell}
+      setShowMatch={setShowMatch}
+      setShowClick={setShowClick}
+      setMenuAway={setMenuAway}
+      menuAway={menuAway}
+      />
+      
       {showFlash && <Carousel flashcardList={FourthList} />}
       {showSpell && <Spell wordList={FourthList} />}
       {showMatch && <Match wordList={FourthMatchList} />}

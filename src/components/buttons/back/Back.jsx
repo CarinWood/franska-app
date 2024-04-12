@@ -1,8 +1,37 @@
-import { Link } from "react-router-dom";
 import "./back.css";
+import { useNavigate } from 'react-router-dom'
 
-const Back = () => {
-  return <Link to="/"><button className="go-back">Tillbaka</button></Link>;
+const Back = ({
+  setShowSpell, 
+  showSpell,
+  setShowMatch, 
+  showMatch,
+  setShowFlash, 
+  showFlash,
+  setShowClick, 
+  showClick,
+  setMenuAway,
+  menuAway
+}) => {
+
+  const navigate = useNavigate()
+
+  const clickOnBack = () => {
+    if(!showSpell && !showMatch && !showFlash && !showClick && !menuAway) {
+      navigate("/") 
+    } else {
+      setShowClick(false)
+      setShowSpell(false)
+      setShowMatch(false)
+      setShowFlash(false)
+      setMenuAway(false)
+    }
+    
+
+  }
+
+
+  return <button onClick={clickOnBack} className="go-back">Tillbaka</button>
 };
 
 export default Back;
