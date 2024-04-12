@@ -312,7 +312,7 @@ export const Spell = ({ wordList }) => {
                 onClick={clickAnswer}
               >
                 <GrFormCheckmark className="check" />
-                Svara
+                <p>Svara</p>
               </button>
             </form>
           </div>
