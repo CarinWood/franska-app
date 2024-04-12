@@ -5,17 +5,21 @@
     justify-content: center;
     color: white;
     font-size: 20px;
-
+    position: fixed;
+    top: 30%;
+    width: 320px;
+    left: 50%;
+    margin-left: -160px;
 }
 
 .click-instructions {
-    position: absolute;
     bottom: 12%;
     left: 50%;
     width: 300px;
     margin-left: -150px;
     display: flex;
     justify-content: center;
+    position: fixed;
 }
 
 .french-correct {
@@ -25,5 +29,15 @@
     justify-content: center;
     margin: 10px 0px 30px 0px;
     font-size: 20px;
+    position: fixed;
+    left: 50%;
+    top: 18%;
+    margin-left: -160px;
+}
+
+@media screen and (max-width: 600px) {
+    .click-instructions {
+        bottom: 17%;
+}
 }
 
