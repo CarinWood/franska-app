@@ -197,17 +197,17 @@
         position: fixed;
         left: 50%;
         margin-left: -160px;
-        bottom: 39%;
+        bottom: 30%;
     }
 
     .buttons-area {
         position: fixed;
-        bottom: 30%;
+        bottom: 22%;
     }
 
     .instructions {
         margin-top: 0px;
         position: fixed;
-        bottom: 22%;
+        bottom: 15%;
     }
 }
