@@ -129,7 +129,7 @@
 @media screen and (max-width: 460px) {
     .spell {
        position: fixed;
-       top: 29%; 
+       top: 20%; 
     }
     .outer-container {
         box-shadow: none;
