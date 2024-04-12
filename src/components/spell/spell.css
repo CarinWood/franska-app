@@ -129,7 +129,7 @@
 @media screen and (max-width: 460px) {
     .spell {
        position: fixed;
-       top: 25%; 
+       top: 29%; 
     }
     .outer-container {
         box-shadow: none;
@@ -185,7 +185,7 @@
     }
 
     .answer-btn {
-        margin-top: 6px;
+        margin-top: 10px;
     }
 
 }
