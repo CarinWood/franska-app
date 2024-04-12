@@ -8,7 +8,13 @@
 .overview-heading {
     position: fixed;
     top: 15%;
+    left: 50%;
+    margin-left: -100px;
     font-size: 20px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image {
