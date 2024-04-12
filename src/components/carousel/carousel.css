@@ -1,5 +1,7 @@
 .carousel {
   margin-top: 80px;
+  position: fixed;
+  top: 14%;
 }
 
 .splide {
