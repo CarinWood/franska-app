@@ -6,6 +6,7 @@ import Back from "../components/buttons/back/Back";
 export const SentencePage = () => {
   return (
     <div>
+   
       <Back />
       <Sentences sentenceList={SentenceData} />
     </div>

@@ -6,6 +6,7 @@ import Carousel from '../components/carousel/Carousel';
 import { Spell } from '../components/spell/Spell';
 import { Match } from '../components/match/Match';
 import Click from '../components/click/Click';
+import { CiBookmark } from "react-icons/ci";
 
 const Five = () => {
   const [showFlash, setShowFlash] = useState(false);
@@ -16,6 +17,10 @@ const Five = () => {
 
   return (
     <div className="container">
+          <div className="chapter-name">
+            <CiBookmark className="bookmark"/>
+            <p> Unité 5</p>
+          </div>
       <Back 
         setShowFlash={setShowFlash}
         showFlash={showFlash}

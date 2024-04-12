@@ -7,6 +7,7 @@ import { Spell } from "../components/spell/Spell";
 import { firstMatchList } from "../data/First";
 import { Match } from "../components/match/Match";
 import Click from "../components/click/Click";
+import { CiBookmark } from "react-icons/ci";
 
 export const One = () => {
   const [showFlash, setShowFlash] = useState(false);
@@ -16,7 +17,11 @@ export const One = () => {
   const [menuAway, setMenuAway] = useState(false);
 
   return (
-    <div className="container">
+      <div className="container">
+          <div className="chapter-name">
+            <CiBookmark className="bookmark"/>
+            <p> Unité 1</p>
+          </div>
       <Back 
         setShowFlash={setShowFlash}
         showFlash={showFlash}

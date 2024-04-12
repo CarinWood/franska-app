@@ -8,6 +8,7 @@ import { Menu } from "../components/menu/Menu";
 import { Match } from "../components/match/Match";
 import { zeroMatchList } from "../data/Zero"
 import Click from "../components/click/Click";
+import { CiBookmark } from "react-icons/ci";
 
 export const Zero = () => {
   const [showFlash, setShowFlash] = useState(false);
@@ -19,6 +20,12 @@ export const Zero = () => {
 
   return (
     <div className="container">
+      
+      <div className="chapter-name">
+        <CiBookmark className="bookmark"/>
+        <p> Unité 0</p>
+      </div>
+
       <Back 
       setShowFlash={setShowFlash}
       showFlash={showFlash}

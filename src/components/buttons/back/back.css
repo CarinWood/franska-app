@@ -2,7 +2,7 @@
     color: white;
     background-color: transparent;
     border: none;
-    width: 90px;
+    width: 120px;
     height: 40px;
     border-radius: 5px;
     cursor: pointer;
@@ -12,7 +12,12 @@
     padding: 5px 10px;
     font-size: 20px;
     letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
 }
+
 
 .go-back:hover {
     opacity: 0.6;

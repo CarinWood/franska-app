@@ -6,6 +6,7 @@ import { Spell } from '../components/spell/Spell';
 import { Match } from '../components/match/Match';
 import { SevenMatchList, SeventhList } from '../data/Seventh';
 import Click from '../components/click/Click';
+import { CiBookmark } from "react-icons/ci";
 
 
 const Seven = () => {
@@ -17,6 +18,10 @@ const Seven = () => {
 
   return (
     <div className="container">
+          <div className="chapter-name">
+            <CiBookmark className="bookmark"/>
+            <p> Unité 7</p>
+          </div>
       <Back 
         setShowFlash={setShowFlash}
         showFlash={showFlash}
