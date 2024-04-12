@@ -61,7 +61,10 @@
     width: 380px;
     display: flex;
     justify-content: space-around;
-    margin-top: 0px;
+    position: fixed;
+    left: 50%;
+    margin-left: -190px;
+    top: 20%;
 }
 
 .outer-match-box {
@@ -121,7 +124,8 @@
     width: 340px;
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-left: -170px;
+
 }
 
 .match-card {
