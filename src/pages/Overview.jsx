@@ -3,13 +3,11 @@ import "../styles/overview.css";
 import { BsPencil, BsBook } from "react-icons/bs";
 import { GiNotebook } from "react-icons/gi";
 
-
-
 const Overview = () => {
   return (
     <div className="overview">
       <p className="overview-heading">Glosor ur Édito A1</p>
-    
+
       <div className="chapters">
         <ul>
           <Link to="/kapitel_0" className="list-item">
