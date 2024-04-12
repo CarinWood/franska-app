@@ -139,11 +139,11 @@
 
     .french-input-wrapper, .swedish-input-wrapper {
         height: 35px;
-        width: 300px;
+        width: 310px;
     }
 
     .fake-input {
-        width: 300px;
+        width: 310px;
         height: 35px;
         font-size: 18px;
         border-radius: 5px;
@@ -151,7 +151,7 @@
     .input-container input {
         font-size: 18px;
         height: 35px;
-        width: 300px;
+        width: 310px;
         border-radius: 5px;
     }
 
@@ -160,31 +160,27 @@
     }
 
     .buttons {
-        width: 320px;
+        width: 310px;
         margin-top: 3px;
      
     }
 
     .buttons button {
         background-color: #eeeeee;
-        width: 32px;
-        padding: 2px 5px;
+        width: 35px;
+        padding: 2px 4px;
         border-radius: 4px;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 17px;
         margin-bottom: 7px;
         margin-right: 4px;
         color: black;
     }
 
-    .answer-btn {
-        padding: 9px 10px;
-        font-size: 18px;
-        margin-top: 5px;
-    }
+  
 
     input {
         transition-delay: 0.3s;

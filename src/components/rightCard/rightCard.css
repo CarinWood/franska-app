@@ -27,7 +27,12 @@
 
 @media screen and (max-width: 600px) {
     .right-card {
-        width: 330px;
+        width: 310px;
         margin-top: 60px;
+        justify-content: flex-end;
+        border: 1px solid white;
+        margin-top: 0px;
+        margin-bottom: -10px;
+ 
     }
 }

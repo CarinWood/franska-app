@@ -43,7 +43,10 @@
     .wrong-card {
         height: 90px;
         width: 330px;
-        margin-top: 60px;
+        margin-top: 0px;
+        justify-content: flex-end;
+        margin-bottom: -10px;
+
     }
 }
 
