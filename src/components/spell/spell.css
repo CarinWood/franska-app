@@ -1,6 +1,6 @@
 .spell {
     position: fixed;
-    top: 20%; 
+    top: 15%; 
 }
 
 .outer-container {
@@ -129,7 +129,7 @@
 @media screen and (max-width: 460px) {
     .spell {
        position: fixed;
-       top: 20%; 
+       top: 15%; 
     }
     .outer-container {
         box-shadow: none;
