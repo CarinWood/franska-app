@@ -2,7 +2,6 @@
     margin-top: 30px;
     width: 100%;
     height: 80vh;
-    border: 1px solid white;
 }
 
 .sentences {
@@ -166,11 +165,10 @@
     .sentence-container {
         margin-top: 0px;
         position: fixed;
-        top: 20%;
+        top: 15%;
         left: 0;
         width: 100%;
-        height: 80vh;
-        border: 1px solid white;
+        height: 45vh;
     }
     .sentences {
         justify-content: flex-start;
@@ -196,5 +194,20 @@
         justify-content: flex-start;
         flex-wrap: wrap;
         align-items: flex-start;
+        position: fixed;
+        left: 50%;
+        margin-left: -160px;
+        bottom: 39%;
+    }
+
+    .buttons-area {
+        position: fixed;
+        bottom: 30%;
+    }
+
+    .instructions {
+        margin-top: 0px;
+        position: fixed;
+        bottom: 22%;
     }
 }
