@@ -42,8 +42,7 @@
 
 .placeholder-sent {
     margin-top: 40px;
-    height: 40px;
-  
+    height: 24px; 
 }
 
 .right-message p, .wrong-message p {
@@ -87,10 +86,6 @@
     height: 35px;
     justify-content: center;
     margin-bottom: 20px;
-}
-
-.correct-btn:active, .next-word-btn:active, .try-btn:active {
-    transform: translateY(3px)
 }
 
 .next-word-btn {
@@ -209,5 +204,32 @@
         margin-top: 0px;
         position: fixed;
         bottom: 15%;
+    }
+
+    .correct-btn, .next-word-btn, .try-btn {
+        padding: 5px 7px;
+        font-size: 17px;
+        margin-top: 0px;
+        width: 130px;
+        height: 40px;
+        margin-bottom: 0px;
+    }  
+
+    .try-btn {
+        width: 130px;
+        height: 40px;
+        margin-bottom: 0px;
+    }
+
+    .word {
+        padding: 5px 7px;
+        background: rgb(63, 63, 216);
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        margin: 0px 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     }
 }
