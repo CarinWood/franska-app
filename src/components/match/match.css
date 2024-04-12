@@ -65,7 +65,7 @@
 }
 
 .outer-match-box {
-    width: 130px;
+    width: 150px;
     height: 70px;
     display: flex;
     align-items: center;
@@ -74,8 +74,8 @@
 }
 
 .match-card {
-    width: 140px;
-    height: 62px;
+    width: 150px;
+    height: 65px;
     font-size: 17px;
     text-align: center;
     display: flex;

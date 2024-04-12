@@ -108,7 +108,7 @@ export const Sentences = ({ sentenceList }) => {
             Övningen avklarad!
           </p>
           <div className="try-again-buttons">
-            <button onClick={resetExercise}>
+            <button onClick={resetExercise} className="again-button">
               <FaRedo className="redo-icon" />
               Öva igen
             </button>

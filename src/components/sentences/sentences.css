@@ -134,6 +134,12 @@
     width: 100%;
 }
 
+.again-button {
+    background: rgb(63, 63, 216);
+    border: none;
+    color: white;
+}
+
 .game-over-card {
     width: 360px;
     height: 200px;

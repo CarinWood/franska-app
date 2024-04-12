@@ -183,7 +183,7 @@ export const SixthMatchList = [
   { id: 5, fr: "accepter", sv: "acceptera" },
   { id: 6, fr: "décrire", sv: "beskriva" },
   { id: 7, fr: "refuser", sv: "vägra" },
-  { id: 8, fr: "l'émission", sv: "program" },
+  { id: 8, fr: "l'émission", sv: "sändning, program" },
   { id: 9, fr: "travailler", sv: "arbeta" },
   { id: 10, fr: "le travail", sv: "arbete" },
   { id: 11, fr: "la chaîne", sv: "tv-kanal" },
