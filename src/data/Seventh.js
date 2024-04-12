@@ -542,7 +542,7 @@ export const SeventhList = [
   {
     id: 109,
     fr: "recevoir",
-    sv: "mottagning, få",
+    sv: "motta, få",
   },
 ];
 
