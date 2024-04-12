@@ -23,7 +23,7 @@ body {
 
 .chapter-name {
   font-size: 20px;
-  position: absolute;
+  position: fixed;
   top: 1%;
   right: 38%;
   padding-top: 10px;
@@ -45,8 +45,8 @@ body {
 @media screen and (max-width: 600px) {
   .chapter-name {
     right: 13%;
-    top: 5%;
-    font-size: 20px;
+    top: 2%;
+    font-size: 22px;
 }
 }
 
