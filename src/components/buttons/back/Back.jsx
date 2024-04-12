@@ -1,5 +1,6 @@
 import "./back.css";
 import { useNavigate } from 'react-router-dom'
+import { MdOutlineArrowBackIos } from "react-icons/md";
 
 const Back = ({
   setShowSpell, 
@@ -31,7 +32,12 @@ const Back = ({
   }
 
 
-  return <button onClick={clickOnBack} className="go-back">Tillbaka</button>
+  return  (
+          <div onClick={clickOnBack} className="go-back">
+            <MdOutlineArrowBackIos className="back-arrow"/>
+              <p>Tillbaka</p>
+          </div>
+    )
 };
 
 export default Back;
