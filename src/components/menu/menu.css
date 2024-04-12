@@ -39,7 +39,7 @@
 
 .menu-list li {
     width: 120px;
-    margin: 10px;
+    margin: 10px 12px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@
 }
 
 .lower-item {
-    margin-top: 20px !important;
+    margin-top: 32px !important;
 }
 
 
