@@ -7,19 +7,27 @@ import { Menu } from "../components/menu/Menu";
 import { Spell } from "../components/spell/Spell";
 import { secondMatchList } from "../data/Second";
 import { Match } from "../components/match/Match";
+import Click from "../components/click/Click";
 
 export const Two = () => {
   const [showFlash, setShowFlash] = useState(false);
   const [showSpell, setShowSpell] = useState(false);
   const [showMatch, setShowMatch] = useState(false);
+  const [showClick, setShowClick] = useState(false);
 
   return (
     <div className="container">
-    <Back />
-    <Menu setShowFlash={setShowFlash} setShowSpell={setShowSpell} setShowMatch={setShowMatch}/>
-    {showFlash && <Carousel flashcardList={SecondList} />}
-    {showSpell && <Spell wordList={SecondList} />}
-    {showMatch && <Match wordList={secondMatchList} />}
-  </div>
+      <Back />
+      <Menu
+        setShowFlash={setShowFlash}
+        setShowSpell={setShowSpell}
+        setShowMatch={setShowMatch}
+        setShowClick={setShowClick}
+      />
+      {showFlash && <Carousel flashcardList={SecondList} />}
+      {showSpell && <Spell wordList={SecondList} />}
+      {showMatch && <Match wordList={secondMatchList} />}
+      {showClick && <Click wordList={secondMatchList} />}
+    </div>
   );
 };
