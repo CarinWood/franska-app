@@ -181,27 +181,9 @@ export const SentenceData = [
       quant: 4,
     },
     {
-      id: 31,
-      fr: "Nous avons joué au foot",
-      sv: "Vi har spelat fotboll",
-      quant: 5,
-    },
-    {
-      id: 32,
-      fr: "Vous avez mangé du gâteau",
-      sv: "Ni har ätit tårta",
-      quant: 5,
-    },
-    {
       id: 33,
       fr: "Ils ont acheté un livre",
       sv: "De har köpt en bok",
-      quant: 5,
-    },
-    {
-      id: 34,
-      fr: "Elles ont fini leurs devoirs",
-      sv: "De har avslutat sina läxor",
       quant: 5,
     },
     {
@@ -228,29 +210,12 @@ export const SentenceData = [
       sv: "Hon har druckit mjölk",
       quant: 4,
     },
-    {
-      id: 39,
-      fr: "Nous avons regardé un film",
-      sv: "Vi har tittat på en film",
-      quant: 5,
-    },
-    {
-      id: 40,
-      fr: "Vous avez trouvé la clé",
-      sv: "Ni har hittat nyckeln",
-      quant: 4,
-    },
+
     {
       id: 41,
       fr: "Ils ont fini le travail",
       sv: "De har avslutat arbetet",
       quant: 4,
-    },
-    {
-      id: 42,
-      fr: "Elles ont écouté de la musique",
-      sv: "De har lyssnat på musik",
-      quant: 5,
     },
     {
       id: 43,
