@@ -1,6 +1,7 @@
 .sentence-container {
     margin-top: 30px;
     width: 100%;
+    height: 80vh;
 }
 
 .sentences {
@@ -9,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 80vh;
 }
 
 .sentence-heading {
@@ -23,11 +25,10 @@
 .answer-box {
     margin: 35px 0px 12px 0px;
     width: 400px;
-    min-height: 60px;
+    height: 80px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
- 
 }
 
 .right-message, .wrong-message {
@@ -36,17 +37,18 @@
     justify-content: center;
     margin-top: 40px;
     height: 40px;
-    margin-bottom: -10px;
+  
 }
 
 .placeholder-sent {
     margin-top: 40px;
     height: 40px;
-    margin-bottom: -10px;
+  
 }
 
 .right-message p, .wrong-message p {
     font-size: 18px;
+    height: 24px;
 }
 
 .right-icon, .wrong-icon {
@@ -113,7 +115,7 @@
 }
 
 .sentence {
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    border: 4px solid rgba(255, 255, 255, 0.2); 
     padding: 20px 23px;
     border-radius: 9px;
     min-width: 250px;
@@ -122,6 +124,14 @@
     justify-content: center;
     margin-bottom: -6px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.buttons-area {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .game-over-card {
@@ -143,4 +153,32 @@
 
 .instructions {
     margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .sentences {
+        justify-content: flex-start;
+    }
+
+    .check-area {
+        margin-top: 20px;
+        width: 320px;
+        height: 70px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding-bottom: 6px;
+        border-bottom: 1px solid white;
+    }
+
+    .answer-box {
+        margin: 35px 0px 12px 0px;
+        width: 320px;
+        height: 100px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
 }

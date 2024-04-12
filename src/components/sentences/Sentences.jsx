@@ -155,6 +155,7 @@ export const Sentences = ({ sentenceList }) => {
               );
             })}
           </div>
+          <div className="buttons-area">
           {isCorrect ? (
             <button className="next-word-btn" onClick={resetAndNext}>
               Nästa
@@ -168,6 +169,7 @@ export const Sentences = ({ sentenceList }) => {
               Rätta
             </button>
           )}
+          </div>
 
           <p className="instructions">Klicka på orden i rätt ordning</p>
         </div>
