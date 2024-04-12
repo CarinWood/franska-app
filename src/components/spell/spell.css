@@ -129,7 +129,7 @@
 @media screen and (max-width: 460px) {
     .spell {
        position: fixed;
-       height: 100%;
+       top: 25%; 
     }
     .outer-container {
         box-shadow: none;
@@ -182,6 +182,10 @@
 
     input {
         transition-delay: 0.3s;
+    }
+
+    .answer-btn {
+        margin-top: 6px;
     }
 
 }
