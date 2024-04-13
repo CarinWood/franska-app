@@ -5,7 +5,7 @@ export const SentenceData = [
       sv: "Hur skriver man det?",
       quant: 3,
     },
-    {
+   /*  {
       id: 2,
       fr: "Je ne comprends pas",
       sv: "Jag förstår inte",
@@ -278,87 +278,10 @@ export const SentenceData = [
       quant: 4,
     },
     {
-      id: 53,
-      fr: "Ils viennent de commencer",
-      sv: "De har precis börjat",
-      quant: 4,
-    },
-    {
       id: 54,
       fr: "Elles viennent d'arriver",
       sv: "De har precis kommit",
       quant: 4,
-    },
-    {
-      id: 55,
-      fr: "Je viens de voir un film",
-      sv: "Jag har precis sett en film",
-      quant: 6,
-    },
-    {
-      id: 56,
-      fr: "Tu viens de lire ce livre",
-      sv: "Du har precis läst den här boken",
-      quant: 6,
-    },
-    {
-      id: 57,
-      fr: "Il vient de prendre le train",
-      sv: "Han har precis tagit tåget",
-      quant: 5,
-    },
-    {
-      id: 58,
-      fr: "Elle vient de préparer le dîner",
-      sv: "Hon har precis lagat middag",
-      quant: 5,
-    },
-    {
-      id: 59,
-      fr: "Nous venons de visiter le musée",
-      sv: "Vi har precis besökt museet",
-      quant: 5,
-    },
-    {
-      id: 60,
-      fr: "Vous venez de rencontrer Pierre",
-      sv: "Ni har precis träffat Pierre",
-      quant: 5,
-    },
-    {
-      id: 61,
-      fr: "Ils viennent de partir en vacances",
-      sv: "De har precis åkt på semester",
-      quant: 5,
-    },
-    {
-      id: 62,
-      fr: "Elles viennent de acheter des vêtements",
-      sv: "De har precis köpt kläder",
-      quant: 5,
-    },
-    {
-      id: 63,
-      fr: "Je viens de rentrer à la maison",
-      sv: "Jag har precis kommit hem",
-      quant: 6,
-    },
-    {
-      id: 64,
-      fr: "Tu viens de terminer tes devoirs",
-      sv: "Du har precis avslutat dina läxor",
-      quant: 6,
-    },
-    {
-      id: 65,
-      fr: "Il vient de prendre une douche",
-      sv: "Han har precis duschat",
-      quant: 5,
-    },
-    {
-      id: 66,
-      fr: "Elle vient de finir son travail",
-      sv: "Hon har precis avslutat sitt arbete",
-      quant: 5,
-    }
+    }, */
+  
   ];
