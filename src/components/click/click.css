@@ -35,4 +35,10 @@
     margin-left: -160px;
 }
 
+@media screen and (max-width: 600px) {
+    .click-instructions {
+        bottom: 1%;
+    }
+}
+
 
