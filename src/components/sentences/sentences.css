@@ -41,8 +41,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid white;
-  
 }
 
 .placeholder-sent {
@@ -200,13 +198,13 @@
 
     .buttons-area {
         position: fixed;
-        bottom: 22%;
+        bottom: 16%;
     }
 
     .instructions {
         margin-top: 0px;
         position: fixed;
-        bottom: 12%;
+        bottom: 6%;
     }
 
     .correct-btn, .next-word-btn, .try-btn {
