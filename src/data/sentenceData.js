@@ -5,7 +5,7 @@ export const SentenceData = [
     sv: "Hur skriver man det?",
     quant: 3,
   },
- /*  {
+  {
     id: 2,
     fr: "Je ne comprends pas",
     sv: "Jag förstår inte",
@@ -322,5 +322,65 @@ export const SentenceData = [
     fr: "Elles viennent d'arriver",
     sv: "De har precis kommit",
     quant: 4,
-  }, */
+  }, 
+  {
+  id: 55,
+  fr: "C'est très intéressant.",
+  sv: "Det är mycket intressant.",
+  quant: 3,
+},
+{
+  id: 56,
+  fr: "Elle parle couramment français.",
+  sv: "Hon talar flytande franska.",
+  quant: 4,
+},
+{
+  id: 57,
+  fr: "Tu peux m'aider?",
+  sv: "Kan du hjälpa mig?",
+  quant: 3,
+},
+{
+  id: 58,
+  fr: "Il est toujours occupé.",
+  sv: "Han är alltid upptagen.",
+  quant: 3,
+},
+{
+  id: 59,
+  fr: "Elle aime voyager beaucoup.",
+  sv: "Hon älskar att resa mycket.",
+  quant: 4,
+},
+{
+  id: 60,
+  fr: "Tu as déjà mangé?",
+  sv: "Har du redan ätit?",
+  quant: 4,
+},
+{
+  id: 61,
+  fr: "C'est une bonne idée.",
+  sv: "Det är en bra idé.",
+  quant: 3,
+},
+{
+  id: 62,
+  fr: "Elle travaille dur chaque jour.",
+  sv: "Hon arbetar hårt varje dag.",
+  quant: 5,
+},
+{
+  id: 63,
+  fr: "Il veut devenir médecin.",
+  sv: "Han vill bli läkare.",
+  quant: 4,
+},
+{
+  id: 64,
+  fr: "Elle a beaucoup d'amis.",
+  sv: "Hon har många vänner.",
+  quant: 4,
+},
 ];
