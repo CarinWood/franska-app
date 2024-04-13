@@ -73,7 +73,6 @@
 .correct-btn, .next-word-btn, .try-btn {
     background-color: #5cb85c;
     color: white;
-    padding: 5px 7px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -83,19 +82,17 @@
     display: flex;
     align-items: center;
     width: 120px;
-    height: 35px;
+    height: 38px;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .next-word-btn {
     background-color: rgb(202, 149, 49);
-    color: white;
 }
 
 .try-btn {
     background-color:rgb(161, 8, 8);
-    width: 140px;
 }
 
 .check-area {
@@ -203,11 +200,10 @@
     .instructions {
         margin-top: 0px;
         position: fixed;
-        bottom: 15%;
+        bottom: 12%;
     }
 
     .correct-btn, .next-word-btn, .try-btn {
-        padding: 5px 7px;
         font-size: 20px;
         margin-top: 0px;
         width: 130px;
@@ -215,10 +211,16 @@
         margin-bottom: 0px;
     }  
 
+    .correct-btn {
+        font-size: 20px !important;
+        font-family: "Roboto";
+    }
+
     .try-btn {
         width: 130px;
         height: 40px;
         margin-bottom: 0px;
+        font-size: 20px;
     }
 
     .word {

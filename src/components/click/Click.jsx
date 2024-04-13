@@ -111,9 +111,10 @@ const Click = ({wordList}) => {
             })}
         </div>
 
-        <p className='instructions click-instructions'>Klicka på rätt svensk översättning</p>
+       
         </>
         }
+         <p className='instructions click-instructions'>Klicka på rätt svensk översättning</p>
         </div>
 
   )
