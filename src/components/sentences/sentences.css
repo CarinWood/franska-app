@@ -89,6 +89,7 @@
     height: 38px;
     justify-content: center;
     margin-bottom: 0px;
+    border: 4px solid rgba(255, 255, 255, 0.2) !important;
 }
 
 .next-word-btn {
@@ -125,7 +126,7 @@
 .buttons-area {
     height: 100px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
 }
@@ -207,6 +208,7 @@
     .buttons-area {
         position: fixed;
         bottom: 16%;
+        align-items: center !important;
     }
 
     .instructions {

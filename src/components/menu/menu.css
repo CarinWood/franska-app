@@ -16,9 +16,10 @@
 }
 
 .menu-headline {
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.2px;
     margin-bottom: 60px;
+    font-family: "Roboto";
 }
 
 .icon {
@@ -49,7 +50,8 @@
 
 .menu-list li p {
     margin-top: 5px;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: "Roboto";
 }
 
 .away {

@@ -1,6 +1,6 @@
  export const eithArray = [
     { id: 1, fr: "la forme", sv: "formen" },
-    { id: 2, fr: "l'émoton", sv: "känslan" },
+    { id: 2, fr: "l'émotion", sv: "känslan" },
     { id: 3, fr: "la santé", sv: "hälsa" },
     { id: 4, fr: "le sport", sv: "idrotten" },
     { id: 5, fr: "exprimer", sv: "uttrycka" },
