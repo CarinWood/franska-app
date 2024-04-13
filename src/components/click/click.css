@@ -43,7 +43,7 @@
 
 @media screen and (max-width: 600px) {
     .click-instructions {
-        bottom: 5%;
+        bottom: 0;
     }
 }
 
