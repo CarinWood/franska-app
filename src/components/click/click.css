@@ -41,6 +41,23 @@
     margin-left: -160px;
 }
 
+.div-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin-top: 14px;
+}
+
+.cube {
+    margin-right: 10px;
+    width: 15px !important;
+    height: 15px;
+    background-color: red;
+    border-radius: 3px;
+
+}
+
 @media screen and (max-width: 600px) {
     .click-instructions {
         bottom: 6%;

@@ -10,6 +10,7 @@ const Click = ({wordList}) => {
     const [currentFrench, setCurrentFrench] = useState(originalArray[0])
     const [guessArray, setGuessArray] = useState([])
     const [finishedCard, showFinishedCard] = useState(false);
+    const [numError, setNumError] = useState(0)
 
 
     useEffect(() => {
@@ -23,7 +24,6 @@ const Click = ({wordList}) => {
  
 
     const setCurrentWords = () => {
-        console.log(originalArray)
         const currentWord = {
             id: originalArray[currObj].id,
             fr: originalArray[currObj].fr,
@@ -86,7 +86,12 @@ const Click = ({wordList}) => {
         {finishedCard &&
          <div className="match-finished">
           <h3 className="match-headline">Övningen avklarad</h3>
+          {numError < 1 ?
           <p className="match-text">Du har svarat rätt på alla orden!</p>
+          :
+      
+          <div className='div-text'><div className='cube'></div><span>Du hade {numError} fel svar</span></div>
+          }
           <button className="button-start-again" onClick={resetGame}>
             <FaRedo className="practice-again-icon" />
             Öva igen
@@ -105,6 +110,7 @@ const Click = ({wordList}) => {
                             word={word} 
                             nextWord={nextWord}
                             currentFrench={currentFrench}
+                            setNumError={setNumError}
                             />}
                         </div>
                         )

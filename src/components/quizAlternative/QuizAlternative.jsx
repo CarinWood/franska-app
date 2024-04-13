@@ -1,7 +1,7 @@
 import './quizAlternative.css'
 import { useState } from 'react'
 
-export const QuizAlternative = ({word, nextWord, currentFrench}) => {
+export const QuizAlternative = ({word, nextWord, currentFrench, setNumError}) => {
     const [greenBorder, setGreenBorder] = useState(false)
     const [wrongIds, setWrongIds] = useState([]);
 
@@ -21,6 +21,9 @@ export const QuizAlternative = ({word, nextWord, currentFrench}) => {
            
         } else {
             setWrongIds([...wrongIds, word.id]);
+            setNumError(prev => {
+                return prev + 1;
+            })
         }
     }
 

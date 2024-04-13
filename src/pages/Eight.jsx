@@ -6,7 +6,7 @@ import { Spell } from '../components/spell/Spell';
 import { Match } from '../components/match/Match';
 import Click from '../components/click/Click';
 import { CiBookmark } from "react-icons/ci";
-import { eithArray } from '../data/Eith';
+import { EithMatchArray, eithArray } from '../data/Eith';
 
 
 const Eight = () => {
@@ -43,8 +43,8 @@ const Eight = () => {
       />
       {showFlash && <Carousel flashcardList={eithArray} />}
       {showSpell && <Spell wordList={eithArray} />}
-      {showMatch && <Match wordList={eithArray} />}
-      {showClick && <Click wordList={eithArray} />}
+      {showMatch && <Match wordList={EithMatchArray} />}
+      {showClick && <Click wordList={EithMatchArray} />}
     </div>
   )
 }
