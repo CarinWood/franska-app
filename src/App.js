@@ -15,6 +15,7 @@ import Five from "./pages/Five";
 import { Verbs } from "./pages/Verbs";
 import Six from "./pages/Six";
 import Seven from "./pages/Seven";
+import Eight from "./pages/Eight";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/kapitel_5" element={<Five/>} />
         <Route path="/kapitel_6" element={<Six/>} />
         <Route path="/kapitel_7" element={<Seven/>} />
+        <Route path="/kapitel_8" element={<Eight/>} />
         <Route path="/sentences" element={<SentencePage />} />
         <Route path="/verb" element={<Verb />} />
         <Route path="/verbs" element={<Verbs/>}/>
