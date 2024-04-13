@@ -254,4 +254,9 @@
         margin-top: 30px;
         font-size: 20px;
     }
+
+    .game-over-card {
+        width: 320px;
+        margin-left: -160px;
+    }
 }
