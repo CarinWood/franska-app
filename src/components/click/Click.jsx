@@ -82,7 +82,7 @@ const Click = ({wordList}) => {
 
 
   return (
-    <div>
+    <div className='click-container'>
         {finishedCard &&
          <div className="match-finished">
           <h3 className="match-headline">Övningen avklarad</h3>
