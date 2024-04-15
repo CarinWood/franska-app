@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+
+# Franska glosor
+
+<details>
+<summary>
+Getting Started with Create React App
+</summary>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +74,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</details>
+
+
+### Video presentation of the app
+
+[click here to see the video](https://youtu.be/-Jz84zaJJUY?si=4nfIzhUztHSVkw2d)
+
+### Images from the app
+
+
+<img src="./src/assets/img/screenshot_1.png" width="300" alt="screenshot"/>
+<img src="./src/assets/img/screenshot_2.png" width="300" alt="screenshot"/>
+<img src="./src/assets/img/screenshot_3.png" width="300" alt="screenshot"/>
+<img src="./src/assets/img/screenshot_4.png" width="300" alt="screenshot"/>

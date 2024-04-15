@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/overview.css";
-import { BsPencil, BsBook } from "react-icons/bs";
-import { GiNotebook } from "react-icons/gi";
+import { BsPencil } from "react-icons/bs";
 
 const Overview = () => {
   return (
