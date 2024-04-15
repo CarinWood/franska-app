@@ -35,6 +35,7 @@ export const Sentences = ({ sentenceList }) => {
   };
 
   const choseWord = (word, i) => {
+    if(isWrong) return
     if (!clickedIndices.includes(i)) {
       setClickedIndices([...clickedIndices, i]);
       setCheckArray([...checkArray, newArray[i]]);
@@ -72,6 +73,7 @@ export const Sentences = ({ sentenceList }) => {
   };
 
   const regret = (id) => {
+    if(isWrong) return
     const filteredArray = checkArray.filter((_, index) => index !== id);
     setCheckArray(filteredArray);
 
