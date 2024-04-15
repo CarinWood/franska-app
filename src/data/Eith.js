@@ -145,7 +145,7 @@
   { "id": 143, "fr": "au fait", "sv": "för övrigt, apropå" },
   { "id": 144, "fr": "l'examen", "sv": "examen, prov, gransning" },
   { "id": 145, "fr": "le paquet", "sv": "paket" },
-  { "id": 146, "fr": "laver", "sv": "tvätta, rengöra" }
+  { "id": 146, "fr": "laver", "sv": "tvätta, rengöra" } 
 ]
 
   
