@@ -228,28 +228,10 @@ export const SentenceData = [
     quant: 4,
   },
   {
-    id: 39,
-    fr: "Nous avons vu un film",
-    sv: "Vi har sett en film",
-    quant: 5,
-  },
-  {
-    id: 40,
-    fr: "Vous avez écouté de la musique",
-    sv: "Ni har lyssnat på musik",
-    quant: 6,
-  },
-  {
     id: 41,
     fr: "Ils ont fini le travail",
     sv: "De har avslutat arbetet",
     quant: 4,
-  },
-  {
-    id: 42,
-    fr: "Elles ont étudié l'espagnol",
-    sv: "De har studerat spanska",
-    quant: 5,
   },
   {
     id: 43,
@@ -330,12 +312,6 @@ export const SentenceData = [
   quant: 3,
 },
 {
-  id: 56,
-  fr: "Elle parle couramment français.",
-  sv: "Hon talar flytande franska.",
-  quant: 4,
-},
-{
   id: 57,
   fr: "Tu peux m'aider?",
   sv: "Kan du hjälpa mig?",
@@ -348,12 +324,6 @@ export const SentenceData = [
   quant: 3,
 },
 {
-  id: 59,
-  fr: "Elle aime voyager beaucoup.",
-  sv: "Hon älskar att resa mycket.",
-  quant: 4,
-},
-{
   id: 60,
   fr: "Tu as déjà mangé?",
   sv: "Har du redan ätit?",
@@ -364,12 +334,6 @@ export const SentenceData = [
   fr: "C'est une bonne idée.",
   sv: "Det är en bra idé.",
   quant: 3,
-},
-{
-  id: 62,
-  fr: "Elle travaille dur chaque jour.",
-  sv: "Hon arbetar hårt varje dag.",
-  quant: 5,
 },
 {
   id: 63,
