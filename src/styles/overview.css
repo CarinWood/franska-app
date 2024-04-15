@@ -7,7 +7,7 @@
 
 .overview-heading {
     position: fixed;
-    top: 15%;
+    top: 10%;
     left: 50%;
     margin-left: -100px;
     font-size: 20px;
@@ -27,7 +27,7 @@
 
 .chapters {
     position: fixed;
-    top: 30%;
+    top: 22%;
     display: flex;
 }
 
@@ -56,8 +56,20 @@
     justify-content: center;
     margin-top: 20px !important;
     position: fixed;
-    bottom: 10%;
+    bottom: 17%;
 
+}
+
+.credits {
+    position: fixed;
+    bottom: 2%;
+    left: 2%;
+    color: white;
+    font-size: 10px;
+}
+
+.credits a {
+    color: white;
 }
 
 .spec {
@@ -86,7 +98,7 @@
     align-items: center;
     justify-content: flex-start;
     align-self: flex-start;
-    padding-top: 100px;
+    padding-top: 20px;
 }
     .list-item {
         font-size: 22px;
@@ -96,5 +108,10 @@
         font-size: 22px;
     }
 
+    .credits {
+        left: 50%;
+        width: 100px;
+        margin-left: -50px;
+    }
 
 }

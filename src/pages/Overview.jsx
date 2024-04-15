@@ -50,6 +50,7 @@ const Overview = () => {
           bygg meningar
         </Link>
       </ul>
+      <p className="credits">&copy;2024 <a href="https://carinwood-eng-cv.netlify.app/" target="_blank" rel="noreferrer">Carin Wood</a></p>
     </div>
   );
 };
