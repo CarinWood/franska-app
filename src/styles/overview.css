@@ -31,7 +31,7 @@
     margin: 0px 20px;
 }
 
-.list-item {
+.list-item, .list-item-2 {
     width: 90px;
     color: white;
     text-decoration: none;
@@ -42,15 +42,24 @@
     align-items: flex-start;
 }
 
-.specials {
+.list-item-2 {
+    width: 200px;
+}
+
+.specials, .specials-2 {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px !important;
     position: fixed;
     bottom: 15%;
-
 }
+
+.specials-2 {
+    bottom: 6%;
+}
+
+   
 
 .credits {
     position: fixed;

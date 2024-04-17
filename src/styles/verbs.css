@@ -9,9 +9,11 @@
 }
 
 .verbs-table {
-    padding-top: 10px;
-    width: 600px;
-    min-height: 200px;
+    position: fixed;
+    top: 8%;
+    padding-top: 15px;
+    width: 520px;
+    height: 370px;
     border: 5px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 6px;
@@ -54,7 +56,7 @@
 
 .word-box {
     margin-left: 20px;
-    width: 80px;
+    width: 90px;
     height: 30px;
     border-radius: 5px;
     padding-left: 3px;
@@ -64,47 +66,46 @@
     border: 3px solid rgba(255, 255, 255, 0.4);
 }
 
-.box-with-words, .check-box {
-    width: 500px;
-    height: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-}
-
-.check-box {
-    margin-top: 30px;
-}
-
-.french-verb {
-    font-size: 18px;
-    width: 60px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background-image: linear-gradient(rgb(68, 68, 195), rgb(42, 42, 120));
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-.correct-btn {
-    background-color: #46a946;
+.word-box input {
+    width: 80px;
+    background: transparent;
+    border: none;
+    outline: none;
     color: white;
-    padding: 5px 7px;
+    font-size: 18px;
+}
+
+
+.button-answer {
+    position: fixed;
+    bottom: 15%;
+    background-image: linear-gradient(#259725, #0d5b0d);
+    color: white;
+    width: 90px;
+    height: 35px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
-    margin-top: 14px;
-    letter-spacing: 1px;
+    font-size: 17px;
+    letter-spacing: 1.5px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.check {
-    margin-left: -10px;
+.button-answer:active {
+    transform: translateY(3px);
+}
+
+
+
+
+.instructions-text {
+    bottom: 4%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
 }

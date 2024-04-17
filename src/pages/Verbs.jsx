@@ -1,49 +1,71 @@
 import React, { useEffect, useState } from "react";
 import "../styles/verbs.css";
-import { VerbArray } from "../data/VerbArray";
-import { GrFormCheckmark } from "react-icons/gr";
+import { VerbArrayIrregular } from "../data/VerbArray";
+import VerbMenu from "../components/verbMenu/VerbMenu";
+import BackForVerb from "../components/buttons/backForVerb/BackForVerb";
+import { FaCheck } from "react-icons/fa";
+
 
 export const Verbs = () => {
-  const [count, setCount] = useState(1);
-  const [hideWord, setHideWord] = useState([]);
+  const [menu, showMenu] = useState(true)
+  const [verbChoice, setVerbChoice] = useState(0)
+  const [currentNum, setCurrentNum] = useState(0)
+  const [verbArray, setVerbArray] = useState(VerbArrayIrregular[currentNum])
 
-  const choseWord = (verb) => {
-    let item = VerbArray.find((item) => item.id === count);
-    item.answer = verb;
-    setHideWord((prevArray) => {
-      return [...prevArray, count];
-    });
-    setCount(count + 1);
-  };
+
+
+
+  const typeInAnswer = (e, id) => {
+
+
+    //Find what object user is currently writing on
+    const foundObject = verbArray.find(verb => verb.id === id)
+
+    //If found, set the users typed answer in the objects "answer"
+    
+
+
+    if(foundObject) {
+      foundObject.answer += e.target.value
+    }
+
+    
+
+  }
+ 
 
   const checkIfCorrect = () => {
-    VerbArray.map((object) => {
-      if (object.fr === object.answer) {
-        return (object.correct = "right");
-      } else {
-        return (object.correct = "wrong");
-      }
-    });
+  
+    
   };
 
-  useEffect(() => {}, [count, VerbArray]);
+  useEffect(() => {}, [verbArray]);
 
   return (
     <div className="verbs-page">
-      <div className="verbs-table">
+        <BackForVerb  />
+        {menu && <VerbMenu showMenu={showMenu} setVerbChoice={setVerbChoice}/>}
+        {!menu && 
+        <>
+        <div className="verbs-table">
         <h4 className="headline-text">Avoir</h4>
         <div>
           <div>
-            {VerbArray.map((verb) => {
+            {VerbArrayIrregular[currentNum].map((verb) => {
               return (
                 <div key={verb.id} className="verb-item">
                   <p className="swedish">{verb.sv}</p>
                   <p className="pronoun">{verb.pronoun}</p>
                   <div className="word-box">
-                    <p>{verb.answer}</p>
+                    <input 
+                      type="text" 
+                      maxLength={9}
+                      onChange={(e) => typeInAnswer(e, verb.id)}
+                      value={verb.answer}
+                    />
                   </div>
                   <div>
-                    {verb.correct === "wrong" ? <GrFormCheckmark /> : null}
+                    {verb.correct === "wrong" ? <FaCheck /> : null}
                   </div>
                 </div>
               );
@@ -51,33 +73,16 @@ export const Verbs = () => {
           </div>
         </div>
       </div>
-      {count < 7 ? (
-        <div className="box-with-words">
-          {VerbArray.map((verb) => {
-            return (
-              <div key={verb.id}>
-                <p
-                  className={
-                    hideWord.includes(verb.id)
-                      ? "french-verb hide"
-                      : "french-verb"
-                  }
-                  onClick={() => choseWord(verb.fr)}
-                >
-                  {verb.fr}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-      ) : (
-        <div className="check-box">
-          <button className="correct-btn" onClick={checkIfCorrect}>
-            <GrFormCheckmark className="check" />
-            Rätta
-          </button>
-        </div>
-      )}
+
+
+      <button className="button-answer" onClick={checkIfCorrect}>Svara</button>
+
+
+      <p className="instructions-text">Skriv in rätt verbböjning i rutorna</p>
+      </>
+      }
+    
     </div>
+
   );
 };

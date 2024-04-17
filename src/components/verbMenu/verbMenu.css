@@ -1,0 +1,37 @@
+.verb-menu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    top: 25%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    font-size: 20px;
+    letter-spacing: 0.3px;
+}
+
+.verb-menu article {
+    width: 220px;
+    height: 42px;
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(63, 63, 216);
+    background-image: linear-gradient(rgb(81, 81, 229), rgb(45, 45, 180));
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.verb-menu article:active {
+    transform: translateY(3px);
+}
+
+.verb-menu article:hover {
+    background: rgb(71, 71, 214);
+}
+

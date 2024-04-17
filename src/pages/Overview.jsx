@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/overview.css";
 import { BsPencil } from "react-icons/bs";
+import { FiBook } from "react-icons/fi";
 
 const Overview = () => {
   return (
@@ -49,6 +50,12 @@ const Overview = () => {
           bygg meningar
         </Link>
       </ul>
+   {/*    <ul className="specials-2">
+        <Link to="/verb_presens" className="list-item-2">
+          <FiBook className="overview-icon" />
+          böj verb i presens
+        </Link>
+      </ul> */}
       <p className="credits">&copy;2024 <a href="https://carinwood-eng-cv.netlify.app/" target="_blank" rel="noreferrer">Carin Wood</a></p>
     </div>
   );

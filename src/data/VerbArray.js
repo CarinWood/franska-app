@@ -1,50 +1,46 @@
-export const VerbArray = [
+export const VerbArrayIrregular = [
+  [
   {
     id: 1,
     sv: "jag har:",
     pronoun: "j'",
     fr: "ai",
-    answer: "",
-    correct: ""
+    answer:""
   },
   {
     id: 2,
     sv: "du har:",
     pronoun: "tu ",
     fr: "as",
-    answer: "",
-    correct: ""
+    answer: ""
   },
   {
     id: 3,
     sv: "han har:",
     pronoun: "il",
     fr: "a",
-    answer: "",
-    correct: ""
+    answer: ""
   },
   {
     id: 4,
     sv: "vi har:",
     pronoun: "nous",
     fr: "avons",
-    answer: "",
-    correct: ""
+    answer: ""
   },
   {
     id: 5,
     sv: "ni har:",
     pronoun: "vous",
     fr: "avez",
-    answer: "",
-    correct: ""
+    answer: ""
   },
   {
     id: 6,
     sv: "de har:",
     pronoun: "ils",
     fr: "ont",
-    answer: "",
-    correct: ""
-  },
+    answer: ""
+  }
+  ]
 ];

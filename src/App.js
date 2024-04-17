@@ -33,8 +33,7 @@ function App() {
         <Route path="/kapitel_7" element={<Seven/>} />
         <Route path="/kapitel_8" element={<Eight/>} />
         <Route path="/sentences" element={<SentencePage />} />
-        <Route path="/verb" element={<Verb />} />
-        <Route path="/verbs" element={<Verbs/>}/>
+        <Route path="/verb_presens" element={<Verbs/>}/>
       </Routes>
     </div>
     </DndProvider>
