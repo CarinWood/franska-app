@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../styles/verbs.css";
-import { VerbArrayIrregular } from "../data/VerbArray";
+import { VerbArrayIrregular, headingsArrayIrregular } from "../data/VerbArray";
 import VerbMenu from "../components/verbMenu/VerbMenu";
 import BackForVerb from "../components/buttons/backForVerb/BackForVerb";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa6";
+import { IoCloseSharp  } from "react-icons/io5";
 
 
 export const Verbs = () => {
@@ -11,13 +12,11 @@ export const Verbs = () => {
   const [verbChoice, setVerbChoice] = useState(0)
   const [currentNum, setCurrentNum] = useState(0)
   const [verbArray, setVerbArray] = useState(VerbArrayIrregular[currentNum])
+  const [num, setNum] = useState(0)
  
 
 
-
-
   const typeInAnswer = (e, id) => {
-
     const foundObject = verbArray.find(verb => verb.id === id)
     
     if(foundObject) {
@@ -26,17 +25,27 @@ export const Verbs = () => {
 
   }
 
-    
-
-  
- 
-
   const checkIfCorrect = () => {
-    console.log(verbArray)
+    const tempArray = verbArray.map((verb) => {
+      return verb.fr === verb.answer ? { ...verb, correct: true} : {...verb, correct: false}
+    })
     
+    setVerbArray(tempArray)
+
+    setNum(tempArray.filter((verb) => verb.correct).length)
+
   };
 
-  useEffect(() => {}, [verbArray]);
+  const nextSet = () => {
+    setNum(0)
+    setCurrentNum(currentNum + 1)
+    setVerbArray(VerbArrayIrregular[currentNum + 1])
+
+  }
+
+  useEffect(() => {
+    console.log(verbArray)
+  }, [verbArray, num, currentNum]);
 
   return (
     <div className="verbs-page">
@@ -45,7 +54,7 @@ export const Verbs = () => {
         {!menu && 
         <>
         <div className="verbs-table">
-        <h4 className="headline-text">Avoir</h4>
+        <h4 className="headline-text">{headingsArrayIrregular[currentNum]}</h4>
         <div>
           <div>
             {verbArray.map((verb) => {
@@ -55,23 +64,28 @@ export const Verbs = () => {
                   <p className="pronoun">{verb.pronoun}</p>
                   <div className="word-box">
                     <input 
+                      key={verb.id}
                       type="text" 
                       maxLength={9}
                       onChange={(e) => typeInAnswer(e, verb.id)}
                     />
                   </div>
                   <div>
-                    {verb.correct === "wrong" ? <FaCheck /> : null}
+                    {verb.correct === true ? <div className="icon-div"><FaCheck className="check-icon" /></div>
+                    : verb.correct === false ? <div className="icon-div"><IoCloseSharp className="close-icon"/></div>
+                    : <></>
+                    }
                   </div>
-                </div>
+                </div>  
               );
             })}
           </div>
         </div>
       </div>
 
-
-      <button className="button-answer" onClick={checkIfCorrect}>Svara</button>
+      {num === 6 ? <button className="continue-button" onClick={nextSet}>Fortsätt</button>
+      : <button className="button-answer" onClick={checkIfCorrect}>Svara</button>
+      }
 
 
       <p className="instructions-text">Skriv in rätt verbböjning i rutorna</p>
