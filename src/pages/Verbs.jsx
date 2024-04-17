@@ -11,31 +11,28 @@ export const Verbs = () => {
   const [verbChoice, setVerbChoice] = useState(0)
   const [currentNum, setCurrentNum] = useState(0)
   const [verbArray, setVerbArray] = useState(VerbArrayIrregular[currentNum])
+ 
 
 
 
 
   const typeInAnswer = (e, id) => {
 
-
-    //Find what object user is currently writing on
     const foundObject = verbArray.find(verb => verb.id === id)
-
-    //If found, set the users typed answer in the objects "answer"
     
-
-
     if(foundObject) {
-      foundObject.answer += e.target.value
-    }
-
-    
+      foundObject.answer = e.target.value
+    } 
 
   }
+
+    
+
+  
  
 
   const checkIfCorrect = () => {
-  
+    console.log(verbArray)
     
   };
 
@@ -51,7 +48,7 @@ export const Verbs = () => {
         <h4 className="headline-text">Avoir</h4>
         <div>
           <div>
-            {VerbArrayIrregular[currentNum].map((verb) => {
+            {verbArray.map((verb) => {
               return (
                 <div key={verb.id} className="verb-item">
                   <p className="swedish">{verb.sv}</p>
@@ -61,7 +58,6 @@ export const Verbs = () => {
                       type="text" 
                       maxLength={9}
                       onChange={(e) => typeInAnswer(e, verb.id)}
-                      value={verb.answer}
                     />
                   </div>
                   <div>

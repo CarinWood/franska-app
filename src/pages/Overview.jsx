@@ -50,12 +50,12 @@ const Overview = () => {
           bygg meningar
         </Link>
       </ul>
-   {/*    <ul className="specials-2">
+     {/*   <ul className="specials-2">
         <Link to="/verb_presens" className="list-item-2">
           <FiBook className="overview-icon" />
           böj verb i presens
         </Link>
-      </ul> */}
+      </ul>  */}
       <p className="credits">&copy;2024 <a href="https://carinwood-eng-cv.netlify.app/" target="_blank" rel="noreferrer">Carin Wood</a></p>
     </div>
   );
