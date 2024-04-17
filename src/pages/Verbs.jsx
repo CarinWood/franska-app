@@ -4,7 +4,7 @@ import { VerbArrayIrregular, headingsArrayIrregular } from "../data/VerbArray";
 import VerbMenu from "../components/verbMenu/VerbMenu";
 import BackForVerb from "../components/buttons/backForVerb/BackForVerb";
 import { FaCheck } from "react-icons/fa6";
-import { IoCloseSharp  } from "react-icons/io5";
+import { FaRegStar } from "react-icons/fa";
 
 
 export const Verbs = () => {
@@ -25,7 +25,8 @@ export const Verbs = () => {
 
   }
 
-  const checkIfCorrect = () => {
+  const checkIfCorrect = (e) => {
+    e.preventDefault();
     const tempArray = verbArray.map((verb) => {
       return verb.fr === verb.answer ? { ...verb, correct: true} : {...verb, correct: false}
     })
@@ -36,8 +37,11 @@ export const Verbs = () => {
 
   };
 
-  const nextSet = () => {
+  const nextSet = (e) => {
+    e.preventDefault()
     setNum(0)
+    console.log(verbArray.length)
+    if(currentNum + 1 >= verbArray.length) return
     setCurrentNum(currentNum + 1)
     setVerbArray(VerbArrayIrregular[currentNum + 1])
 
@@ -52,9 +56,10 @@ export const Verbs = () => {
         <BackForVerb  />
         {menu && <VerbMenu showMenu={showMenu} setVerbChoice={setVerbChoice}/>}
         {!menu && 
-        <>
-        <div className="verbs-table">
-        <h4 className="headline-text">{headingsArrayIrregular[currentNum]}</h4>
+        <form className="verbs-table">
+             <h4 className="headline-text">{headingsArrayIrregular[currentNum]}</h4>
+        <div>
+     
         <div>
           <div>
             {verbArray.map((verb) => {
@@ -67,15 +72,17 @@ export const Verbs = () => {
                       key={verb.id}
                       type="text" 
                       maxLength={9}
+                      autoCapitalize="none"
                       onChange={(e) => typeInAnswer(e, verb.id)}
                     />
                   </div>
-                  <div>
-                    {verb.correct === true ? <div className="icon-div"><FaCheck className="check-icon" /></div>
-                    : verb.correct === false ? <div className="icon-div"><IoCloseSharp className="close-icon"/></div>
-                    : <></>
-                    }
-                  </div>
+                    <div>
+                 
+                    {verb.correct === false && <div className="icon-div"><FaCheck className="check-icon-red"/></div>}
+                
+                     {verb.correct === true && <div className="icon-div"><FaCheck className="check-icon" /></div>}
+                    </div>
+              
                 </div>  
               );
             })}
@@ -83,13 +90,13 @@ export const Verbs = () => {
         </div>
       </div>
 
-      {num === 6 ? <button className="continue-button" onClick={nextSet}>Fortsätt</button>
-      : <button className="button-answer" onClick={checkIfCorrect}>Svara</button>
+      {num === 6 ? <button className="continue-button" type="submit"  onClick={(e) =>nextSet(e)}>Fortsätt</button>
+      : <button className="button-answer" type="submit" onClick={(e) =>checkIfCorrect(e)}>Svara</button>
       }
 
 
       <p className="instructions-text">Skriv in rätt verbböjning i rutorna</p>
-      </>
+      </form>
       }
     
     </div>
