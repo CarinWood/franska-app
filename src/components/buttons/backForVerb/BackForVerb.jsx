@@ -3,12 +3,17 @@ import './backForVerb.css'
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import { useNavigate } from 'react-router-dom'
 
-const BackForVerb = () => {
+const BackForVerb = ({menu, showMenu}) => {
     const navigate = useNavigate()
 
 
     const clickOnBackBtn = () => {
+      if(menu) {
         navigate('/')
+      } else {
+        showMenu(true)
+      }
+      
     }
 
   return (

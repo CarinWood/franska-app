@@ -351,7 +351,330 @@ export const VerbArrayIrregular = [
         ]
 ];
 
+export const firstConArr = [
+  [
+    {
+      id: 1,
+      sv: "jag äter:",
+      pronoun: "je",
+      fr: "mange",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 2,
+      sv: "du äter:",
+      pronoun: "tu",
+      fr: "manges",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 3,
+      sv: "han äter:",
+      pronoun: "il",
+      fr: "mange",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 4,
+      sv: "vi äter:",
+      pronoun: "nous",
+      fr: "mangeons",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 5,
+      sv: "ni äter:",
+      pronoun: "vous",
+      fr: "mangez",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 6,
+      sv: "de äter:",
+      pronoun: "ils",
+      fr: "mangent",
+      answer: "",
+      correct: null
+    },
+
+    ],
+   [
+    {
+      id: 7,
+      sv: "jag betalar:",
+      pronoun: "je",
+      fr: "paye",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 8,
+      sv: "du betalar:",
+      pronoun: "tu",
+      fr: "payes",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 9,
+      sv: "han betalar:",
+      pronoun: "il",
+      fr: "paye",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 10,
+      sv: "vi betalar:",
+      pronoun: "nous",
+      fr: "payons",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 11,
+      sv: "ni betalar:",
+      pronoun: "vous",
+      fr: "payez",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 12,
+      sv: "de betalar:",
+      pronoun: "ils",
+      fr: "payent",
+      answer: "",
+      correct: null
+    },
+   ],
+   [
+    {
+      id: 13,
+      sv: "jag köper:",
+      pronoun: "j'",
+      fr: "achète",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 14,
+      sv: "du köper:",
+      pronoun: "tu",
+      fr: "achètes",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 15,
+      sv: "han köper:",
+      pronoun: "il",
+      fr: "achète",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 16,
+      sv: "vi köper:",
+      pronoun: "nous",
+      fr: "achetons",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 17,
+      sv: "ni köper:",
+      pronoun: "vous",
+      fr: "achetez",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 18,
+      sv: "de köper:",
+      pronoun: "ils",
+      fr: "achètent",
+      answer: "",
+      correct: null
+    },
+   ]
+]
+
+export const secondConArr = [
+  [
+    {
+      id: 1,
+      sv: "jag slutar:",
+      pronoun: "je",
+      fr: "finis",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 2,
+      sv: "du slutar:",
+      pronoun: "tu",
+      fr: "finis",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 3,
+      sv: "han slutar:",
+      pronoun: "il",
+      fr: "finit",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 4,
+      sv: "vi slutar:",
+      pronoun: "nous",
+      fr: "finissons",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 5,
+      sv: "ni slutar:",
+      pronoun: "vous",
+      fr: "finissez",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 6,
+      sv: "de slutar:",
+      pronoun: "ils",
+      fr: "finissent",
+      answer: "",
+      correct: null
+    },
+
+    ],
+   [
+    {
+      id: 7,
+      sv: "jag väljer:",
+      pronoun: "je",
+      fr: "choisis",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 8,
+      sv: "du väljer:",
+      pronoun: "tu",
+      fr: "choisis",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 9,
+      sv: "han väljer:",
+      pronoun: "il",
+      fr: "choisit",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 10,
+      sv: "vi väljer:",
+      pronoun: "nous",
+      fr: "choisissons",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 11,
+      sv: "ni väljer:",
+      pronoun: "vous",
+      fr: "choisissez",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 12,
+      sv: "de väljer:",
+      pronoun: "ils",
+      fr: "choisissent",
+      answer: "",
+      correct: null
+    },
+   ],
+  
+]
+export const thirdConArr = [
+  [
+    {
+      id: 1,
+      sv: "jag säljer:",
+      pronoun: "je",
+      fr: "vends",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 2,
+      sv: "du säljer:",
+      pronoun: "tu",
+      fr: "vends",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 3,
+      sv: "han säljer:",
+      pronoun: "il",
+      fr: "vend",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 4,
+      sv: "vi säljer:",
+      pronoun: "nous",
+      fr: "vendons",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 5,
+      sv: "ni säljer:",
+      pronoun: "vous",
+      fr: "vendez",
+      answer: "",
+      correct: null
+    },
+    {
+      id: 6,
+      sv: "de säljer:",
+      pronoun: "ils",
+      fr: "vendent",
+      answer: "",
+      correct: null
+    },
+    ],
+  
+]
+
 
 export const headingsArrayIrregular = [
-  "Avoir (att ha)", "Être (att vara)", "Aller (att åka)", "Faire (att göra)","Venir (att komma)", "Mettre (att lägga)", "Prendre (att ta)"
+  "Avoir (ha)", "Être (vara)", "Aller (åka)", "Faire (göra)","Venir (komma)", "Mettre (lägga)", "Prendre (ta)"
+]
+
+
+export const headingsArrFirstCon = [
+  "Manger (äta)", "Payer (betala)", "Acheter (köpa)"
+]
+export const headingsArrSecondCon = [
+  "Finir (sluta)", "Choisir (välja)",
+]
+export const headingsArrThirdCon = [
+  "vendre (sälja)",
 ]

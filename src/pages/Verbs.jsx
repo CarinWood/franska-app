@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../styles/verbs.css";
-import { VerbArrayIrregular, headingsArrayIrregular } from "../data/VerbArray";
+import { VerbArrayIrregular, headingsArrSecondCon, headingsArrThirdCon, headingsArrayIrregular, secondConArr, thirdConArr } from "../data/VerbArray";
 import VerbMenu from "../components/verbMenu/VerbMenu";
 import BackForVerb from "../components/buttons/backForVerb/BackForVerb";
 import { FaCheck } from "react-icons/fa6";
 import VerbFinishCard from "../components/verbFinishCard/VerbFinishCard";
+import { firstConArr } from "../data/VerbArray";
+import { headingsArrFirstCon } from "../data/VerbArray";
 
 
 
@@ -12,9 +14,31 @@ export const Verbs = () => {
   const [menu, showMenu] = useState(true)
   const [verbChoice, setVerbChoice] = useState(0)
   const [currentNum, setCurrentNum] = useState(0)
-  const [verbArray, setVerbArray] = useState(VerbArrayIrregular[currentNum])
+  const [verbArray, setVerbArray] = useState()
+  const [headingArray, setHeadingArray] = useState()
   const [num, setNum] = useState(0)
   const [verbsFinished, setVerbsFinished] = useState(false)
+
+
+  const setArrays = (choice) => {
+    if(choice === 1) {
+      setHeadingArray(headingsArrFirstCon)
+      setVerbArray(firstConArr[currentNum])
+    
+    } else if (choice === 2) {
+      setHeadingArray(headingsArrSecondCon)
+      setVerbArray(secondConArr[currentNum])
+    
+    } else if (choice === 3) {
+      setHeadingArray(headingsArrThirdCon)
+      setVerbArray(thirdConArr[currentNum])
+    }
+    
+    else {
+      setVerbArray(VerbArrayIrregular[currentNum])
+      setHeadingArray(headingsArrayIrregular)
+    }
+  }
 
 
   const typeInAnswer = (e, id) => {
@@ -42,14 +66,27 @@ export const Verbs = () => {
     e.preventDefault()
     setNum(0)
     console.log(verbArray.length)
-    if(currentNum + 1 >= verbArray.length) {
+    if(verbChoice === 1 && currentNum + 1 >= firstConArr.length) {
       setVerbsFinished(true)
       return
-    }
-    setCurrentNum(currentNum + 1)
-    setVerbArray(VerbArrayIrregular[currentNum + 1])
 
-  }
+    } else if (verbChoice === 2 && currentNum + 1 >= secondConArr.length) {
+      setVerbsFinished(true)
+    
+    } else if (verbChoice === 4 && currentNum + 1 === VerbArrayIrregular.length) {
+      setVerbsFinished(true)
+    
+    } else if (verbChoice === 3 && currentNum + 1 === thirdConArr.length) {
+      setVerbsFinished(true)
+    
+    } else {
+      setCurrentNum(currentNum + 1)
+      setVerbArray(verbChoice === 1 ? firstConArr[currentNum + 1] 
+      : verbChoice === 2 ? secondConArr[currentNum + 1]  
+        : VerbArrayIrregular[currentNum + 1]);
+
+      } 
+     }
 
   useEffect(() => {
     console.log(verbArray)
@@ -57,13 +94,13 @@ export const Verbs = () => {
 
   return (
     <div className="verbs-page">
-        <BackForVerb  />
+        <BackForVerb menu={menu} showMenu={showMenu} />
         {verbsFinished ? <VerbFinishCard/> :
         <>
-        {menu && <VerbMenu showMenu={showMenu} setVerbChoice={setVerbChoice}/>}
+        {menu && <VerbMenu showMenu={showMenu} setVerbChoice={setVerbChoice} setArrays={setArrays}/>}
         {!menu && 
         <form className="verbs-table">
-             <h4 className="headline-text">{headingsArrayIrregular[currentNum]}</h4>
+             <h4 className="headline-text">{headingArray[currentNum]}</h4>
         <div>
      
         <div>
@@ -77,7 +114,7 @@ export const Verbs = () => {
                     <input 
                       key={verb.id}
                       type="text" 
-                      maxLength={9}
+                      maxLength={11}
                       autoCapitalize="none"
                       onChange={(e) => typeInAnswer(e, verb.id)}
                     />
