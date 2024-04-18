@@ -4,7 +4,8 @@ import { VerbArrayIrregular, headingsArrayIrregular } from "../data/VerbArray";
 import VerbMenu from "../components/verbMenu/VerbMenu";
 import BackForVerb from "../components/buttons/backForVerb/BackForVerb";
 import { FaCheck } from "react-icons/fa6";
-import { FaRegStar } from "react-icons/fa";
+import VerbFinishCard from "../components/verbFinishCard/VerbFinishCard";
+
 
 
 export const Verbs = () => {
@@ -13,7 +14,7 @@ export const Verbs = () => {
   const [currentNum, setCurrentNum] = useState(0)
   const [verbArray, setVerbArray] = useState(VerbArrayIrregular[currentNum])
   const [num, setNum] = useState(0)
- 
+  const [verbsFinished, setVerbsFinished] = useState(false)
 
 
   const typeInAnswer = (e, id) => {
@@ -41,7 +42,10 @@ export const Verbs = () => {
     e.preventDefault()
     setNum(0)
     console.log(verbArray.length)
-    if(currentNum + 1 >= verbArray.length) return
+    if(currentNum + 1 >= verbArray.length) {
+      setVerbsFinished(true)
+      return
+    }
     setCurrentNum(currentNum + 1)
     setVerbArray(VerbArrayIrregular[currentNum + 1])
 
@@ -54,6 +58,8 @@ export const Verbs = () => {
   return (
     <div className="verbs-page">
         <BackForVerb  />
+        {verbsFinished ? <VerbFinishCard/> :
+        <>
         {menu && <VerbMenu showMenu={showMenu} setVerbChoice={setVerbChoice}/>}
         {!menu && 
         <form className="verbs-table">
@@ -98,7 +104,8 @@ export const Verbs = () => {
       <p className="instructions-text">Skriv in rätt verbböjning i rutorna</p>
       </form>
       }
-    
+      </>
+}
     </div>
 
   );
