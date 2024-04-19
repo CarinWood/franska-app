@@ -96,7 +96,12 @@ export const Verbs = () => {
 
   return (
     <div className="verbs-page">
-        <BackForVerb menu={menu} showMenu={showMenu} />
+        <BackForVerb 
+          menu={menu} 
+          showMenu={showMenu} 
+          verbsFinished={verbsFinished}
+          setVerbsFinished={setVerbsFinished}
+          />
         {verbsFinished ? 
             <VerbFinishCard 
                 setCurrentNum={setCurrentNum} 
