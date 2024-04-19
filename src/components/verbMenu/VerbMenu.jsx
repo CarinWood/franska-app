@@ -1,8 +1,15 @@
+import { useEffect } from 'react'
 import './verbMenu.css'
 
-const VerbMenu = ({showMenu, setVerbChoice, setArrays}) => {
+const VerbMenu = ({showMenu, setVerbChoice, setArrays, setCurrentNum, currentNum}) => {
+
+
+    useEffect(() => {
+        setCurrentNum(0)
+    }, [currentNum])
 
     const clickOnChoice = (choice) => {
+        setCurrentNum(0)
         showMenu(false)
         setVerbChoice(choice)
         setArrays(choice)

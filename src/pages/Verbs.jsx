@@ -108,7 +108,13 @@ export const Verbs = () => {
                 currentNum={currentNum}
             /> :
         <>
-        {menu && <VerbMenu showMenu={showMenu} setVerbChoice={setVerbChoice} setArrays={setArrays}/>}
+        {menu && <VerbMenu 
+            showMenu={showMenu} 
+            setVerbChoice={setVerbChoice} 
+            setArrays={setArrays}
+            setCurrentNum={setCurrentNum}
+            currentNum={currentNum}
+        />}
         {!menu && 
         <form className="verbs-table">
              <h4 className="headline-text">{headingArray[currentNum]}</h4>
