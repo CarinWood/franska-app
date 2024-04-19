@@ -65,7 +65,7 @@ export const Verbs = () => {
   const nextSet = (e) => {
     e.preventDefault()
     setNum(0)
-    console.log(verbArray.length)
+    
     if(verbChoice === 1 && currentNum + 1 >= firstConArr.length) {
       setVerbsFinished(true)
       return
@@ -89,13 +89,24 @@ export const Verbs = () => {
      }
 
   useEffect(() => {
-    console.log(verbArray)
+
   }, [verbArray, num, currentNum]);
+
+  
 
   return (
     <div className="verbs-page">
         <BackForVerb menu={menu} showMenu={showMenu} />
-        {verbsFinished ? <VerbFinishCard/> :
+        {verbsFinished ? 
+            <VerbFinishCard 
+                setCurrentNum={setCurrentNum} 
+                setVerbsFinished={setVerbsFinished} 
+                verbArray={verbArray} 
+                setVerbArray={setVerbArray}
+                setHeadingArray={setHeadingArray} 
+                verbChoice={verbChoice}
+                currentNum={currentNum}
+            /> :
         <>
         {menu && <VerbMenu showMenu={showMenu} setVerbChoice={setVerbChoice} setArrays={setArrays}/>}
         {!menu && 
