@@ -136,7 +136,7 @@ export const Verbs = () => {
                     <input 
                       key={verb.id}
                       type="text" 
-                      maxLength={11}
+                      maxLength={13}
                       autoCapitalize="none"
                       onChange={(e) => typeInAnswer(e, verb.id)}
                     />

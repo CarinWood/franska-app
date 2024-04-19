@@ -30,7 +30,6 @@ const VerbFinishCard = ({
 
     setVerbArray(tempArray)
 
-
     if(verbChoice === 1) {
       setHeadingArray(headingsArrFirstCon)
       setVerbArray(firstConArr[currentNum])

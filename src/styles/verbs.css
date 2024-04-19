@@ -57,7 +57,7 @@
 .word-box {
     margin-left: 20px;
     margin-right: 18px;
-    width: 95px;
+    width: 105px;
     height: 30px;
     border-radius: 5px;
     padding-left: 3px;
@@ -70,7 +70,7 @@
 }
 
 .word-box input {
-    width: 85px;
+    width: 95px;
     background: transparent;
     border: none;
     outline: none;
