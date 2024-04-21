@@ -62,6 +62,22 @@
     .click-instructions {
         bottom: 6%;
     }
+
+    .french-correct {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0px 30px 0px;
+        font-size: 20px;
+        position: fixed;
+        left: 50%;
+        top: 19.8%;
+        margin-left: -150px;
+        text-shadow: 2px 2px black;
+    }
+
+    
 }
 
 
