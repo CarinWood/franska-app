@@ -99,7 +99,7 @@
     align-items: center;
     justify-content: flex-start;
     align-self: flex-start;
-    padding-top: 20px;
+    padding-top: 0px;
 }
     .list-item {
         font-size: 22px;
@@ -108,6 +108,20 @@
     .overview-heading {
         font-size: 22px;
     }
+    .overview-heading {
+        top: 8%;
+    }
+    .chapters {
+        top: 21%;
+    }
+
+    .specials {
+        bottom: 22%;
+    }
+    
+.specials-2 {
+    bottom: 13%;
+}
 
 
 }
