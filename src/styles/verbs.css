@@ -134,10 +134,10 @@
     }
 
     .button-answer, .continue-button { 
-        bottom: 8%;
+        bottom: 5%;
         width: 95px;
         height: 40px;
-        font-size: 20px;
+        font-size: 18px;
         letter-spacing: 1.6px;
     }
 
