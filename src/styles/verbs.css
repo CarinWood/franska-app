@@ -150,16 +150,17 @@
 
     .swedish {
         width: 110px;
-        font-size: 16px;
+        font-size: 17px;
         color: rgba(255, 255, 255, 0.8);
         letter-spacing: 0.3px;
-        padding-left: 10px;
+        padding-left: 15px;
 
     }
 
     .verb-item {
         width: 330px;
         font-family: "Roboto";
+        margin-top: 5px;
     }
 
     .word-box {
