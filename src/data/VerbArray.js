@@ -402,7 +402,7 @@ export const VerbArrayIrregular = [
           [     
             {
               id: 49,
-              sv: "jag kan:",
+              sv: "jag vill:",
               pronoun: "je",
               fr: "veux",
               answer:"",
@@ -410,7 +410,7 @@ export const VerbArrayIrregular = [
             },
             {
               id: 50,
-              sv: "du kan:",
+              sv: "du vill:",
               pronoun: "tu",
               fr: "veux",
               answer: "",
@@ -418,7 +418,7 @@ export const VerbArrayIrregular = [
             },
             {
               id: 51,
-              sv: "han kan:",
+              sv: "han vill:",
               pronoun: "il",
               fr: "veut",
               answer: "",
@@ -426,7 +426,7 @@ export const VerbArrayIrregular = [
             },
             {
               id: 52,
-              sv: "vi kan:",
+              sv: "vi vill:",
               pronoun: "nous",
               fr: "voulons",
               answer: "",
@@ -434,7 +434,7 @@ export const VerbArrayIrregular = [
             },
             {
               id: 53,
-              sv: "ni kan:",
+              sv: "ni vill:",
               pronoun: "vous",
               fr: "voulez",
               answer: "",
@@ -442,7 +442,7 @@ export const VerbArrayIrregular = [
             },
             {
               id: 54,
-              sv: "de kan:",
+              sv: "de vill:",
               pronoun: "ils",
               fr: "veulent",
               answer: "",
