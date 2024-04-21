@@ -35,7 +35,6 @@
     align-items: center;
     width: 400px;
     font-family: "Roboto";
-   
 }
 
 .swedish {
@@ -65,8 +64,6 @@
     align-items: center;
     justify-content: flex-start;
     border: 3px solid rgba(255, 255, 255, 0.4);
-    
-    
 }
 
 .word-box input {
@@ -103,9 +100,6 @@
 .button-answer:active, .continue-button:active {
     transform: translateY(3px);
 }
-
-
-
 
 .instructions-text {
     bottom: 4%;
@@ -149,13 +143,33 @@
 
     .verbs-table {
         position: fixed;
-        top: 17%;
+        top: 16%;
         width: 340px;
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-bottom: 20px;
+        height: 420px;
     }
+
+    .swedish {
+        width: 110px;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.8);
+        letter-spacing: 0.3px;
+        padding-left: 10px;
+
+    }
+
+    .verb-item {
+        width: 330px;
+        font-family: "Roboto";
+    }
+
+    .word-box {
+        margin-left: 20px;
+        margin-right: 18px;
+    }
+
+    .pronoun {
+        font-size: 18px;
+        width: 50px;
+    }
+    
 }
