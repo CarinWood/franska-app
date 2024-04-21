@@ -146,4 +146,16 @@
         font-size: 20px;
         letter-spacing: 1.6px;
     }
+
+    .verbs-table {
+        position: fixed;
+        top: 17%;
+        width: 340px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 20px;
+    }
 }
