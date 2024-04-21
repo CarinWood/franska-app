@@ -348,7 +348,107 @@ export const VerbArrayIrregular = [
           answer: "",
           correct: null
         }
-        ]
+        ],
+        [
+          {
+            id: 43,
+            sv: "jag kan:",
+            pronoun: "je",
+            fr: "peux",
+            answer:"",
+            correct: null
+          },
+          {
+            id: 44,
+            sv: "du kan:",
+            pronoun: "tu",
+            fr: "peux",
+            answer: "",
+            correct: null
+          },
+          {
+            id: 45,
+            sv: "han kan:",
+            pronoun: "il",
+            fr: "peut",
+            answer: "",
+            correct: null
+          },
+          {
+            id: 46,
+            sv: "vi kan:",
+            pronoun: "nous",
+            fr: "pouvons",
+            answer: "",
+            correct: null
+          },
+          {
+            id: 47,
+            sv: "ni kan:",
+            pronoun: "vous",
+            fr: "pouvez",
+            answer: "",
+            correct: null
+          },
+          {
+            id: 48,
+            sv: "de kan:",
+            pronoun: "ils",
+            fr: "peuvent",
+            answer: "",
+            correct: null
+          }
+          ],
+          [     
+            {
+              id: 49,
+              sv: "jag kan:",
+              pronoun: "je",
+              fr: "veux",
+              answer:"",
+              correct: null
+            },
+            {
+              id: 50,
+              sv: "du kan:",
+              pronoun: "tu",
+              fr: "veux",
+              answer: "",
+              correct: null
+            },
+            {
+              id: 51,
+              sv: "han kan:",
+              pronoun: "il",
+              fr: "veut",
+              answer: "",
+              correct: null
+            },
+            {
+              id: 52,
+              sv: "vi kan:",
+              pronoun: "nous",
+              fr: "voulons",
+              answer: "",
+              correct: null
+            },
+            {
+              id: 53,
+              sv: "ni kan:",
+              pronoun: "vous",
+              fr: "voulez",
+              answer: "",
+              correct: null
+            },
+            {
+              id: 54,
+              sv: "de kan:",
+              pronoun: "ils",
+              fr: "veulent",
+              answer: "",
+              correct: null
+            }
+            ]
 ];
 
 export const firstConArr = [
@@ -665,7 +765,15 @@ export const thirdConArr = [
 
 
 export const headingsArrayIrregular = [
-  "Avoir (ha)", "Être (vara)", "Aller (åka)", "Faire (göra)","Venir (komma)", "Mettre (lägga)", "Prendre (ta)"
+  "Avoir (ha)", 
+  "Être (vara)", 
+  "Aller (åka)", 
+  "Faire (göra)",
+  "Venir (komma)", 
+  "Mettre (lägga)", 
+  "Prendre (ta)",
+  "Pouvoir (kunna)", 
+  "Vouloir (vilja)"
 ]
 
 
