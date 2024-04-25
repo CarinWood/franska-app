@@ -1,6 +1,6 @@
  export const eithArray = 
  [
-  { "id": 1, "fr": "la forme", "sv": "form" },
+ /*  { "id": 1, "fr": "la forme", "sv": "form" },
   { "id": 2, "fr": "l'émotion", "sv": "känsla" },
   { "id": 3, "fr": "la santé", "sv": "hälsa, sundhet" },
   { "id": 4, "fr": "le sport", "sv": "idrott, sport" },
@@ -19,7 +19,7 @@
   { "id": 17, "fr": "inquiet", "sv": "orolig (m)" },
   { "id": 18, "fr": "inquiète", "sv": "orolig (f)" },
   { "id": 19, "fr": "l'exercice", "sv": "övning" },
-  { "id": 20, "fr": "muscler", "sv": "bygga upp muskler" },
+  { "id": 20, "fr": "muscler", "sv": "bygga upp muskler" }, */
   { "id": 21, "fr": "le ventre", "sv": "mage" },
   { "id": 22, "fr": "le bras", "sv": "arm" },
   { "id": 23, "fr": "le dos", "sv": "rygg" },
@@ -51,7 +51,7 @@
   { "id": 49, "fr": "stressé", "sv": "stressad (m)" },
   { "id": 50, "fr": "stressée", "sv": "stressad (f)" },
   { "id": 51, "fr": "le docteur", "sv": "doktor (m)" },
-  { "id": 52, "fr": "la docteure", "sv": "doktor (f)" },
+ /*  { "id": 52, "fr": "la docteure", "sv": "doktor (f)" },
   { "id": 53, "fr": "à distance", "sv": "på distans" },
   { "id": 54, "fr": "la gorge", "sv": "strupe, hals, svalg" },
   { "id": 55, "fr": "la tête", "sv": "huvud" },
@@ -145,7 +145,7 @@
   { "id": 143, "fr": "au fait", "sv": "för övrigt, apropå" },
   { "id": 144, "fr": "l'examen", "sv": "examen, prov, gransning" },
   { "id": 145, "fr": "le paquet", "sv": "paket" },
-  { "id": 146, "fr": "laver", "sv": "tvätta, rengöra" } 
+  { "id": 146, "fr": "laver", "sv": "tvätta, rengöra" }  */
 ]
 
   

@@ -1,5 +1,5 @@
 export const ninethArray = [
-    { id: 1, fr: "le paysage", sv: "landskap" },
+     { id: 1, fr: "le paysage", sv: "landskap" },
     { id: 2, fr: "la carte postale", sv: "vykort" },
     { id: 3, fr: "l'idée", sv: "idé" },
     { id: 4, fr: "les vacances", sv: "semester" },
@@ -27,11 +27,11 @@ export const ninethArray = [
     { id: 27, fr: "la chambre d'hôte", sv: "gästrum" },
     { id: 28, fr: "le van", sv: "minibuss" },
     { id: 29, fr: "la location", sv: "uthyrning" },
-    { id: 30, fr: "la vue", sv: "utsikt" },
+    { id: 30, fr: "la vue", sv: "utsikt" }, 
     { id: 31, fr: "le parking", sv: "parkering" },
     { id: 32, fr: "l'animal", sv: "djur" },
-    { id: 33, fr: "la randonnée", sv: "vandring" },
-    { id: 34, fr: "bronzer", sv: "sola" },
+    { id: 33, fr: "la randonnée", sv: "långpromenad, vandring" },
+    { id: 34, fr: "bronzer", sv: "bli solbränd, sola" },
     { id: 35, fr: "se baigner", sv: "bada" },
     { id: 36, fr: "réserver", sv: "boka" },
     { id: 37, fr: "compris", sv: "inklusive" },
@@ -41,7 +41,7 @@ export const ninethArray = [
     { id: 41, fr: "l'avion", sv: "flygplan" },
     { id: 42, fr: "rapide", sv: "snabb" },
     { id: 43, fr: "la région", sv: "region" },
-    { id: 44, fr: "louer", sv: "hyra" },
+    { id: 44, fr: "louer", sv: "hyra, hyra ut" },
     { id: 45, fr: "se déplacer", sv: "förflytta sig" },
     { id: 46, fr: "meilleur", sv: "bättre" },
     { id: 47, fr: "l'aéroport", sv: "flygplats" },
@@ -59,7 +59,7 @@ export const ninethArray = [
     { id: 59, fr: "faire du surf", sv: "surfa" },
     { id: 60, fr: "goûter", sv: "smaka" },
     { id: 61, fr: "prendre des photos", sv: "fotografera" },
-    { id: 62, fr: "le musée", sv: "museum" },
+     { id: 62, fr: "le musée", sv: "museum" },
     { id: 63, fr: "suivant", sv: "följande" },
     { id: 64, fr: "le confort", sv: "komfort" },
     { id: 65, fr: "la construction", sv: "konstruktion" },
@@ -101,7 +101,7 @@ export const ninethArray = [
     { id: 101, fr: "la fermeture", sv: "stängning" },
     { id: 102, fr: "le château", sv: "slott" },
     { id: 103, fr: "la prison", sv: "fängelse" },
-    { id: 105, fr: "le bisou", sv: "puss" }
+    { id: 105, fr: "le bisou", sv: "puss" }  
   ];
   
 
