@@ -35,6 +35,7 @@
     align-items: center;
     width: 400px;
     font-family: "Roboto";
+    margin: 18px 0px;
 }
 
 .swedish {
@@ -146,6 +147,7 @@
         top: 15%;
         width: 340px;
         height: 420px;
+
     }
 
     .swedish {
@@ -160,7 +162,7 @@
     .verb-item {
         width: 330px;
         font-family: "Roboto";
-        margin-top: 5px;
+  
     }
 
     .word-box {
