@@ -7,7 +7,7 @@ import { Match } from '../components/match/Match';
 import Click from '../components/click/Click';
 import { CiBookmark } from "react-icons/ci";
 import { ninethArray, ninethMatchArray } from '../data/Ninth';
-import { TenthArray } from '../data/Tenth';
+import { TenthArray, TenthMatchArray } from '../data/Tenth';
 
 
 const Ten = () => {
@@ -44,8 +44,8 @@ const Ten = () => {
       />
       {showFlash && <Carousel flashcardList={TenthArray} />}
       {showSpell && <Spell wordList={TenthArray} />}
-      {showMatch && <Match wordList={TenthArray} />}
-      {showClick && <Click wordList={TenthArray} />}
+      {showMatch && <Match wordList={TenthMatchArray} />}
+      {showClick && <Click wordList={TenthMatchArray} />}
     </div>
   )
 }
