@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../styles/overview.css";
 import { BsPencil } from "react-icons/bs";
 import { FiBook } from "react-icons/fi";
+import { IoRocketOutline } from "react-icons/io5";
 
 const Overview = () => {
   return (
@@ -46,18 +47,36 @@ const Overview = () => {
           <Link to="/kapitel_10" className="list-item">Unité 10</Link>
         </ul>
       </div>
-      <ul className="specials">
-        <Link to="/sentences" className="list-item spec">
-          <BsPencil className="overview-icon" />
-          bygg meningar
-        </Link>
-      </ul>
-     <ul className="specials-2">
-        <Link to="/verb_presens" className="list-item-2">
-          <FiBook className="overview-icon" />
-          böj verb i presens
-        </Link>
-      </ul>  
+      <div className="specials-container">
+          <article className="first-row">
+          <ul className="specials">
+            <Link to="/sentences" className="list-item-2">
+              <BsPencil className="overview-icon" />
+              bygg meningar
+            </Link>
+          </ul>
+        <ul className="specials">
+            <Link to="/verb_presens" className="list-item-2">
+              <FiBook className="overview-icon" />
+              böj verb i presens
+            </Link>
+          </ul>  
+          </article>
+          <article className="second-row">
+          <ul className="specials">
+            <Link to="/verb_presens" className="list-item-2">
+              <IoRocketOutline className="overview-icon" />
+              böj verb i futurum
+            </Link>
+          </ul>  
+          <ul className="specials">
+            <Link to="/verb_presens" className="list-item-2">
+              <IoRocketOutline className="overview-icon" />
+              böj verb i imperfekt
+            </Link>
+          </ul>  
+          </article>
+      </div>
       <p className="credits">&copy;2024 <a href="https://carinwood-eng-cv.netlify.app/" target="_blank" rel="noreferrer">Carin Wood</a></p>
     </div>
   );
